@@ -1,0 +1,51 @@
+<% title "Recortables" %>
+
+<table>
+  <tr>
+    <th>Numero Gajos</th>
+    <th>Numero U</th>
+    <th>Numero V</th>
+    <th>Textura</th>
+    <th>Ancho Textura X</th>
+    <th>Ancho Textura Y</th>
+    <th>Desplazamiento Textura X</th>
+    <th>Desplazamiento Textura Y</th>
+    <th>Rojo</th>
+    <th>Verde</th>
+    <th>Azul</th>
+    <th>Repite Horizontal</th>
+    <th>Repite Vertical</th>
+    <th>Malla Rojo</th>
+    <th>Malla Verde</th>
+    <th>Malla Azul</th>
+    <th>Malla Tamanyo</th>
+    <th>Fin</th>
+  </tr>
+  <% for recortable in @recortables %>
+    <tr>
+      <td><%=h recortable.numero_gajos %></td>
+      <td><%=h recortable.numero_u %></td>
+      <td><%=h recortable.numero_v %></td>
+      <td><%=h recortable.textura %></td>
+      <td><%=h recortable.ancho_textura_x %></td>
+      <td><%=h recortable.ancho_textura_y %></td>
+      <td><%=h recortable.desplazamiento_textura_x %></td>
+      <td><%=h recortable.desplazamiento_textura_y %></td>
+      <td><%=h recortable.rojo %></td>
+      <td><%=h recortable.verde %></td>
+      <td><%=h recortable.azul %></td>
+      <td><%=h recortable.repite_horizontal %></td>
+      <td><%=h recortable.repite_vertical %></td>
+      <td><%=h recortable.malla_rojo %></td>
+      <td><%=h recortable.malla_verde %></td>
+      <td><%=h recortable.malla_azul %></td>
+      <td><%=h recortable.malla_tamanyo %></td>
+      <td><%=h recortable.fin %></td>
+      <td><%= link_to "Show", recortable %></td>
+      <td><%= link_to "Edit", edit_recortable_path(recortable) %></td>
+      <td><%= link_to "Destroy", recortable, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Recortable", new_recortable_path %></p>

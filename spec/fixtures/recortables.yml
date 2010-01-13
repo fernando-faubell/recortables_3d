@@ -1,0 +1,39 @@
+one:
+  numero_gajos: 1
+  numero_u: 1
+  numero_v: 1
+  textura: MyString
+  ancho_textura_x: 9.99
+  ancho_textura_y: 9.99
+  desplazamiento_textura_x: 9.99
+  desplazamiento_textura_y: 9.99
+  rojo: 9.99
+  verde: 9.99
+  azul: 9.99
+  repite_horizontal: 1
+  repite_vertical: 1
+  malla_rojo: 9.99
+  malla_verde: 9.99
+  malla_azul: 9.99
+  malla_tamanyo: 9.99
+  fin: 1
+
+two:
+  numero_gajos: 1
+  numero_u: 1
+  numero_v: 1
+  textura: MyString
+  ancho_textura_x: 9.99
+  ancho_textura_y: 9.99
+  desplazamiento_textura_x: 9.99
+  desplazamiento_textura_y: 9.99
+  rojo: 9.99
+  verde: 9.99
+  azul: 9.99
+  repite_horizontal: 1
+  repite_vertical: 1
+  malla_rojo: 9.99
+  malla_verde: 9.99
+  malla_azul: 9.99
+  malla_tamanyo: 9.99
+  fin: 1
