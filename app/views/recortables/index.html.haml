@@ -8,15 +8,16 @@
     %th Color de aristas
     %th Grosor de aristas
     %th Textura
-  - for recortable in @recortables   
-    %td=  recortable.modelo
-    %td=  recortable.complejidad
-    %td=  recortable.color_fondo
-    %td=  recortable.color_aristas
-    %td=  recortable.grosor_aristas
-    %td=  recortable.textura
-    %td= link_to "Show", recortable
-    %td= link_to "Edit", edit_recortable_path(recortable)
-    %td= link_to "Destroy", recortable, :confirm => 'Are you sure?', :method => :delete
+  - for recortable in @recortables
+    %tr
+      %td=  recortable.modelo
+      %td=  recortable.complejidad
+      %td=  recortable.color_fondo
+      %td=  recortable.color_aristas
+      %td=  recortable.grosor_aristas
+      %td=  recortable.textura
+      %td= link_to "Show", recortable
+      %td= link_to "Edit", edit_recortable_path(recortable)
+      %td= link_to "Destroy", recortable, :confirm => 'Are you sure?', :method => :delete
 
 %p= link_to "New Recortable", new_recortable_path
