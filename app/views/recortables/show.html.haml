@@ -1,80 +1,32 @@
-<% title "Recortable" %>
+- title "Recortable"
 
-<p>
-  <strong>Numero Gajos:</strong>
-  <%=h @recortable.numero_gajos %>
-</p>
-<p>
-  <strong>Numero U:</strong>
-  <%=h @recortable.numero_u %>
-</p>
-<p>
-  <strong>Numero V:</strong>
-  <%=h @recortable.numero_v %>
-</p>
-<p>
-  <strong>Textura:</strong>
-  <%=h @recortable.textura %>
-</p>
-<p>
-  <strong>Ancho Textura X:</strong>
-  <%=h @recortable.ancho_textura_x %>
-</p>
-<p>
-  <strong>Ancho Textura Y:</strong>
-  <%=h @recortable.ancho_textura_y %>
-</p>
-<p>
-  <strong>Desplazamiento Textura X:</strong>
-  <%=h @recortable.desplazamiento_textura_x %>
-</p>
-<p>
-  <strong>Desplazamiento Textura Y:</strong>
-  <%=h @recortable.desplazamiento_textura_y %>
-</p>
-<p>
-  <strong>Rojo:</strong>
-  <%=h @recortable.rojo %>
-</p>
-<p>
-  <strong>Verde:</strong>
-  <%=h @recortable.verde %>
-</p>
-<p>
-  <strong>Azul:</strong>
-  <%=h @recortable.azul %>
-</p>
-<p>
-  <strong>Repite Horizontal:</strong>
-  <%=h @recortable.repite_horizontal %>
-</p>
-<p>
-  <strong>Repite Vertical:</strong>
-  <%=h @recortable.repite_vertical %>
-</p>
-<p>
-  <strong>Malla Rojo:</strong>
-  <%=h @recortable.malla_rojo %>
-</p>
-<p>
-  <strong>Malla Verde:</strong>
-  <%=h @recortable.malla_verde %>
-</p>
-<p>
-  <strong>Malla Azul:</strong>
-  <%=h @recortable.malla_azul %>
-</p>
-<p>
-  <strong>Malla Tamanyo:</strong>
-  <%=h @recortable.malla_tamanyo %>
-</p>
-<p>
-  <strong>Fin:</strong>
-  <%=h @recortable.fin %>
-</p>
+%p
+  %strong Modelo:
+  = @recortable.modelo
 
-<p>
-  <%= link_to "Edit", edit_recortable_path(@recortable) %> |
-  <%= link_to "Destroy", @recortable, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", recortables_path %>
-</p>
+%p
+  %strong Complejidad:
+  =h @recortable.complejidad
+
+%p
+  %strong Color de fondo:
+  =h @recortable.color_fondo
+
+%p
+  %strong Color aristas:
+  =h @recortable.color_aristas
+
+%p
+  %strong Grosor aristas:
+  =h @recortable.grosor_aristas
+
+%p
+  %strong Textura:
+  =h @recortable.textura
+
+
+%p
+  = link_to "Edit", edit_recortable_path(@recortable) 
+  = link_to "Destroy", @recortable, :confirm => 'Are you sure?', :method => :delete  
+  = link_to "View All", recortables_path 
+

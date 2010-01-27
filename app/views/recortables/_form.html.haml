@@ -1,79 +1,31 @@
 - form_for @recortable do |f|
   = f.error_messages
   
-  = f.label :numero_gajos
   %br
-  = f.text_field :numero_gajos
+  = f.label :modelo
+  = f.select :modelo, @modelos, :include_blank => true
 
-
-  = f.label :numero_u
   %br
-  = f.text_field :numero_u
+  = f.label :complejidad
+  = f.select :complejidad, @complejidad, :include_blank => true
 
-
-  = f.label :numero_v
   %br
-  = f.text_field :numero_v
+  = f.label :color_fondo
+  = f.text_field :color_fondo
+
+  %br
+  = f.label :color_aristas
+  = f.text_field :color_aristas
 
 
+  %br
+  = f.label :grosor_aristas
+  = f.text_field :grosor_aristas
+
+  %br
   = f.label :textura
-  %br
   = f.text_field :textura
 
-
-  = f.label :ancho_textura_x
-  = f.text_field :ancho_textura_x
-
-
-  = f.label :ancho_textura_y
-  = f.text_field :ancho_textura_y
-
-
-  = f.label :desplazamiento_textura_x
-  = f.text_field :desplazamiento_textura_x
-
-
-  = f.label :desplazamiento_textura_y
-  = f.text_field :desplazamiento_textura_y
-
-
-  = f.label :rojo
-  = f.text_field :rojo
-
-
-  = f.label :verde
-  = f.text_field :verde
-
-
-  = f.label :azul
-  = f.text_field :azul
-
-
-  = f.label :repite_horizontal
-  = f.text_field :repite_horizontal
-
-
-  = f.label :repite_vertical
-  = f.text_field :repite_vertical
-
-
-  = f.label :malla_rojo
-  = f.text_field :malla_rojo
-
-
-  = f.label :malla_verde
-  = f.text_field :malla_verde
-
-
-  = f.label :malla_azul
-  = f.text_field :malla_azul
-
-
-  = f.label :malla_tamanyo
-  = f.text_field :malla_tamanyo
-
-
-  = f.label :fin
-  = f.text_field :fin
-
-  = f.submit "Submit"
+  %br
+  = f.submit "Previsualizar"
+  = f.submit "Generar"

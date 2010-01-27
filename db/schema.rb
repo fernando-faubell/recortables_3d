@@ -12,24 +12,12 @@
 ActiveRecord::Schema.define(:version => 20100113103445) do
 
   create_table "recortables", :force => true do |t|
-    t.integer  "numero_gajos"
-    t.integer  "numero_u"
-    t.integer  "numero_v"
+    t.string   "modelo"
+    t.string   "complejidad"
+    t.string   "color_fondo"
+    t.string   "color_aristas"
+    t.string   "grosor_aristas"
     t.string   "textura"
-    t.integer  "ancho_textura_x",          :limit => 10, :precision => 10, :scale => 0
-    t.integer  "ancho_textura_y",          :limit => 10, :precision => 10, :scale => 0
-    t.integer  "desplazamiento_textura_x", :limit => 10, :precision => 10, :scale => 0
-    t.integer  "desplazamiento_textura_y", :limit => 10, :precision => 10, :scale => 0
-    t.integer  "rojo",                     :limit => 10, :precision => 10, :scale => 0
-    t.integer  "verde",                    :limit => 10, :precision => 10, :scale => 0
-    t.integer  "azul",                     :limit => 10, :precision => 10, :scale => 0
-    t.integer  "repite_horizontal"
-    t.integer  "repite_vertical"
-    t.integer  "malla_rojo",               :limit => 10, :precision => 10, :scale => 0
-    t.integer  "malla_verde",              :limit => 10, :precision => 10, :scale => 0
-    t.integer  "malla_azul",               :limit => 10, :precision => 10, :scale => 0
-    t.integer  "malla_tamanyo",            :limit => 10, :precision => 10, :scale => 0
-    t.integer  "fin"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
