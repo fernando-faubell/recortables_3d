@@ -16,9 +16,9 @@ class RecortablesController < ApplicationController
   def create    
     @recortable = Recortable.new(params[:recortable])
     if @recortable.save
-      flash[:notice] = "Recortable creado con éxito."
+      flash[:notice] = t :recortable_creado
 
-      if params[:commit] == "Previsualizar"
+      if params[:commit] == t(:previsualizar)
         redirect_to edit_recortable_path(@recortable)
       else
         redirect_to @recortable
@@ -38,8 +38,8 @@ class RecortablesController < ApplicationController
   def update
     @recortable = Recortable.find(params[:id])
     if @recortable.update_attributes(params[:recortable])
-      flash[:notice] = "Recortable actualizado con éxito."
-      if params[:commit] == "Previsualizar"
+      flash[:notice] = t :recortable_actualizado
+      if params[:commit] == t(:previsualizar)
         redirect_to edit_recortable_path(@recortable)
       else
         redirect_to @recortable
@@ -53,7 +53,7 @@ class RecortablesController < ApplicationController
   def destroy
     @recortable = Recortable.find(params[:id])
     @recortable.destroy
-    flash[:notice] = "Recortable eliminado con éxito."
+    flash[:notice] = t :recortable_eliminado
     redirect_to recortables_url
   end
 
