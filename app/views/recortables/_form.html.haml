@@ -2,30 +2,33 @@
   = f.error_messages
   
   %br
-  = f.label :modelo
+  = f.label t :modelo
   = f.select :modelo, @modelos, :include_blank => true
 
   %br
-  = f.label :complejidad
+  = f.label t :complejidad
   = f.select :complejidad, @complejidad, :include_blank => true
 
   %br
-  = f.label :color_fondo
+  = f.label t :color_fondo
   = f.text_field :color_fondo
 
   %br
-  = f.label :color_aristas
+  = f.label t :color_aristas
   = f.text_field :color_aristas
 
 
   %br
-  = f.label :grosor_aristas
+  = f.label t :grosor_aristas
   = f.text_field :grosor_aristas
 
   %br
-  = f.label :textura
+  = f.label t :textura
   = f.text_field :textura
 
   %br
   = f.submit t(:previsualizar)
   = f.submit t(:generar)
+
+%p
+  = link_to t(:cancelar), root_path

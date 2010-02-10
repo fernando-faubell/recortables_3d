@@ -1,6 +1,8 @@
 class Recortable < ActiveRecord::Base
 
   def self.lista_select_modelos
+    #TODO: Buscar la forma de traducir los modelos.
+    #[[I18n.t(:globo),1]]
     ["Globo"]
   end
 

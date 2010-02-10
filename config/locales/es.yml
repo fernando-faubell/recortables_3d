@@ -1,6 +1,22 @@
 es:
   titulo: "Recortables 3d"
+  nuevo_recortable: "Nuevo recortable"
   recortable_creado: "Recortable creado con éxito."
   recortable_actualizado: "Recortable actualizado con éxito"
   previsualizar: "Previsualizar"
   generar: "Generar"
+  cancelar: "Cancelar"
+  nuevo_recortable: "Nuevo recortable"
+
+
+  modelo: "Modelo"
+  complejidad: "Complejidad"
+  color_fondo: "Color de fondo"
+  color_aristas: "Color de aristas"
+  grosor_aristas: "Grosor de aristas"
+  textura: "Textura"
+
+
+##### Modelos
+
+  globo: "Globo aerostatico"

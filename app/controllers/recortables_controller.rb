@@ -21,7 +21,7 @@ class RecortablesController < ApplicationController
       if params[:commit] == t(:previsualizar)
         redirect_to edit_recortable_path(@recortable)
       else
-        redirect_to @recortable
+        redirect_to root_path
       end
 
     else
@@ -42,7 +42,7 @@ class RecortablesController < ApplicationController
       if params[:commit] == t(:previsualizar)
         redirect_to edit_recortable_path(@recortable)
       else
-        redirect_to @recortable
+        redirect_to root_path
       end
     else
       carga_combos
@@ -54,7 +54,7 @@ class RecortablesController < ApplicationController
     @recortable = Recortable.find(params[:id])
     @recortable.destroy
     flash[:notice] = t :recortable_eliminado
-    redirect_to recortables_url
+    redirect_to root_path
   end
 
   def carga_combos
