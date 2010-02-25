@@ -1,0 +1,99 @@
+/* -------------------------------------------------------------------------------------------------
+ *
+ * Load this stylesheet after formtastic.css in your layouts to override the CSS to suit your needs.
+ * This will allow you to update formtastic.css with new releases without clobbering your own changes.
+ *
+ * For example, to make the inline hint paragraphs a little darker in color than the standard #666:
+ *
+ * form.formtastic fieldset ol li p.inline-hints { color:#333; }
+ *
+ * -------------------------------------------------------------------------------------------------- */
+/* line 13, ../../app/stylesheets/formtastic_changes.sass */
+form.formtastic {
+  border: 1px solid #ccc;
+  padding: .5em;
+  /* Estilos aplicados a los errores de un formulario */ }
+  /* line 17, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic .required {
+    color: #333; }
+  /* line 20, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic input, form.formtastic textarea, form.formtastic select {
+    font-family: Verdana,Helvetica,Arial;
+    font-weight: normal; }
+  /* line 24, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic textarea {
+    height: 6em; }
+  /* line 27, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic .select select {
+    width: 25em; }
+  /* line 30, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic fieldset.buttons {
+    padding: 0;
+    padding-left: 85%; }
+    /* line 33, ../../app/stylesheets/formtastic_changes.sass */
+    form.formtastic fieldset.buttons input {
+      width: 10em; }
+  /* line 38, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic fieldset.inputs .error {
+    background: none;
+    border: 0;
+    font-weight: normal; }
+    /* line 42, ../../app/stylesheets/formtastic_changes.sass */
+    form.formtastic fieldset.inputs .error .fieldWithErrors {
+      background: none;
+      display: inline;
+      padding: 0; }
+      /* line 46, ../../app/stylesheets/formtastic_changes.sass */
+      form.formtastic fieldset.inputs .error .fieldWithErrors label {
+        color: #8A1F11; }
+      /* line 48, ../../app/stylesheets/formtastic_changes.sass */
+      form.formtastic fieldset.inputs .error .fieldWithErrors input, form.formtastic fieldset.inputs .error .fieldWithErrors select, form.formtastic fieldset.inputs .error .fieldWithErrors textarea {
+        border: 1px solid red; }
+    /* line 50, ../../app/stylesheets/formtastic_changes.sass */
+    form.formtastic fieldset.inputs .error ul {
+      list-style-type: none;
+      margin: 0; }
+  /* line 54, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic fieldset {
+    padding: 1em; }
+    /* line 57, ../../app/stylesheets/formtastic_changes.sass */
+    form.formtastic fieldset ol li {
+      margin-bottom: 0;
+      /* Este estilo lo inserto para formatear la label de un campo date_select, */
+      /* ya que Rails inserta un fieldset añadiendo un legend con la label. */
+      /* Este estilo se utiliza para formatear la lista de varios check_box. */ }
+      /* line 59, ../../app/stylesheets/formtastic_changes.sass */
+      form.formtastic fieldset ol li.string input, form.formtastic fieldset ol li.numeric input {
+        width: auto; }
+      /* line 63, ../../app/stylesheets/formtastic_changes.sass */
+      form.formtastic fieldset ol li fieldset {
+        padding: 0.2em; }
+        /* line 66, ../../app/stylesheets/formtastic_changes.sass */
+        form.formtastic fieldset ol li fieldset legend .label {
+          font-weight: bold;
+          color: #333;
+          font-size: 0.8em; }
+      /* line 72, ../../app/stylesheets/formtastic_changes.sass */
+      form.formtastic fieldset ol li.lista_check_boxes fieldset ol {
+        margin-bottom: 0; }
+        /* line 74, ../../app/stylesheets/formtastic_changes.sass */
+        form.formtastic fieldset ol li.lista_check_boxes fieldset ol li {
+          display: inline-block;
+          *display: inline; }
+          /* line 77, ../../app/stylesheets/formtastic_changes.sass */
+          form.formtastic fieldset ol li.lista_check_boxes fieldset ol li label {
+            width: 20%;
+            display: inline;
+            margin-right: 1em; }
+
+/* Modificacion posicion de los legend ya que en ie salen mal */
+/* line 84, ../../app/stylesheets/formtastic_changes.sass */
+form.formtastic legend {
+  margin-left: -0.75em; }
+/* line 88, ../../app/stylesheets/formtastic_changes.sass */
+form.formtastic fieldset ol li fieldset legend, form.formtastic fieldset ol li fieldset span {
+  position: relative; }
+
+/* line 91, ../../app/stylesheets/formtastic_changes.sass */
+form.formtastic fieldset ol li.radio fieldset ol, form.formtastic fieldset ol li.check_boxes fieldset ol {
+  margin-bottom: 0; }

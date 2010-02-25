@@ -1,0 +1,537 @@
+@import base.sass
+
+//@import formtastic.sass
+//@import formtastic_changes.sass
+@import ryanb_application.sass
+@import notificaciones.sass
+
+//Layout de tres columnas
+=three-columns(!header,!left,!center,!right,!footer)
+  #{!header}, #{!footer}
+    +column(24)
+  #{!left}
+    +column(4)
+  #{!center}
+    +column(13)
+  #{!right}
+    +column(7, "last")
+
+
+//Layout de dos columnas
+=two-columns(!header,!left,!center,!footer)
+  #{!header}, #{!footer}
+    +column(24)
+  #{!left}
+    +column(4)
+  #{!center}
+    +column(20, "last")
+
+
+//Layout de una columna
+=one-column(!header,!center,!footer)
+  #{!header}
+    +column(24)
+  #{!center}
+    +column(24)
+  #{!footer}
+    +column(24)
+
+body
+  .container
+    +container
+    +showgrid
+
+#container
+  +column(24)
+  :margin 0
+  :margin 20px auto
+  :display block
+  :float none
+  :background #fff
+
+//Comentado de momento
+//  #container
+//    :background-image url(/images/s2dlogo.jpg)
+//    :background-repeat no-repeat
+    //+showgrid
+    //:background #fff
+
+body.three-columns
+  +three-columns("#header","#left-side","#content","#ads-and-stuff","#footer")
+
+body.two-columns
+  +two-columns("#header","#left-side","#content","#footer")
+
+body.one-column
+  +one-column("#header", "#content","#footer")
+
+
+=a_la_derecha
+  :float right
+  :text-align right
+
+=a_la_izquierda
+  :float left
+  :text-align left
+
+#main-menu
+  +column(24)
+
+#login_menu
+  :margin 10px
+  :text-align right
+
+#header
+  :background-image url(/images/fabrica_517_1.jpg)
+  :background-repeat no-repeat
+  :margin-bottom 0.5em
+
+#header_title
+  :font-size 1.5em
+  :text-align right
+  :margin 10px
+
+#content
+  :min-height 200px
+
+#footer
+  +a_la_derecha
+  :padding 5px
+  :font-size 0.9em
+
+/* generico */
+body
+  :font-size 0.8em
+  :font-family arial
+
+td, th
+  :padding 0
+  :margin 0
+
+p
+  :padding 0
+  :margin 0
+
+a
+  :text-decoration none
+  +link-colors(#00f, #414141, #00f, #00f, #00f)
+
+h1
+  :font-size 1.5em
+  :padding-top .5em
+
+.acciones
+  :text-align right
+
+.invisible
+  :display none
+
+#password, #login
+  :width 10em
+  :margin 0
+  :padding 0
+
+input[type="password"]
+  :background-color #fff
+
+/* session
+form#form_session
+  +column(8)
+  :border 1px solid #ccc
+  :padding .5em
+
+/* cola produccion
+form#new_orden
+  +column(7)
+  :border 1px solid #ccc
+  :padding 0.25em
+  label
+    :width 30%
+  input#orden_numero_mezclas, input#orden_porcentaje_peso
+    :width 2em
+  input#orden_estado
+    :width 5em
+  select
+    :width auto
+  select#orden_formula_id
+    :width 4.25em
+  select#orden_articulo_id
+    :width 5em
+  .descripcion
+    :font-size 90%
+
+/* paginacion
+.pagination
+  :padding-bottom .5em
+  :text-align right
+
+  a
+    :padding 1px 5px
+    :margin 1px
+    :border 1px solid #ccc
+    :text-decoration none
+    :color #00f
+
+    &:hover, &:active
+      :border 1px solid #00f
+      :color #000
+
+  span
+    &.current
+      :padding 2px 5px
+      :margin 1px
+      :border 1px solid #00f
+      :font-weight bold
+      :background-color #00f
+      :color #fff
+
+    &.disabled
+      :padding 2px 5px
+      :margin 1px
+      :border 1px solid #ccc
+      :color #ccc
+
+/* Formulario de búsqueda
+.formulario_busqueda
+  ol
+    :margin 0
+    :list_style_type none
+    li
+      :display inline
+  input
+    :padding 2px
+
+/* show
+.show
+  :border 1px solid #ccc
+  :padding .5em
+  :overflow hidden
+
+  form
+    :border none
+    :padding 0
+
+  fieldset
+    :border none
+    :padding 1em
+
+    legend
+      :margin-left -0.75em
+
+    ol
+      :list-style-type none
+      :margin 0
+      li
+        :display block
+        :margin-bottom 0
+        :padding-top 0.2em
+        :clear both
+        label
+          :float left
+          :width 15%
+          :display block
+
+input[type="text"], input[type="password"], select
+  :border 1px solid #BBB
+
+select#formula_tipo
+  :width auto
+input#formula_nombre
+  :width 15em
+
+// Errores en los formularios
+form.formtastic fieldset ol li
+  &.error input, &.error select
+    :border 1px solid red
+  p.inline-errors
+    :margin 0
+    :margin-bottom 0.5em
+  label
+    :width 15%
+
+table.listado tr
+  td, th
+    :border-bottom 1px solid #CCC
+
+// DESGLOSE DE UNA FORMULA
+=desglose
+  &.header_desglose
+    :font-weight bold
+    //:border-bottom 1px solid #CCC
+    :font-size 90%
+  &.desglose
+    //:border-bottom 1px solid #CCC
+    :border-top 1px solid #CCC
+    :font-size 90%
+    .grueso1, .grueso2, .fino
+      :color blue
+      :cursor pointer
+    //&.sustituido
+    //  :color red
+    //  :border-left 1px solid #CCC
+    //  :border-right 1px solid #CCC
+  //&.sustituto
+  //  :font-size 90%
+  //  :background-color #fff99b
+  //  :border-left 1px solid #CCC
+  //  :border-right 1px solid #CCC
+  //  :border-top none
+  span
+    :display inline-block
+    &.peso, &.vena, &.tolerancia, &.afinado, &.codigo_componente,
+    &.grueso1, &.grueso2, &.fino, &.estado
+      :width 5em
+      :margin-right 1em
+      input, select
+        :width 5em
+      .formulario
+        :display none
+    &.peso, &.vena, &.tolerancia, &.afinado
+      :text-align right
+    &.descripcion_componente
+      :width 18em
+      :margin-right 1em
+      select
+        :width 18em
+    &.accion
+      :color black
+      //:width 5em
+      //.cancelar, .sustituir
+      //  :display none
+
+form fieldset ol li
+  +desglose
+
+#actual fieldset ol li
+  +desglose
+  &.desglose
+    span
+      &.grueso1, &.grueso2, &.fino
+        :color black
+        :cursor default
+
+  
+
+#dos-columnas
+  +column(24)
+  #izquierda
+    +column(16)
+  #derecha
+    +column(7)
+  #busqueda
+    +column(14)
+  #formulario
+    +column(9)
+  #subtitulo_sustitucion
+    +column(2)
+  #elementos
+    +column(15)
+
+#sustitucion
+  +column(22)
+  #subtitulo
+    +column(2)
+  #elementos
+    +column(20, "last")
+
+=num_column_en_produccion
+  +column(15)
+
+// COLA DE PRODUCCION
+ol#cola_produccion
+  +num_column_en_produccion
+  :font-size 90%
+  li.header
+    +num_column_en_produccion
+    :font-weight bold
+    :margin-left 2px
+    ul
+      :list_style_type none
+      li
+        :display inline
+      .num_orden
+        +column(1)
+      .formula
+        +column(2)
+      .articulo
+        +column(5)
+      .porcentaje_peso, .numero_mezclas, .destino
+        +column(2)
+        :text-align right
+
+  li.ui-state-default
+    +num_column_en_produccion
+    :border 1px solid #999
+    :margin 2px
+    :padding 2px
+    :background #E6E6E6 url(/images/ui-bg_glass_75_e6e6e6_1x400.png) repeat-x scroll 50% 50%
+    :cursor pointer
+    ul.item
+      +num_column_en_produccion
+      :list_style_type none
+      li
+        :display inline
+      .borrar
+        +column(1)
+        :text-align right
+      .formula
+        +column(2)
+      .articulo
+        +column(5)
+      .porcentaje_peso, .numero_mezclas, .destino
+        +column(2)
+        :text-align right
+      .numero_mezclas, .porcentaje_peso, .formula, .destino
+        :color blue
+        .formulario
+          :display none
+      .numero_mezclas .formulario
+        input
+          :width 2.5em
+          :margin 0
+          :padding 0
+      .porcentaje_peso .formulario
+        input
+          :width 3em
+          :margin 0
+          :padding 0
+      .formula .formulario
+        select
+          :width 4em
+          :margin 0
+          :padding 0
+      .destino .formulario
+        select
+          :width 4em
+          :margin 0
+          :padding 0
+
+// PRODUCCION ACTUAL
+ol#produccion_actual
+  +num_column_en_produccion
+  :font-size 90%
+  li.ui-state-default
+    +num_column_en_produccion
+    :border 1px solid #999
+    :margin 2px
+    :padding 2px
+    :background #E6E6E6 url(/images/pbar-ani-2.gif) repeat-x scroll
+    ul.item
+      +num_column_en_produccion
+      :list_style_type none
+      li
+        :display inline
+        :font-weight bold
+      .formula
+        +column(2)
+      .articulo
+        +column(5)
+      .porcentaje_peso, .numero_mezclas, .destino
+        +column(2)
+        :text-align right
+
+// ORDENES TERMINADAS
+ol#ordenes_terminadas
+  +num_column_en_produccion
+  :font-size 90%
+  li.ui-state-default
+    +num_column_en_produccion
+    :border 1px solid #999
+    :margin 2px
+    :padding 2px
+    :background #E6E6E6 url(/images/ui-bg_glass_65_ffffff_1x400.png) repeat-x scroll 50% 50%
+    ul.item
+      +num_column_en_produccion
+      :list_style_type none
+      li
+        :display inline
+      .formula
+        +column(2)
+      .articulo
+        +column(5)
+      .porcentaje_peso, .numero_mezclas, .destino
+        +column(2)
+        :text-align right
+
+.wait
+  :background url(/images/wait.gif) no-repeat center center
+
+.anular_linea_desglose, .activar_linea_desglose
+  :display none
+
+.siguiente_orden
+  :border 1px solid #CCC
+  :padding 5px
+
+// FORMULARIO SUSTITUCION
+fieldset ol li.formulario_sustitucion
+  :border 2px solid #fff99b
+  :background-color #fffcc6
+  :padding 5px
+  .titulo_sustitucion
+    :font-weight bold
+    :font-size 120%
+  .subtitulo_sustitucion
+    :font-weight bold
+    //:margin-top 1em
+  .elemento_actual
+    :font-weight bold
+  .nuevos_elementos
+    //:padding 10px
+    li.desglose, li.header_desglose
+      :border none
+  span
+    &.descripcion_componente
+      :width 15em
+    &.codigo_componente
+      :width 4em
+    &.grueso1, &.grueso2, &.fino
+      :color #333
+      :cursor default
+    &.borrar_sustituto
+      :color blue
+      :cursor pointer
+    &.tolerancia
+      :width 5em
+      :margin-right 1em
+      input
+        :width 4em
+        :text-align right
+    &.peso, &.vena, &.afinado
+      :width 4em
+      :margin-right 1em
+      input
+        :width 4em
+        :text-align right
+    &.borrar
+      :font-weight bold
+      
+
+
+.sustitutos
+  :padding 5px 40px
+  :color #333
+  .subtitulo
+    :font-weight bold
+
+form fieldset.sustitutos
+  :border 2px solid #fff99b
+  :background-color #fffcc6
+  legend
+    :color #333
+    :font-size 100%
+    :font-weight 500
+    :margin 0
+  li.header_desglose, li.desglose
+    :border none
+    :font-size 100%
+    span
+      :color #333
+      :cursor default
+
+fieldset ol.produccion_actual
+  :list-style-type none
+
+li.cargando_elementos
+  :text-align center
+  :background url(/images/ajax-loader.gif) no-repeat 50% 50%

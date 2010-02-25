@@ -1,0 +1,92 @@
+
+/* -------------------------------------------------------------------------------------------------
+
+  Load this stylesheet after formtastic.css in your layouts to override the CSS to suit your needs.
+  This will allow you to update formtastic.css with new releases without clobbering your own changes.
+
+  For example, to make the inline hint paragraphs a little darker in color than the standard #666:
+
+  form.formtastic fieldset ol li p.inline-hints { color:#333; }
+
+  --------------------------------------------------------------------------------------------------
+
+form.formtastic
+  :border 1px solid #ccc
+  :padding .5em
+  
+  .required
+    :color #333
+  
+  input, textarea, select
+    :font-family Verdana,Helvetica,Arial
+    :font-weight normal
+
+  textarea
+    :height 6em
+  
+  .select select
+    :width 25em
+
+  fieldset.buttons
+    :padding 0
+    :padding-left 85%
+    input
+      :width 10em
+  
+  /* Estilos aplicados a los errores de un formulario
+  fieldset.inputs
+    .error
+      :background none
+      :border 0
+      :font-weight normal
+      .fieldWithErrors
+        :background none
+        :display inline
+        :padding 0
+        label
+          :color #8A1F11
+        input, select, textarea
+          :border 1px solid red
+      ul
+        :list-style-type none
+        :margin 0
+
+  fieldset
+    :padding 1em
+    ol
+      li
+        :margin-bottom 0
+        &.string input, &.numeric input
+          :width auto
+        /* Este estilo lo inserto para formatear la label de un campo date_select,
+        /* ya que Rails inserta un fieldset añadiendo un legend con la label.
+        fieldset
+          :padding 0.2em
+          legend
+            .label
+              :font-weight bold
+              :color #333
+              :font-size 0.8em
+        /* Este estilo se utiliza para formatear la lista de varios check_box.
+        &.lista_check_boxes
+          fieldset ol
+            :margin-bottom 0
+            li
+              :display inline-block
+              :*display inline
+              label
+                :width 20%
+                :display inline
+                :margin-right 1em
+  
+/* Modificacion posicion de los legend ya que en ie salen mal
+form.formtastic 
+  legend
+    :margin-left -0.75em
+  fieldset ol li 
+    fieldset
+      legend, span
+        :position relative
+
+form.formtastic fieldset ol li.radio fieldset ol, form.formtastic fieldset ol li.check_boxes fieldset ol
+  :margin-bottom 0
