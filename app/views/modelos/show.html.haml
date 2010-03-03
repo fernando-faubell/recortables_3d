@@ -1,0 +1,12 @@
+- title "Modelo"
+
+%p
+  %strong Nombre:
+  =h @modelo.nombre
+
+%p
+  = link_to "Edit", edit_modelo_path(@modelo)
+  |
+  = link_to "Destroy", @modelo, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", modelos_path

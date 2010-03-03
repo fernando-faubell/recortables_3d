@@ -1,9 +1,12 @@
-- form_for @recortable do |f|
+- semantic_form_for @recortable do |f|
   = f.error_messages
   
   %br
   = f.label t :modelo
-  = f.select :modelo, @modelos, :include_blank => true
+  /= f.radio_button :modelo, "kk"
+  = f.input :radio_input, @modelos
+  /= f.select :modelo, @modelos, :include_blank => true
+
 
   %br
   = f.label t :complejidad

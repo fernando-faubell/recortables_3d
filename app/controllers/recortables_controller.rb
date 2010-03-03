@@ -36,6 +36,7 @@ class RecortablesController < ApplicationController
   end
   
   def update
+    hkkkk
     @recortable = Recortable.find(params[:id])
     if @recortable.update_attributes(params[:recortable])
       flash[:notice] = t :recortable_actualizado
@@ -58,7 +59,7 @@ class RecortablesController < ApplicationController
   end
 
   def carga_combos
-    @modelos = Recortable.lista_select_modelos
+    @modelos = Modelo.lista_select
     @complejidad = Recortable.lista_select_complejidad    
   end
   private :carga_combos

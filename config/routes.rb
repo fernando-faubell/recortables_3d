@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :modelos
+
   map.resources :recortables
 
   map.resource :bienvenida, :only => :show, :controller => :bienvenida

@@ -1,0 +1,13 @@
+- title "Modelos"
+
+%table
+  %tr
+    %th Nombre
+  - for modelo in @modelos
+    %tr
+      %td= h modelo.nombre
+      %td= link_to 'Show', modelo
+      %td= link_to 'Edit', edit_modelo_path(modelo)
+      %td= link_to 'Destroy', modelo, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Modelo", new_modelo_path

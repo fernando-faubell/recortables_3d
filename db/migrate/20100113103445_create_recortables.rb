@@ -2,7 +2,7 @@ class CreateRecortables < ActiveRecord::Migration
   def self.up
     create_table :recortables do |t|
 
-      t.string :modelo
+      t.integer :modelo_id
       t.string :complejidad
       t.string :color_fondo
       t.string :color_aristas

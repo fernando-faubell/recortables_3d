@@ -9,10 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100113103445) do
+ActiveRecord::Schema.define(:version => 20100303061140) do
+
+  create_table "modelos", :force => true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "recortables", :force => true do |t|
-    t.string   "modelo"
+    t.integer  "modelo_id"
     t.string   "complejidad"
     t.string   "color_fondo"
     t.string   "color_aristas"

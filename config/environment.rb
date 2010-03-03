@@ -28,6 +28,8 @@ Rails::Initializer.run do |config|
   config.gem 'haml'
   # Soporte para multilenguaje (configurado desde el navegador)
   config.gem 'http_accept_language'
+  # Mejora de los formularios
+  config.gem 'formtastic'
 
 
   # Only load the plugins named here, in the order given (default is alphabetical).
