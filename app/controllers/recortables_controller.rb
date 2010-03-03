@@ -9,14 +9,14 @@ class RecortablesController < ApplicationController
   end
   
   def new
-    @recortable = Recortable.new
+    @recortable = Recortable.new(:color_fondo => '#118833', :color_aristas => '#442211')
     carga_combos
   end
   
   def create    
     @recortable = Recortable.new(params[:recortable])
     if @recortable.save
-      flash[:notice] = t :recortable_creado
+      #flash[:notice] = t :recortable_creado
 
       if params[:commit] == t(:previsualizar)
         redirect_to edit_recortable_path(@recortable)
@@ -35,11 +35,10 @@ class RecortablesController < ApplicationController
     carga_combos
   end
   
-  def update
-    hkkkk
+  def update    
     @recortable = Recortable.find(params[:id])
     if @recortable.update_attributes(params[:recortable])
-      flash[:notice] = t :recortable_actualizado
+      #flash[:notice] = t :recortable_actualizado
       if params[:commit] == t(:previsualizar)
         redirect_to edit_recortable_path(@recortable)
       else
@@ -54,12 +53,12 @@ class RecortablesController < ApplicationController
   def destroy
     @recortable = Recortable.find(params[:id])
     @recortable.destroy
-    flash[:notice] = t :recortable_eliminado
+    #flash[:notice] = t :recortable_eliminado
     redirect_to root_path
   end
 
   def carga_combos
-    @modelos = Modelo.lista_select
+    @modelos = Modelo.lista_select    
     @complejidad = Recortable.lista_select_complejidad    
   end
   private :carga_combos

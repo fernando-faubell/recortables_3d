@@ -3,10 +3,11 @@ class Modelo < ActiveRecord::Base
   has_many :recortables
   attr_accessible :nombre
 
+  validates_presence_of :nombre
+  validates_uniqueness_of :nombre
 
   def self.lista_select
     #TODO: Buscar la forma de traducir los modelos.
-    #[[I18n.t(:globo),1]]
     all.map{|k| [k.nombre,k.id]}
   end
 
