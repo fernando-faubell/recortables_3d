@@ -2,7 +2,7 @@
 
 %p
   %strong Modelo:
-  = @recortable.modelo
+  = @recortable.modelo.try(:nombre)
 
 %p
   %strong Complejidad:
