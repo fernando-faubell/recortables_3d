@@ -250,8 +250,8 @@ body.bp div.border {
   border-right: 1px solid #eeeeee; }
 /* line 42, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_scaffolding.sass */
 body.bp div.colborder {
-  padding-right: 13px;
-  margin-right: 14px;
+  padding-right: 24px;
+  margin-right: 25px;
   border-right: 1px solid #eeeeee; }
 /* line 44, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_scaffolding.sass */
 body.bp hr {
@@ -317,7 +317,7 @@ body.bp .bottom {
   padding-bottom: 0; }
 /* line 7, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_debug.sass */
 body.bp .showgrid {
-  background: url('/images/grid.png?1267133144'); }
+  background: url('/images/grid.png?1267133419'); }
 /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 body.bp .error {
   padding: .8em;
@@ -420,7 +420,7 @@ form.bp textarea {
 
 /* line 27, ../../app/stylesheets/screen.sass */
 body.three-col #container {
-  width: 400px;
+  width: 970px;
   margin: 0 auto;
   overflow: hidden;
   display: inline-block; }
@@ -432,7 +432,7 @@ body.three-col #header, body.three-col #footer {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 400px; }
+  width: 970px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-col #header, * html body.three-col #footer {
     overflow-x: hidden; }
@@ -441,7 +441,7 @@ body.three-col #sidebar {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 126.667px; }
+  width: 316.667px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-col #sidebar {
     overflow-x: hidden; }
@@ -450,7 +450,7 @@ body.three-col #content {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 263.333px; }
+  width: 643.333px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-col #content {
     overflow-x: hidden; }

@@ -1,9 +1,9 @@
 @import base.sass
-
-//@import formtastic.sass
-//@import formtastic_changes.sass
-@import ryanb_application.sass
-@import notificaciones.sass
+@import partials/base.sass
+@import formtastic.sass
+@import formtastic_changes.sass
+@import recortables.sass
+//@import notificaciones.sass
 
 //Layout de tres columnas
 =three-columns(!header,!left,!center,!right,!footer)
@@ -82,7 +82,7 @@ body.one-column
   :text-align right
 
 #header
-  :background-image url(/images/fabrica_517_1.jpg)
+  :background-image url(/images/header_background.png)
   :background-repeat no-repeat
   :margin-bottom 0.5em
 
@@ -140,25 +140,6 @@ form#form_session
   :border 1px solid #ccc
   :padding .5em
 
-/* cola produccion
-form#new_orden
-  +column(7)
-  :border 1px solid #ccc
-  :padding 0.25em
-  label
-    :width 30%
-  input#orden_numero_mezclas, input#orden_porcentaje_peso
-    :width 2em
-  input#orden_estado
-    :width 5em
-  select
-    :width auto
-  select#orden_formula_id
-    :width 4.25em
-  select#orden_articulo_id
-    :width 5em
-  .descripcion
-    :font-size 90%
 
 /* paginacion
 .pagination
@@ -191,15 +172,6 @@ form#new_orden
       :border 1px solid #ccc
       :color #ccc
 
-/* Formulario de búsqueda
-.formulario_busqueda
-  ol
-    :margin 0
-    :list_style_type none
-    li
-      :display inline
-  input
-    :padding 2px
 
 /* show
 .show
@@ -234,11 +206,6 @@ form#new_orden
 input[type="text"], input[type="password"], select
   :border 1px solid #BBB
 
-select#formula_tipo
-  :width auto
-input#formula_nombre
-  :width 15em
-
 // Errores en los formularios
 form.formtastic fieldset ol li
   &.error input, &.error select
@@ -254,28 +221,6 @@ table.listado tr
     :border-bottom 1px solid #CCC
 
 // DESGLOSE DE UNA FORMULA
-=desglose
-  &.header_desglose
-    :font-weight bold
-    //:border-bottom 1px solid #CCC
-    :font-size 90%
-  &.desglose
-    //:border-bottom 1px solid #CCC
-    :border-top 1px solid #CCC
-    :font-size 90%
-    .grueso1, .grueso2, .fino
-      :color blue
-      :cursor pointer
-    //&.sustituido
-    //  :color red
-    //  :border-left 1px solid #CCC
-    //  :border-right 1px solid #CCC
-  //&.sustituto
-  //  :font-size 90%
-  //  :background-color #fff99b
-  //  :border-left 1px solid #CCC
-  //  :border-right 1px solid #CCC
-  //  :border-top none
   span
     :display inline-block
     &.peso, &.vena, &.tolerancia, &.afinado, &.codigo_componente,
@@ -299,18 +244,8 @@ table.listado tr
       //.cancelar, .sustituir
       //  :display none
 
-form fieldset ol li
-  +desglose
 
-#actual fieldset ol li
-  +desglose
-  &.desglose
-    span
-      &.grueso1, &.grueso2, &.fino
-        :color black
-        :cursor default
 
-  
 
 #dos-columnas
   +column(24)
@@ -337,201 +272,7 @@ form fieldset ol li
 =num_column_en_produccion
   +column(15)
 
-// COLA DE PRODUCCION
-ol#cola_produccion
-  +num_column_en_produccion
-  :font-size 90%
-  li.header
-    +num_column_en_produccion
-    :font-weight bold
-    :margin-left 2px
-    ul
-      :list_style_type none
-      li
-        :display inline
-      .num_orden
-        +column(1)
-      .formula
-        +column(2)
-      .articulo
-        +column(5)
-      .porcentaje_peso, .numero_mezclas, .destino
-        +column(2)
-        :text-align right
-
-  li.ui-state-default
-    +num_column_en_produccion
-    :border 1px solid #999
-    :margin 2px
-    :padding 2px
-    :background #E6E6E6 url(/images/ui-bg_glass_75_e6e6e6_1x400.png) repeat-x scroll 50% 50%
-    :cursor pointer
-    ul.item
-      +num_column_en_produccion
-      :list_style_type none
-      li
-        :display inline
-      .borrar
-        +column(1)
-        :text-align right
-      .formula
-        +column(2)
-      .articulo
-        +column(5)
-      .porcentaje_peso, .numero_mezclas, .destino
-        +column(2)
-        :text-align right
-      .numero_mezclas, .porcentaje_peso, .formula, .destino
-        :color blue
-        .formulario
-          :display none
-      .numero_mezclas .formulario
-        input
-          :width 2.5em
-          :margin 0
-          :padding 0
-      .porcentaje_peso .formulario
-        input
-          :width 3em
-          :margin 0
-          :padding 0
-      .formula .formulario
-        select
-          :width 4em
-          :margin 0
-          :padding 0
-      .destino .formulario
-        select
-          :width 4em
-          :margin 0
-          :padding 0
-
-// PRODUCCION ACTUAL
-ol#produccion_actual
-  +num_column_en_produccion
-  :font-size 90%
-  li.ui-state-default
-    +num_column_en_produccion
-    :border 1px solid #999
-    :margin 2px
-    :padding 2px
-    :background #E6E6E6 url(/images/pbar-ani-2.gif) repeat-x scroll
-    ul.item
-      +num_column_en_produccion
-      :list_style_type none
-      li
-        :display inline
-        :font-weight bold
-      .formula
-        +column(2)
-      .articulo
-        +column(5)
-      .porcentaje_peso, .numero_mezclas, .destino
-        +column(2)
-        :text-align right
-
-// ORDENES TERMINADAS
-ol#ordenes_terminadas
-  +num_column_en_produccion
-  :font-size 90%
-  li.ui-state-default
-    +num_column_en_produccion
-    :border 1px solid #999
-    :margin 2px
-    :padding 2px
-    :background #E6E6E6 url(/images/ui-bg_glass_65_ffffff_1x400.png) repeat-x scroll 50% 50%
-    ul.item
-      +num_column_en_produccion
-      :list_style_type none
-      li
-        :display inline
-      .formula
-        +column(2)
-      .articulo
-        +column(5)
-      .porcentaje_peso, .numero_mezclas, .destino
-        +column(2)
-        :text-align right
 
 .wait
   :background url(/images/wait.gif) no-repeat center center
 
-.anular_linea_desglose, .activar_linea_desglose
-  :display none
-
-.siguiente_orden
-  :border 1px solid #CCC
-  :padding 5px
-
-// FORMULARIO SUSTITUCION
-fieldset ol li.formulario_sustitucion
-  :border 2px solid #fff99b
-  :background-color #fffcc6
-  :padding 5px
-  .titulo_sustitucion
-    :font-weight bold
-    :font-size 120%
-  .subtitulo_sustitucion
-    :font-weight bold
-    //:margin-top 1em
-  .elemento_actual
-    :font-weight bold
-  .nuevos_elementos
-    //:padding 10px
-    li.desglose, li.header_desglose
-      :border none
-  span
-    &.descripcion_componente
-      :width 15em
-    &.codigo_componente
-      :width 4em
-    &.grueso1, &.grueso2, &.fino
-      :color #333
-      :cursor default
-    &.borrar_sustituto
-      :color blue
-      :cursor pointer
-    &.tolerancia
-      :width 5em
-      :margin-right 1em
-      input
-        :width 4em
-        :text-align right
-    &.peso, &.vena, &.afinado
-      :width 4em
-      :margin-right 1em
-      input
-        :width 4em
-        :text-align right
-    &.borrar
-      :font-weight bold
-      
-
-
-.sustitutos
-  :padding 5px 40px
-  :color #333
-  .subtitulo
-    :font-weight bold
-
-form fieldset.sustitutos
-  :border 2px solid #fff99b
-  :background-color #fffcc6
-  legend
-    :color #333
-    :font-size 100%
-    :font-weight 500
-    :margin 0
-  li.header_desglose, li.desglose
-    :border none
-    :font-size 100%
-    span
-      :color #333
-      :cursor default
-
-fieldset ol.produccion_actual
-  :list-style-type none
-
-li.cargando_elementos
-  :text-align center
-  :background url(/images/ajax-loader.gif) no-repeat 50% 50%

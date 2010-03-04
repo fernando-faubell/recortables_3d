@@ -1,23 +1,23 @@
-/* line 3, ../../app/stylesheets/ryanb_application.sass */
+/* line 3, ../../app/stylesheets/recortables.sass */
 body {
   background-color: #e9e8e5;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
-/* line 9, ../../app/stylesheets/ryanb_application.sass */
+/* line 9, ../../app/stylesheets/recortables.sass */
 a {
-  color: #0000FF; }
-  /* line 11, ../../app/stylesheets/ryanb_application.sass */
+  color: #AA00FF; }
+  /* line 11, ../../app/stylesheets/recortables.sass */
   a img {
     border: none; }
 
-/* line 14, ../../app/stylesheets/ryanb_application.sass */
+/* line 14, ../../app/stylesheets/recortables.sass */
 .clear {
   clear: both;
   height: 0;
   overflow: hidden; }
 
-/* line 19, ../../app/stylesheets/ryanb_application.sass */
+/* line 19, ../../app/stylesheets/recortables.sass */
 #container {
   width: 75%;
   margin: 0 auto;
@@ -25,29 +25,29 @@ a {
   border: solid 1px black;
   margin-top: 20px; }
 
-/* line 27, ../../app/stylesheets/ryanb_application.sass */
+/* line 30, ../../app/stylesheets/recortables.sass */
 #flash_notice,
 #flash_error {
   padding: 5px 8px;
   margin: 10px 0; }
 
-/* line 32, ../../app/stylesheets/ryanb_application.sass */
+/* line 35, ../../app/stylesheets/recortables.sass */
 #flash_notice {
   background-color: #CFC;
   border: solid 1px #6C6; }
 
-/* line 36, ../../app/stylesheets/ryanb_application.sass */
+/* line 39, ../../app/stylesheets/recortables.sass */
 #flash_error {
   background-color: #FCC;
   border: solid 1px #C66; }
 
-/* line 40, ../../app/stylesheets/ryanb_application.sass */
+/* line 43, ../../app/stylesheets/recortables.sass */
 .fieldWithErrors {
   padding: 2px;
   background-color: red;
   display: table; }
 
-/* line 46, ../../app/stylesheets/ryanb_application.sass */
+/* line 49, ../../app/stylesheets/recortables.sass */
 #errorExplanation {
   width: 400px;
   border: 2px solid #CF0000;
@@ -55,7 +55,7 @@ a {
   padding-bottom: 12px;
   margin-bottom: 20px;
   background-color: #f0f0f0; }
-  /* line 53, ../../app/stylesheets/ryanb_application.sass */
+  /* line 56, ../../app/stylesheets/recortables.sass */
   #errorExplanation h2 {
     text-align: left;
     padding: 5px 5px 5px 15px;
@@ -64,32 +64,32 @@ a {
     font-size: 12px;
     background-color: #c00;
     color: #fff; }
-  /* line 62, ../../app/stylesheets/ryanb_application.sass */
+  /* line 65, ../../app/stylesheets/recortables.sass */
   #errorExplanation p {
     color: #333;
     margin-bottom: 0;
     padding: 8px; }
-  /* line 66, ../../app/stylesheets/ryanb_application.sass */
+  /* line 69, ../../app/stylesheets/recortables.sass */
   #errorExplanation ul {
     margin: 2px 24px; }
-    /* line 68, ../../app/stylesheets/ryanb_application.sass */
+    /* line 71, ../../app/stylesheets/recortables.sass */
     #errorExplanation ul li {
       font-size: 12px;
       list-style: disc; }
 
-/* line 73, ../../app/stylesheets/ryanb_application.sass */
+/* line 76, ../../app/stylesheets/recortables.sass */
 .error_message {
   float: right;
   color: #D00;
   font-size: 12px;
   padding-right: 50px; }
 
-/* line 80, ../../app/stylesheets/ryanb_application.sass */
+/* line 83, ../../app/stylesheets/recortables.sass */
 .formError {
   color: #D00;
   font-size: 12px; }
 
-/* line 85, ../../app/stylesheets/ryanb_application.sass */
+/* line 88, ../../app/stylesheets/recortables.sass */
 .required {
   font-weight: bold;
   color: blue; }

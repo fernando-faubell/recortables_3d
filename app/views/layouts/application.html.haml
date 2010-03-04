@@ -3,12 +3,15 @@
   %head
     %title= h(yield(:title) || "Untitled")
     = javascript_include_tag 'jquery-1.4.1', 'application', 'farbtastic'
-    = stylesheet_link_tag 'application', 'farbtastic', 'formtastic', 'formtastic_changes'
+    = stylesheet_link_tag 'application', 'farbtastic'
     = yield :head
   %body
-    %div{:id => "container"}
+    %div.two-columns{:id => "container"}
       - flash.each do |name, msg| 
         = content_tag :div, msg, :id => "flash_#{name}"
+      %div.one-column{:id => "header"}
+        /= "hokkkkkkkkkkkkkkkkkkkkkkkla"
       - if show_title?
         %h1=h yield :title
       = yield
+    %div.one-column{:id => "footer"}

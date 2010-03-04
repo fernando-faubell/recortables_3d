@@ -895,7 +895,7 @@ input.span-24, textarea.span-24, select.span-24 {
 
 /* line 7, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_debug.sass */
 .showgrid {
-  background: url('/images/grid.png?1267133144'); }
+  background: url('/images/grid.png?1267133419'); }
 
 /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_interaction.sass */
 .error {
@@ -1012,26 +1012,299 @@ textarea {
   width: 390px;
   height: 250px; }
 
-/* line 3, ../../app/stylesheets/ryanb_application.sass */
+/* line 1, ../../app/stylesheets/formtastic.sass */
+form.formtastic {
+  margin: 0;
+  padding: 0; }
+  /* line 5, ../../app/stylesheets/formtastic.sass */
+  form.formtastic ul, form.formtastic ol, form.formtastic li, form.formtastic fieldset, form.formtastic legend, form.formtastic input, form.formtastic textarea, form.formtastic select, form.formtastic p {
+    margin: 0;
+    padding: 0; }
+  /* line 9, ../../app/stylesheets/formtastic.sass */
+  form.formtastic fieldset {
+    border: 0; }
+  /* line 12, ../../app/stylesheets/formtastic.sass */
+  form.formtastic em, form.formtastic strong {
+    font-style: normal;
+    font-weight: normal; }
+  /* line 16, ../../app/stylesheets/formtastic.sass */
+  form.formtastic ol, form.formtastic ul {
+    list-style: none; }
+  /* line 19, ../../app/stylesheets/formtastic.sass */
+  form.formtastic abbr, form.formtastic acronym {
+    border: 0;
+    font-variant: normal; }
+  /* line 23, ../../app/stylesheets/formtastic.sass */
+  form.formtastic input, form.formtastic textarea, form.formtastic select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit; }
+  /* line 28, ../../app/stylesheets/formtastic.sass */
+  form.formtastic input, form.formtastic textarea, form.formtastic select {
+    font-size: 100%; }
+  /* line 31, ../../app/stylesheets/formtastic.sass */
+  form.formtastic legend {
+    color: #000; }
+  /* line 34, ../../app/stylesheets/formtastic.sass */
+  form.formtastic fieldset {
+    display: inline-block; }
+    /* line 38, ../../app/stylesheets/formtastic.sass */
+    form.formtastic fieldset.buttons {
+      padding-left: 25%; }
+    /* line 42, ../../app/stylesheets/formtastic.sass */
+    form.formtastic fieldset.buttons li {
+      float: left;
+      padding-right: 0.5em; }
+    /* line 46, ../../app/stylesheets/formtastic.sass */
+    form.formtastic fieldset:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+
+/* line 54, ../../app/stylesheets/formtastic.sass */
+html[xmlns] form.formtastic fieldset {
+  display: block; }
+
+/* line 58, ../../app/stylesheets/formtastic.sass */
+* html form.formtastic fieldset {
+  height: 1%; }
+
+/* line 62, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li {
+  margin-bottom: 1.5em;
+  display: inline-block; }
+  /* line 66, ../../app/stylesheets/formtastic.sass */
+  form.formtastic fieldset ol li:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+/* line 74, ../../app/stylesheets/formtastic.sass */
+html[xmlns] form.formtastic fieldset ol li {
+  display: block; }
+
+/* line 78, ../../app/stylesheets/formtastic.sass */
+* html form.formtastic fieldset ol li {
+  height: 1%; }
+
+/* line 84, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li label {
+  display: block;
+  width: 25%;
+  float: left;
+  padding-top: .2em; }
+/* line 90, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li li label {
+  line-height: 100%;
+  padding-top: 0; }
+  /* line 94, ../../app/stylesheets/formtastic.sass */
+  form.formtastic fieldset ol li li label input {
+    line-height: 100%;
+    vertical-align: middle;
+    margin-top: -0.1em; }
+/* line 99, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li fieldset {
+  position: relative; }
+  /* line 102, ../../app/stylesheets/formtastic.sass */
+  form.formtastic fieldset ol li fieldset legend {
+    position: absolute;
+    width: 25%;
+    padding-top: 0.1em; }
+    /* line 107, ../../app/stylesheets/formtastic.sass */
+    form.formtastic fieldset ol li fieldset legend span {
+      position: absolute; }
+  /* line 110, ../../app/stylesheets/formtastic.sass */
+  form.formtastic fieldset ol li fieldset ol {
+    float: left;
+    width: 74%;
+    margin: 0;
+    padding: 0 0 0 25%; }
+    /* line 116, ../../app/stylesheets/formtastic.sass */
+    form.formtastic fieldset ol li fieldset ol li {
+      padding: 0;
+      border: 0; }
+/* line 121, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li p.inline-hints {
+  color: #666;
+  margin: 0.5em 0 0 25%; }
+/* line 125, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li p.inline-errors {
+  color: #cc0000;
+  margin: 0.5em 0 0 25%; }
+/* line 129, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li ul.errors {
+  color: #cc0000;
+  margin: 0.5em 0 0 25%;
+  list-style: square; }
+  /* line 134, ../../app/stylesheets/formtastic.sass */
+  form.formtastic fieldset ol li ul.errors li {
+    padding: 0;
+    border: none;
+    display: list-item; }
+/* line 139, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li.string input, form.formtastic fieldset ol li.numeric input, form.formtastic fieldset ol li.text textarea {
+  width: 74%; }
+/* line 142, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li.hidden {
+  display: none; }
+/* line 145, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li.boolean label {
+  padding-left: 25%;
+  width: auto; }
+  /* line 149, ../../app/stylesheets/formtastic.sass */
+  form.formtastic fieldset ol li.boolean label input {
+    margin: 0 0.5em 0 0.2em; }
+/* line 152, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li.radio fieldset ol, form.formtastic fieldset ol li.check_boxes fieldset ol {
+  margin-bottom: -0.6em; }
+  /* line 155, ../../app/stylesheets/formtastic.sass */
+  form.formtastic fieldset ol li.radio fieldset ol li, form.formtastic fieldset ol li.check_boxes fieldset ol li {
+    margin: 0.1em 0 0.5em 0; }
+    /* line 158, ../../app/stylesheets/formtastic.sass */
+    form.formtastic fieldset ol li.radio fieldset ol li label, form.formtastic fieldset ol li.check_boxes fieldset ol li label {
+      float: none;
+      width: 100%; }
+      /* line 162, ../../app/stylesheets/formtastic.sass */
+      form.formtastic fieldset ol li.radio fieldset ol li label input, form.formtastic fieldset ol li.check_boxes fieldset ol li label input {
+        margin-right: 0.2em; }
+/* line 165, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li.date fieldset ol li, form.formtastic fieldset ol li.time fieldset ol li, form.formtastic fieldset ol li.datetime fieldset ol li {
+  float: left;
+  width: auto;
+  margin: 0 .3em 0 0; }
+/* line 170, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li.date fieldset ol li label, form.formtastic fieldset ol li.time fieldset ol li label, form.formtastic fieldset ol li.datetime fieldset ol li label {
+  display: none; }
+/* line 173, ../../app/stylesheets/formtastic.sass */
+form.formtastic fieldset ol li.date fieldset ol li label input, form.formtastic fieldset ol li.time fieldset ol li label input, form.formtastic fieldset ol li.datetime fieldset ol li label input {
+  display: inline;
+  margin: 0;
+  padding: 0; }
+
+/* -------------------------------------------------------------------------------------------------
+ *
+ * Load this stylesheet after formtastic.css in your layouts to override the CSS to suit your needs.
+ * This will allow you to update formtastic.css with new releases without clobbering your own changes.
+ *
+ * For example, to make the inline hint paragraphs a little darker in color than the standard #666:
+ *
+ * form.formtastic fieldset ol li p.inline-hints { color:#333; }
+ *
+ * -------------------------------------------------------------------------------------------------- */
+/* line 13, ../../app/stylesheets/formtastic_changes.sass */
+form.formtastic {
+  border: 1px solid #ccc;
+  padding: .5em;
+  /* Estilos aplicados a los errores de un formulario */ }
+  /* line 17, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic .required {
+    color: #333; }
+  /* line 20, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic input, form.formtastic textarea, form.formtastic select {
+    font-family: Verdana,Helvetica,Arial;
+    font-weight: normal; }
+  /* line 24, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic textarea {
+    height: 6em; }
+  /* line 27, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic .select select {
+    width: 25em; }
+  /* line 30, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic fieldset.buttons {
+    padding: 0;
+    padding-left: 85%; }
+    /* line 33, ../../app/stylesheets/formtastic_changes.sass */
+    form.formtastic fieldset.buttons input {
+      width: 10em; }
+  /* line 38, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic fieldset.inputs .error {
+    background: none;
+    border: 0;
+    font-weight: normal; }
+    /* line 42, ../../app/stylesheets/formtastic_changes.sass */
+    form.formtastic fieldset.inputs .error .fieldWithErrors {
+      background: none;
+      display: inline;
+      padding: 0; }
+      /* line 46, ../../app/stylesheets/formtastic_changes.sass */
+      form.formtastic fieldset.inputs .error .fieldWithErrors label {
+        color: #8A1F11; }
+      /* line 48, ../../app/stylesheets/formtastic_changes.sass */
+      form.formtastic fieldset.inputs .error .fieldWithErrors input, form.formtastic fieldset.inputs .error .fieldWithErrors select, form.formtastic fieldset.inputs .error .fieldWithErrors textarea {
+        border: 1px solid red; }
+    /* line 50, ../../app/stylesheets/formtastic_changes.sass */
+    form.formtastic fieldset.inputs .error ul {
+      list-style-type: none;
+      margin: 0; }
+  /* line 54, ../../app/stylesheets/formtastic_changes.sass */
+  form.formtastic fieldset {
+    padding: 1em; }
+    /* line 57, ../../app/stylesheets/formtastic_changes.sass */
+    form.formtastic fieldset ol li {
+      margin-bottom: 0;
+      /* Este estilo lo inserto para formatear la label de un campo date_select, */
+      /* ya que Rails inserta un fieldset añadiendo un legend con la label. */
+      /* Este estilo se utiliza para formatear la lista de varios check_box. */ }
+      /* line 59, ../../app/stylesheets/formtastic_changes.sass */
+      form.formtastic fieldset ol li.string input, form.formtastic fieldset ol li.numeric input {
+        width: auto; }
+      /* line 63, ../../app/stylesheets/formtastic_changes.sass */
+      form.formtastic fieldset ol li fieldset {
+        padding: 0.2em; }
+        /* line 66, ../../app/stylesheets/formtastic_changes.sass */
+        form.formtastic fieldset ol li fieldset legend .label {
+          font-weight: bold;
+          color: #333;
+          font-size: 0.8em; }
+      /* line 72, ../../app/stylesheets/formtastic_changes.sass */
+      form.formtastic fieldset ol li.lista_check_boxes fieldset ol {
+        margin-bottom: 0; }
+        /* line 74, ../../app/stylesheets/formtastic_changes.sass */
+        form.formtastic fieldset ol li.lista_check_boxes fieldset ol li {
+          display: inline-block;
+          *display: inline; }
+          /* line 77, ../../app/stylesheets/formtastic_changes.sass */
+          form.formtastic fieldset ol li.lista_check_boxes fieldset ol li label {
+            width: 20%;
+            display: inline;
+            margin-right: 1em; }
+
+/* Modificacion posicion de los legend ya que en ie salen mal */
+/* line 84, ../../app/stylesheets/formtastic_changes.sass */
+form.formtastic legend {
+  margin-left: -0.75em; }
+/* line 88, ../../app/stylesheets/formtastic_changes.sass */
+form.formtastic fieldset ol li fieldset legend, form.formtastic fieldset ol li fieldset span {
+  position: relative; }
+
+/* line 91, ../../app/stylesheets/formtastic_changes.sass */
+form.formtastic fieldset ol li.radio fieldset ol, form.formtastic fieldset ol li.check_boxes fieldset ol {
+  margin-bottom: 0; }
+
+/* line 3, ../../app/stylesheets/recortables.sass */
 body {
-  background-color: #4b7399;
+  background-color: #e9e8e5;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px; }
 
-/* line 9, ../../app/stylesheets/ryanb_application.sass */
+/* line 9, ../../app/stylesheets/recortables.sass */
 a {
-  color: #0000FF; }
-  /* line 11, ../../app/stylesheets/ryanb_application.sass */
+  color: #AA00FF; }
+  /* line 11, ../../app/stylesheets/recortables.sass */
   a img {
     border: none; }
 
-/* line 14, ../../app/stylesheets/ryanb_application.sass */
+/* line 14, ../../app/stylesheets/recortables.sass */
 .clear {
   clear: both;
   height: 0;
   overflow: hidden; }
 
-/* line 19, ../../app/stylesheets/ryanb_application.sass */
+/* line 19, ../../app/stylesheets/recortables.sass */
 #container {
   width: 75%;
   margin: 0 auto;
@@ -1039,29 +1312,29 @@ a {
   border: solid 1px black;
   margin-top: 20px; }
 
-/* line 27, ../../app/stylesheets/ryanb_application.sass */
+/* line 30, ../../app/stylesheets/recortables.sass */
 #flash_notice,
 #flash_error {
   padding: 5px 8px;
   margin: 10px 0; }
 
-/* line 32, ../../app/stylesheets/ryanb_application.sass */
+/* line 35, ../../app/stylesheets/recortables.sass */
 #flash_notice {
   background-color: #CFC;
   border: solid 1px #6C6; }
 
-/* line 36, ../../app/stylesheets/ryanb_application.sass */
+/* line 39, ../../app/stylesheets/recortables.sass */
 #flash_error {
   background-color: #FCC;
   border: solid 1px #C66; }
 
-/* line 40, ../../app/stylesheets/ryanb_application.sass */
+/* line 43, ../../app/stylesheets/recortables.sass */
 .fieldWithErrors {
   padding: 2px;
   background-color: red;
   display: table; }
 
-/* line 46, ../../app/stylesheets/ryanb_application.sass */
+/* line 49, ../../app/stylesheets/recortables.sass */
 #errorExplanation {
   width: 400px;
   border: 2px solid #CF0000;
@@ -1069,7 +1342,7 @@ a {
   padding-bottom: 12px;
   margin-bottom: 20px;
   background-color: #f0f0f0; }
-  /* line 53, ../../app/stylesheets/ryanb_application.sass */
+  /* line 56, ../../app/stylesheets/recortables.sass */
   #errorExplanation h2 {
     text-align: left;
     padding: 5px 5px 5px 15px;
@@ -1078,55 +1351,43 @@ a {
     font-size: 12px;
     background-color: #c00;
     color: #fff; }
-  /* line 62, ../../app/stylesheets/ryanb_application.sass */
+  /* line 65, ../../app/stylesheets/recortables.sass */
   #errorExplanation p {
     color: #333;
     margin-bottom: 0;
     padding: 8px; }
-  /* line 66, ../../app/stylesheets/ryanb_application.sass */
+  /* line 69, ../../app/stylesheets/recortables.sass */
   #errorExplanation ul {
     margin: 2px 24px; }
-    /* line 68, ../../app/stylesheets/ryanb_application.sass */
+    /* line 71, ../../app/stylesheets/recortables.sass */
     #errorExplanation ul li {
       font-size: 12px;
       list-style: disc; }
 
-/* line 73, ../../app/stylesheets/ryanb_application.sass */
+/* line 76, ../../app/stylesheets/recortables.sass */
 .error_message {
   float: right;
   color: #D00;
   font-size: 12px;
   padding-right: 50px; }
 
-/* line 80, ../../app/stylesheets/ryanb_application.sass */
+/* line 83, ../../app/stylesheets/recortables.sass */
 .formError {
   color: #D00;
   font-size: 12px; }
 
-/* line 85, ../../app/stylesheets/ryanb_application.sass */
+/* line 88, ../../app/stylesheets/recortables.sass */
 .required {
   font-weight: bold;
   color: blue; }
 
-/* line 1, ../../app/stylesheets/notificaciones.sass */
-#flash_notice, #flash_error {
-  position: absolute;
-  top: 165px;
-  margin-left: 345px;
-  width: 600px;
-  height: 25px;
-  z-index: 255;
-  text-align: center;
-  padding: 0;
-  font-size: 14px; }
-
 /* line 40, ../../app/stylesheets/application.sass */
 body .container {
-  width: 950px;
+  width: 970px;
   margin: 0 auto;
   overflow: hidden;
   display: inline-block;
-  background: url('/images/grid.png?1267133144'); }
+  background: url('/images/grid.png?1267133419'); }
   /* line 5, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/compass/stylesheets/compass/utilities/general/_hacks.sass */
   body .container {
     display: block; }
@@ -1136,7 +1397,7 @@ body .container {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 950px;
+  width: 970px;
   margin: 0;
   margin: 20px auto;
   display: block;
@@ -1151,7 +1412,7 @@ body.three-columns #header, body.three-columns #footer {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 950px; }
+  width: 970px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-columns #header, * html body.three-columns #footer {
     overflow-x: hidden; }
@@ -1160,7 +1421,7 @@ body.three-columns #left-side {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 150px; }
+  width: 153.333px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-columns #left-side {
     overflow-x: hidden; }
@@ -1169,7 +1430,7 @@ body.three-columns #content {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 510px; }
+  width: 520.833px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-columns #content {
     overflow-x: hidden; }
@@ -1178,7 +1439,7 @@ body.three-columns #ads-and-stuff {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 270px; }
+  width: 275.833px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-columns #ads-and-stuff {
     overflow-x: hidden; }
@@ -1188,7 +1449,7 @@ body.two-columns #header, body.two-columns #footer {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 950px; }
+  width: 970px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.two-columns #header, * html body.two-columns #footer {
     overflow-x: hidden; }
@@ -1197,7 +1458,7 @@ body.two-columns #left-side {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 150px; }
+  width: 153.333px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.two-columns #left-side {
     overflow-x: hidden; }
@@ -1206,7 +1467,7 @@ body.two-columns #content {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 790px; }
+  width: 806.667px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.two-columns #content {
     overflow-x: hidden; }
@@ -1216,7 +1477,7 @@ body.one-column #header {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 950px; }
+  width: 970px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.one-column #header {
     overflow-x: hidden; }
@@ -1225,7 +1486,7 @@ body.one-column #content {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 950px; }
+  width: 970px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.one-column #content {
     overflow-x: hidden; }
@@ -1234,7 +1495,7 @@ body.one-column #footer {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 950px; }
+  width: 970px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.one-column #footer {
     overflow-x: hidden; }
@@ -1244,7 +1505,7 @@ body.one-column #footer {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 950px; }
+  width: 970px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html #main-menu {
     overflow-x: hidden; }
@@ -1256,7 +1517,7 @@ body.one-column #footer {
 
 /* line 84, ../../app/stylesheets/application.sass */
 #header {
-  background-image: url(/images/fabrica_517_1.jpg);
+  background-image: url(/images/header_background.png);
   background-repeat: no-repeat;
   margin-bottom: 0.5em; }
 
@@ -1339,64 +1600,30 @@ form#form_session {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 310px;
+  width: 316.667px;
   border: 1px solid #ccc;
   padding: .5em; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html form#form_session {
     overflow-x: hidden; }
 
-/* cola produccion */
-/* line 144, ../../app/stylesheets/application.sass */
-form#new_orden {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 270px;
-  border: 1px solid #ccc;
-  padding: 0.25em; }
-  /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-  * html form#new_orden {
-    overflow-x: hidden; }
-  /* line 148, ../../app/stylesheets/application.sass */
-  form#new_orden label {
-    width: 30%; }
-  /* line 150, ../../app/stylesheets/application.sass */
-  form#new_orden input#orden_numero_mezclas, form#new_orden input#orden_porcentaje_peso {
-    width: 2em; }
-  /* line 152, ../../app/stylesheets/application.sass */
-  form#new_orden input#orden_estado {
-    width: 5em; }
-  /* line 154, ../../app/stylesheets/application.sass */
-  form#new_orden select {
-    width: auto; }
-  /* line 156, ../../app/stylesheets/application.sass */
-  form#new_orden select#orden_formula_id {
-    width: 4.25em; }
-  /* line 158, ../../app/stylesheets/application.sass */
-  form#new_orden select#orden_articulo_id {
-    width: 5em; }
-  /* line 160, ../../app/stylesheets/application.sass */
-  form#new_orden .descripcion {
-    font-size: 90%; }
-
 /* paginacion */
-/* line 164, ../../app/stylesheets/application.sass */
+/* line 145, ../../app/stylesheets/application.sass */
 .pagination {
   padding-bottom: .5em;
   text-align: right; }
-  /* line 168, ../../app/stylesheets/application.sass */
+  /* line 149, ../../app/stylesheets/application.sass */
   .pagination a {
     padding: 1px 5px;
     margin: 1px;
     border: 1px solid #ccc;
     text-decoration: none;
     color: #00f; }
-    /* line 175, ../../app/stylesheets/application.sass */
+    /* line 156, ../../app/stylesheets/application.sass */
     .pagination a:hover, .pagination a:active {
       border: 1px solid #00f;
       color: #000; }
-  /* line 180, ../../app/stylesheets/application.sass */
+  /* line 161, ../../app/stylesheets/application.sass */
   .pagination span.current {
     padding: 2px 5px;
     margin: 1px;
@@ -1404,649 +1631,157 @@ form#new_orden {
     font-weight: bold;
     background-color: #00f;
     color: #fff; }
-  /* line 188, ../../app/stylesheets/application.sass */
+  /* line 169, ../../app/stylesheets/application.sass */
   .pagination span.disabled {
     padding: 2px 5px;
     margin: 1px;
     border: 1px solid #ccc;
     color: #ccc; }
 
-/* Formulario de búsqueda */
-/* line 196, ../../app/stylesheets/application.sass */
-.formulario_busqueda ol {
-  margin: 0;
-  list_style_type: none; }
-  /* line 199, ../../app/stylesheets/application.sass */
-  .formulario_busqueda ol li {
-    display: inline; }
-/* line 201, ../../app/stylesheets/application.sass */
-.formulario_busqueda input {
-  padding: 2px; }
-
 /* show */
-/* line 205, ../../app/stylesheets/application.sass */
+/* line 177, ../../app/stylesheets/application.sass */
 .show {
   border: 1px solid #ccc;
   padding: .5em;
   overflow: hidden; }
-  /* line 210, ../../app/stylesheets/application.sass */
+  /* line 182, ../../app/stylesheets/application.sass */
   .show form {
     border: none;
     padding: 0; }
-  /* line 214, ../../app/stylesheets/application.sass */
+  /* line 186, ../../app/stylesheets/application.sass */
   .show fieldset {
     border: none;
     padding: 1em; }
-    /* line 218, ../../app/stylesheets/application.sass */
+    /* line 190, ../../app/stylesheets/application.sass */
     .show fieldset legend {
       margin-left: -0.75em; }
-    /* line 221, ../../app/stylesheets/application.sass */
+    /* line 193, ../../app/stylesheets/application.sass */
     .show fieldset ol {
       list-style-type: none;
       margin: 0; }
-      /* line 224, ../../app/stylesheets/application.sass */
+      /* line 196, ../../app/stylesheets/application.sass */
       .show fieldset ol li {
         display: block;
         margin-bottom: 0;
         padding-top: 0.2em;
         clear: both; }
-        /* line 229, ../../app/stylesheets/application.sass */
+        /* line 201, ../../app/stylesheets/application.sass */
         .show fieldset ol li label {
           float: left;
           width: 15%;
           display: block; }
 
-/* line 234, ../../app/stylesheets/application.sass */
+/* line 206, ../../app/stylesheets/application.sass */
 input[type="text"], input[type="password"], select {
   border: 1px solid #BBB; }
 
-/* line 237, ../../app/stylesheets/application.sass */
-select#formula_tipo {
-  width: auto; }
-
-/* line 239, ../../app/stylesheets/application.sass */
-input#formula_nombre {
-  width: 15em; }
-
-/* line 244, ../../app/stylesheets/application.sass */
+/* line 211, ../../app/stylesheets/application.sass */
 form.formtastic fieldset ol li.error input, form.formtastic fieldset ol li.error select {
   border: 1px solid red; }
-/* line 246, ../../app/stylesheets/application.sass */
+/* line 213, ../../app/stylesheets/application.sass */
 form.formtastic fieldset ol li p.inline-errors {
   margin: 0;
   margin-bottom: 0.5em; }
-/* line 249, ../../app/stylesheets/application.sass */
+/* line 216, ../../app/stylesheets/application.sass */
 form.formtastic fieldset ol li label {
   width: 15%; }
 
-/* line 253, ../../app/stylesheets/application.sass */
+/* line 220, ../../app/stylesheets/application.sass */
 table.listado tr td, table.listado tr th {
   border-bottom: 1px solid #CCC; }
 
-/* line 258, ../../app/stylesheets/application.sass */
-form fieldset ol li.header_desglose {
-  font-weight: bold;
-  font-size: 90%; }
-/* line 262, ../../app/stylesheets/application.sass */
-form fieldset ol li.desglose {
-  border-top: 1px solid #CCC;
-  font-size: 90%; }
-  /* line 266, ../../app/stylesheets/application.sass */
-  form fieldset ol li.desglose .grueso1, form fieldset ol li.desglose .grueso2, form fieldset ol li.desglose .fino {
-    color: blue;
-    cursor: pointer; }
-/* line 279, ../../app/stylesheets/application.sass */
-form fieldset ol li span {
-  display: inline-block; }
-  /* line 281, ../../app/stylesheets/application.sass */
-  form fieldset ol li span.peso, form fieldset ol li span.vena, form fieldset ol li span.tolerancia, form fieldset ol li span.afinado, form fieldset ol li span.codigo_componente,
-  form fieldset ol li span.grueso1, form fieldset ol li span.grueso2, form fieldset ol li span.fino, form fieldset ol li span.estado {
-    width: 5em;
-    margin-right: 1em; }
-    /* line 285, ../../app/stylesheets/application.sass */
-    form fieldset ol li span.peso input, form fieldset ol li span.peso select, form fieldset ol li span.vena input, form fieldset ol li span.vena select, form fieldset ol li span.tolerancia input, form fieldset ol li span.tolerancia select, form fieldset ol li span.afinado input, form fieldset ol li span.afinado select, form fieldset ol li span.codigo_componente input, form fieldset ol li span.codigo_componente select,
-    form fieldset ol li span.grueso1 input, form fieldset ol li span.grueso1 select, form fieldset ol li span.grueso2 input, form fieldset ol li span.grueso2 select, form fieldset ol li span.fino input, form fieldset ol li span.fino select, form fieldset ol li span.estado input, form fieldset ol li span.estado select {
-      width: 5em; }
-    /* line 287, ../../app/stylesheets/application.sass */
-    form fieldset ol li span.peso .formulario, form fieldset ol li span.vena .formulario, form fieldset ol li span.tolerancia .formulario, form fieldset ol li span.afinado .formulario, form fieldset ol li span.codigo_componente .formulario,
-    form fieldset ol li span.grueso1 .formulario, form fieldset ol li span.grueso2 .formulario, form fieldset ol li span.fino .formulario, form fieldset ol li span.estado .formulario {
-      display: none; }
-  /* line 289, ../../app/stylesheets/application.sass */
-  form fieldset ol li span.peso, form fieldset ol li span.vena, form fieldset ol li span.tolerancia, form fieldset ol li span.afinado {
-    text-align: right; }
-  /* line 291, ../../app/stylesheets/application.sass */
-  form fieldset ol li span.descripcion_componente {
-    width: 18em;
-    margin-right: 1em; }
-    /* line 294, ../../app/stylesheets/application.sass */
-    form fieldset ol li span.descripcion_componente select {
-      width: 18em; }
-  /* line 296, ../../app/stylesheets/application.sass */
-  form fieldset ol li span.accion {
-    color: black; }
-
-/* line 258, ../../app/stylesheets/application.sass */
-#actual fieldset ol li.header_desglose {
-  font-weight: bold;
-  font-size: 90%; }
-/* line 262, ../../app/stylesheets/application.sass */
-#actual fieldset ol li.desglose {
-  border-top: 1px solid #CCC;
-  font-size: 90%; }
-  /* line 266, ../../app/stylesheets/application.sass */
-  #actual fieldset ol li.desglose .grueso1, #actual fieldset ol li.desglose .grueso2, #actual fieldset ol li.desglose .fino {
-    color: blue;
-    cursor: pointer; }
-/* line 279, ../../app/stylesheets/application.sass */
-#actual fieldset ol li span {
-  display: inline-block; }
-  /* line 281, ../../app/stylesheets/application.sass */
-  #actual fieldset ol li span.peso, #actual fieldset ol li span.vena, #actual fieldset ol li span.tolerancia, #actual fieldset ol li span.afinado, #actual fieldset ol li span.codigo_componente,
-  #actual fieldset ol li span.grueso1, #actual fieldset ol li span.grueso2, #actual fieldset ol li span.fino, #actual fieldset ol li span.estado {
-    width: 5em;
-    margin-right: 1em; }
-    /* line 285, ../../app/stylesheets/application.sass */
-    #actual fieldset ol li span.peso input, #actual fieldset ol li span.peso select, #actual fieldset ol li span.vena input, #actual fieldset ol li span.vena select, #actual fieldset ol li span.tolerancia input, #actual fieldset ol li span.tolerancia select, #actual fieldset ol li span.afinado input, #actual fieldset ol li span.afinado select, #actual fieldset ol li span.codigo_componente input, #actual fieldset ol li span.codigo_componente select,
-    #actual fieldset ol li span.grueso1 input, #actual fieldset ol li span.grueso1 select, #actual fieldset ol li span.grueso2 input, #actual fieldset ol li span.grueso2 select, #actual fieldset ol li span.fino input, #actual fieldset ol li span.fino select, #actual fieldset ol li span.estado input, #actual fieldset ol li span.estado select {
-      width: 5em; }
-    /* line 287, ../../app/stylesheets/application.sass */
-    #actual fieldset ol li span.peso .formulario, #actual fieldset ol li span.vena .formulario, #actual fieldset ol li span.tolerancia .formulario, #actual fieldset ol li span.afinado .formulario, #actual fieldset ol li span.codigo_componente .formulario,
-    #actual fieldset ol li span.grueso1 .formulario, #actual fieldset ol li span.grueso2 .formulario, #actual fieldset ol li span.fino .formulario, #actual fieldset ol li span.estado .formulario {
-      display: none; }
-  /* line 289, ../../app/stylesheets/application.sass */
-  #actual fieldset ol li span.peso, #actual fieldset ol li span.vena, #actual fieldset ol li span.tolerancia, #actual fieldset ol li span.afinado {
-    text-align: right; }
-  /* line 291, ../../app/stylesheets/application.sass */
-  #actual fieldset ol li span.descripcion_componente {
-    width: 18em;
-    margin-right: 1em; }
-    /* line 294, ../../app/stylesheets/application.sass */
-    #actual fieldset ol li span.descripcion_componente select {
-      width: 18em; }
-  /* line 296, ../../app/stylesheets/application.sass */
-  #actual fieldset ol li span.accion {
-    color: black; }
-/* line 309, ../../app/stylesheets/application.sass */
-#actual fieldset ol li.desglose span.grueso1, #actual fieldset ol li.desglose span.grueso2, #actual fieldset ol li.desglose span.fino {
-  color: black;
-  cursor: default; }
-
-/* line 315, ../../app/stylesheets/application.sass */
+/* line 250, ../../app/stylesheets/application.sass */
 #dos-columnas {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 950px; }
+  width: 970px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html #dos-columnas {
     overflow-x: hidden; }
-  /* line 317, ../../app/stylesheets/application.sass */
+  /* line 252, ../../app/stylesheets/application.sass */
   #dos-columnas #izquierda {
     display: inline;
     float: left;
     margin-right: 10px;
-    width: 630px; }
+    width: 643.333px; }
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #izquierda {
       overflow-x: hidden; }
-  /* line 319, ../../app/stylesheets/application.sass */
+  /* line 254, ../../app/stylesheets/application.sass */
   #dos-columnas #derecha {
     display: inline;
     float: left;
     margin-right: 10px;
-    width: 270px; }
+    width: 275.833px; }
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #derecha {
       overflow-x: hidden; }
-  /* line 321, ../../app/stylesheets/application.sass */
+  /* line 256, ../../app/stylesheets/application.sass */
   #dos-columnas #busqueda {
     display: inline;
     float: left;
     margin-right: 10px;
-    width: 550px; }
+    width: 561.667px; }
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #busqueda {
       overflow-x: hidden; }
-  /* line 323, ../../app/stylesheets/application.sass */
+  /* line 258, ../../app/stylesheets/application.sass */
   #dos-columnas #formulario {
     display: inline;
     float: left;
     margin-right: 10px;
-    width: 350px; }
+    width: 357.5px; }
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #formulario {
       overflow-x: hidden; }
-  /* line 325, ../../app/stylesheets/application.sass */
+  /* line 260, ../../app/stylesheets/application.sass */
   #dos-columnas #subtitulo_sustitucion {
     display: inline;
     float: left;
     margin-right: 10px;
-    width: 70px; }
+    width: 71.667px; }
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #subtitulo_sustitucion {
       overflow-x: hidden; }
-  /* line 327, ../../app/stylesheets/application.sass */
+  /* line 262, ../../app/stylesheets/application.sass */
   #dos-columnas #elementos {
     display: inline;
     float: left;
     margin-right: 10px;
-    width: 590px; }
+    width: 602.5px; }
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #elementos {
       overflow-x: hidden; }
 
-/* line 330, ../../app/stylesheets/application.sass */
+/* line 265, ../../app/stylesheets/application.sass */
 #sustitucion {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 870px; }
+  width: 888.333px; }
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html #sustitucion {
     overflow-x: hidden; }
-  /* line 332, ../../app/stylesheets/application.sass */
+  /* line 267, ../../app/stylesheets/application.sass */
   #sustitucion #subtitulo {
     display: inline;
     float: left;
     margin-right: 10px;
-    width: 70px; }
+    width: 71.667px; }
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #sustitucion #subtitulo {
       overflow-x: hidden; }
-  /* line 334, ../../app/stylesheets/application.sass */
+  /* line 269, ../../app/stylesheets/application.sass */
   #sustitucion #elementos {
     display: inline;
     float: left;
     margin-right: 0;
-    width: 790px; }
+    width: 806.667px; }
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #sustitucion #elementos {
       overflow-x: hidden; }
 
-/* line 341, ../../app/stylesheets/application.sass */
-ol#cola_produccion {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 590px;
-  font-size: 90%; }
-  /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-  * html ol#cola_produccion {
-    overflow-x: hidden; }
-  /* line 344, ../../app/stylesheets/application.sass */
-  ol#cola_produccion li.header {
-    display: inline;
-    float: left;
-    margin-right: 10px;
-    width: 590px;
-    font-weight: bold;
-    margin-left: 2px; }
-    /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-    * html ol#cola_produccion li.header {
-      overflow-x: hidden; }
-    /* line 348, ../../app/stylesheets/application.sass */
-    ol#cola_produccion li.header ul {
-      list_style_type: none; }
-      /* line 350, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.header ul li {
-        display: inline; }
-      /* line 352, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.header ul .num_orden {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 30px; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#cola_produccion li.header ul .num_orden {
-          overflow-x: hidden; }
-      /* line 354, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.header ul .formula {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 70px; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#cola_produccion li.header ul .formula {
-          overflow-x: hidden; }
-      /* line 356, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.header ul .articulo {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 190px; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#cola_produccion li.header ul .articulo {
-          overflow-x: hidden; }
-      /* line 358, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.header ul .porcentaje_peso, ol#cola_produccion li.header ul .numero_mezclas, ol#cola_produccion li.header ul .destino {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 70px;
-        text-align: right; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#cola_produccion li.header ul .porcentaje_peso, * html ol#cola_produccion li.header ul .numero_mezclas, * html ol#cola_produccion li.header ul .destino {
-          overflow-x: hidden; }
-  /* line 362, ../../app/stylesheets/application.sass */
-  ol#cola_produccion li.ui-state-default {
-    display: inline;
-    float: left;
-    margin-right: 10px;
-    width: 590px;
-    border: 1px solid #999;
-    margin: 2px;
-    padding: 2px;
-    background: #E6E6E6 url(/images/ui-bg_glass_75_e6e6e6_1x400.png) repeat-x scroll 50% 50%;
-    cursor: pointer; }
-    /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-    * html ol#cola_produccion li.ui-state-default {
-      overflow-x: hidden; }
-    /* line 369, ../../app/stylesheets/application.sass */
-    ol#cola_produccion li.ui-state-default ul.item {
-      display: inline;
-      float: left;
-      margin-right: 10px;
-      width: 590px;
-      list_style_type: none; }
-      /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-      * html ol#cola_produccion li.ui-state-default ul.item {
-        overflow-x: hidden; }
-      /* line 372, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.ui-state-default ul.item li {
-        display: inline; }
-      /* line 374, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.ui-state-default ul.item .borrar {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 30px;
-        text-align: right; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#cola_produccion li.ui-state-default ul.item .borrar {
-          overflow-x: hidden; }
-      /* line 377, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.ui-state-default ul.item .formula {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 70px; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#cola_produccion li.ui-state-default ul.item .formula {
-          overflow-x: hidden; }
-      /* line 379, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.ui-state-default ul.item .articulo {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 190px; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#cola_produccion li.ui-state-default ul.item .articulo {
-          overflow-x: hidden; }
-      /* line 381, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.ui-state-default ul.item .porcentaje_peso, ol#cola_produccion li.ui-state-default ul.item .numero_mezclas, ol#cola_produccion li.ui-state-default ul.item .destino {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 70px;
-        text-align: right; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#cola_produccion li.ui-state-default ul.item .porcentaje_peso, * html ol#cola_produccion li.ui-state-default ul.item .numero_mezclas, * html ol#cola_produccion li.ui-state-default ul.item .destino {
-          overflow-x: hidden; }
-      /* line 384, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.ui-state-default ul.item .numero_mezclas, ol#cola_produccion li.ui-state-default ul.item .porcentaje_peso, ol#cola_produccion li.ui-state-default ul.item .formula, ol#cola_produccion li.ui-state-default ul.item .destino {
-        color: blue; }
-        /* line 386, ../../app/stylesheets/application.sass */
-        ol#cola_produccion li.ui-state-default ul.item .numero_mezclas .formulario, ol#cola_produccion li.ui-state-default ul.item .porcentaje_peso .formulario, ol#cola_produccion li.ui-state-default ul.item .formula .formulario, ol#cola_produccion li.ui-state-default ul.item .destino .formulario {
-          display: none; }
-      /* line 389, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.ui-state-default ul.item .numero_mezclas .formulario input {
-        width: 2.5em;
-        margin: 0;
-        padding: 0; }
-      /* line 394, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.ui-state-default ul.item .porcentaje_peso .formulario input {
-        width: 3em;
-        margin: 0;
-        padding: 0; }
-      /* line 399, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.ui-state-default ul.item .formula .formulario select {
-        width: 4em;
-        margin: 0;
-        padding: 0; }
-      /* line 404, ../../app/stylesheets/application.sass */
-      ol#cola_produccion li.ui-state-default ul.item .destino .formulario select {
-        width: 4em;
-        margin: 0;
-        padding: 0; }
-
-/* line 410, ../../app/stylesheets/application.sass */
-ol#produccion_actual {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 590px;
-  font-size: 90%; }
-  /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-  * html ol#produccion_actual {
-    overflow-x: hidden; }
-  /* line 413, ../../app/stylesheets/application.sass */
-  ol#produccion_actual li.ui-state-default {
-    display: inline;
-    float: left;
-    margin-right: 10px;
-    width: 590px;
-    border: 1px solid #999;
-    margin: 2px;
-    padding: 2px;
-    background: #E6E6E6 url(/images/pbar-ani-2.gif) repeat-x scroll; }
-    /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-    * html ol#produccion_actual li.ui-state-default {
-      overflow-x: hidden; }
-    /* line 419, ../../app/stylesheets/application.sass */
-    ol#produccion_actual li.ui-state-default ul.item {
-      display: inline;
-      float: left;
-      margin-right: 10px;
-      width: 590px;
-      list_style_type: none; }
-      /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-      * html ol#produccion_actual li.ui-state-default ul.item {
-        overflow-x: hidden; }
-      /* line 422, ../../app/stylesheets/application.sass */
-      ol#produccion_actual li.ui-state-default ul.item li {
-        display: inline;
-        font-weight: bold; }
-      /* line 425, ../../app/stylesheets/application.sass */
-      ol#produccion_actual li.ui-state-default ul.item .formula {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 70px; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#produccion_actual li.ui-state-default ul.item .formula {
-          overflow-x: hidden; }
-      /* line 427, ../../app/stylesheets/application.sass */
-      ol#produccion_actual li.ui-state-default ul.item .articulo {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 190px; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#produccion_actual li.ui-state-default ul.item .articulo {
-          overflow-x: hidden; }
-      /* line 429, ../../app/stylesheets/application.sass */
-      ol#produccion_actual li.ui-state-default ul.item .porcentaje_peso, ol#produccion_actual li.ui-state-default ul.item .numero_mezclas, ol#produccion_actual li.ui-state-default ul.item .destino {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 70px;
-        text-align: right; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#produccion_actual li.ui-state-default ul.item .porcentaje_peso, * html ol#produccion_actual li.ui-state-default ul.item .numero_mezclas, * html ol#produccion_actual li.ui-state-default ul.item .destino {
-          overflow-x: hidden; }
-
-/* line 434, ../../app/stylesheets/application.sass */
-ol#ordenes_terminadas {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 590px;
-  font-size: 90%; }
-  /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-  * html ol#ordenes_terminadas {
-    overflow-x: hidden; }
-  /* line 437, ../../app/stylesheets/application.sass */
-  ol#ordenes_terminadas li.ui-state-default {
-    display: inline;
-    float: left;
-    margin-right: 10px;
-    width: 590px;
-    border: 1px solid #999;
-    margin: 2px;
-    padding: 2px;
-    background: #E6E6E6 url(/images/ui-bg_glass_65_ffffff_1x400.png) repeat-x scroll 50% 50%; }
-    /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-    * html ol#ordenes_terminadas li.ui-state-default {
-      overflow-x: hidden; }
-    /* line 443, ../../app/stylesheets/application.sass */
-    ol#ordenes_terminadas li.ui-state-default ul.item {
-      display: inline;
-      float: left;
-      margin-right: 10px;
-      width: 590px;
-      list_style_type: none; }
-      /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-      * html ol#ordenes_terminadas li.ui-state-default ul.item {
-        overflow-x: hidden; }
-      /* line 446, ../../app/stylesheets/application.sass */
-      ol#ordenes_terminadas li.ui-state-default ul.item li {
-        display: inline; }
-      /* line 448, ../../app/stylesheets/application.sass */
-      ol#ordenes_terminadas li.ui-state-default ul.item .formula {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 70px; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#ordenes_terminadas li.ui-state-default ul.item .formula {
-          overflow-x: hidden; }
-      /* line 450, ../../app/stylesheets/application.sass */
-      ol#ordenes_terminadas li.ui-state-default ul.item .articulo {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 190px; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#ordenes_terminadas li.ui-state-default ul.item .articulo {
-          overflow-x: hidden; }
-      /* line 452, ../../app/stylesheets/application.sass */
-      ol#ordenes_terminadas li.ui-state-default ul.item .porcentaje_peso, ol#ordenes_terminadas li.ui-state-default ul.item .numero_mezclas, ol#ordenes_terminadas li.ui-state-default ul.item .destino {
-        display: inline;
-        float: left;
-        margin-right: 10px;
-        width: 70px;
-        text-align: right; }
-        /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
-        * html ol#ordenes_terminadas li.ui-state-default ul.item .porcentaje_peso, * html ol#ordenes_terminadas li.ui-state-default ul.item .numero_mezclas, * html ol#ordenes_terminadas li.ui-state-default ul.item .destino {
-          overflow-x: hidden; }
-
-/* line 456, ../../app/stylesheets/application.sass */
+/* line 276, ../../app/stylesheets/application.sass */
 .wait {
   background: url(/images/wait.gif) no-repeat center center; }
-
-/* line 459, ../../app/stylesheets/application.sass */
-.anular_linea_desglose, .activar_linea_desglose {
-  display: none; }
-
-/* line 462, ../../app/stylesheets/application.sass */
-.siguiente_orden {
-  border: 1px solid #CCC;
-  padding: 5px; }
-
-/* line 467, ../../app/stylesheets/application.sass */
-fieldset ol li.formulario_sustitucion {
-  border: 2px solid #fff99b;
-  background-color: #fffcc6;
-  padding: 5px; }
-  /* line 471, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion .titulo_sustitucion {
-    font-weight: bold;
-    font-size: 120%; }
-  /* line 474, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion .subtitulo_sustitucion {
-    font-weight: bold; }
-  /* line 477, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion .elemento_actual {
-    font-weight: bold; }
-  /* line 481, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion .nuevos_elementos li.desglose, fieldset ol li.formulario_sustitucion .nuevos_elementos li.header_desglose {
-    border: none; }
-  /* line 484, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion span.descripcion_componente {
-    width: 15em; }
-  /* line 486, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion span.codigo_componente {
-    width: 4em; }
-  /* line 488, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion span.grueso1, fieldset ol li.formulario_sustitucion span.grueso2, fieldset ol li.formulario_sustitucion span.fino {
-    color: #333;
-    cursor: default; }
-  /* line 491, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion span.borrar_sustituto {
-    color: blue;
-    cursor: pointer; }
-  /* line 494, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion span.tolerancia {
-    width: 5em;
-    margin-right: 1em; }
-    /* line 497, ../../app/stylesheets/application.sass */
-    fieldset ol li.formulario_sustitucion span.tolerancia input {
-      width: 4em;
-      text-align: right; }
-  /* line 500, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion span.peso, fieldset ol li.formulario_sustitucion span.vena, fieldset ol li.formulario_sustitucion span.afinado {
-    width: 4em;
-    margin-right: 1em; }
-    /* line 503, ../../app/stylesheets/application.sass */
-    fieldset ol li.formulario_sustitucion span.peso input, fieldset ol li.formulario_sustitucion span.vena input, fieldset ol li.formulario_sustitucion span.afinado input {
-      width: 4em;
-      text-align: right; }
-  /* line 506, ../../app/stylesheets/application.sass */
-  fieldset ol li.formulario_sustitucion span.borrar {
-    font-weight: bold; }
-
-/* line 511, ../../app/stylesheets/application.sass */
-.sustitutos {
-  padding: 5px 40px;
-  color: #333; }
-  /* line 514, ../../app/stylesheets/application.sass */
-  .sustitutos .subtitulo {
-    font-weight: bold; }
-
-/* line 517, ../../app/stylesheets/application.sass */
-form fieldset.sustitutos {
-  border: 2px solid #fff99b;
-  background-color: #fffcc6; }
-  /* line 520, ../../app/stylesheets/application.sass */
-  form fieldset.sustitutos legend {
-    color: #333;
-    font-size: 100%;
-    font-weight: 500;
-    margin: 0; }
-  /* line 525, ../../app/stylesheets/application.sass */
-  form fieldset.sustitutos li.header_desglose, form fieldset.sustitutos li.desglose {
-    border: none;
-    font-size: 100%; }
-    /* line 528, ../../app/stylesheets/application.sass */
-    form fieldset.sustitutos li.header_desglose span, form fieldset.sustitutos li.desglose span {
-      color: #333;
-      cursor: default; }
-
-/* line 532, ../../app/stylesheets/application.sass */
-fieldset ol.produccion_actual {
-  list-style-type: none; }
-
-/* line 535, ../../app/stylesheets/application.sass */
-li.cargando_elementos {
-  text-align: center;
-  background: url(/images/ajax-loader.gif) no-repeat 50% 50%; }
