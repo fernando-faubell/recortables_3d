@@ -2,13 +2,10 @@
   = f.error_messages
   %br
   - f.inputs do
-    = f.input :modelo_id, :as => :radio, :collection => @modelos, :wrapper_html => {"kkito" => "pepito"}
-
-
-
-
-
-
+    /= f.input :modelo_id, :as => :radio, :collection => @modelos
+    - @modelos.each do |modelo|
+      = image_tag(modelo[0].downcase + ".png")
+      = f.radio_button :modelo_id, modelo[1].to_i
   %br
   - f.inputs do
     = f.input :complejidad, :as => :radio, :collection => @complejidad

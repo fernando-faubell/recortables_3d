@@ -13,7 +13,7 @@ class RecortablesController < ApplicationController
     carga_combos
   end
   
-  def create    
+  def create
     @recortable = Recortable.new(params[:recortable])
     if @recortable.save
       #flash[:notice] = t :recortable_creado
