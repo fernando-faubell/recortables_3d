@@ -1,31 +1,33 @@
 - semantic_form_for @recortable do |f|
   = f.error_messages
-  
   %br
-  = f.input :modelo_id, :as => :radio, :collection => @modelos
+  - f.inputs do
+    = f.input :modelo_id, :as => :radio, :collection => @modelos, :wrapper_html => {"kkito" => "pepito"}
+
+
+
+
+
 
   %br
-  = f.input :complejidad, :as => :radio, :collection => @complejidad
-
+  - f.inputs do
+    = f.input :complejidad, :as => :radio, :collection => @complejidad
   %br
-  = f.label t :color_fondo
-  = f.text_field :color_fondo
-  #colorpicker_recortable_color_fondo
-  = f.label t :color_aristas
-  = f.text_field :color_aristas
-  #colorpicker_recortable_color_aristas
-
+  - f.inputs :name => "Aristas" do
+    = f.label t :color_aristas
+    = f.text_field :color_aristas
+    #colorpicker_recortable_color_aristas
+    = f.label t :grosor_aristas
+    = f.text_field :grosor_aristas
   %br
-  = f.label t :grosor_aristas
-  = f.text_field :grosor_aristas
-
-  %br
-  = f.label t :textura
-  = f.text_field :textura
-
+  - f.inputs :name => "Fondo" do
+    = f.label t :color_fondo
+    = f.text_field :color_fondo
+    #colorpicker_recortable_color_fondo
+    = f.label t :textura
+    = f.text_field :textura
   %br
   = f.submit t(:previsualizar)
   = f.submit t(:generar)
-
-%p
+  %p
   = link_to t(:cancelar), root_path
