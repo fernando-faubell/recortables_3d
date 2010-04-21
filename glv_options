@@ -1,0 +1,31 @@
+#### Rasterization
+window_size 800 800
+window_pos 645 227
+game_mode 640x480:8@60
+clear_color white
+own_clear_color 0 0 0 0
+shade_model flat
+polygon_mode fill
+front_face ccw
+cull_face_mode back
+cull_face no
+#### Transformation
+projection parallel
+camera_fovy 9.0
+normalize no
+#### Lighting
+Enable_Light0			no
+Enable_Lighting			no
+Enable_Color_Material		no
+Enable_Light_Two_Side		no
+Enable_Light_Local_Viewer	no
+Light_Model_Ambient		0.2 0.2 0.2 1
+Light0_Position			0 0 10 1
+Light0_Diffuse			0.9 0.9 0.9 1
+Light0_Specular			0.4 0.4 0.4 1
+Light0_Ambient			0.1 0.1 0.1 1
+Material_Ambient		0.1 0.1 0.1 1
+Material_Diffuse		0.7 0.7 0.7 0
+Material_Specular		0.2 0.2 0.2 1
+Material_Emission		0 0 0 0
+Material_Shininess		50

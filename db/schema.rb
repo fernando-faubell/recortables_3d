@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20100303061140) do
   end
 
   create_table "recortables", :force => true do |t|
-    t.integer  "modelo_id"
+    t.string   "modelo"
     t.string   "complejidad"
     t.string   "color_fondo"
     t.string   "color_aristas"
