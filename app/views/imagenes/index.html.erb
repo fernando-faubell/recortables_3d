@@ -1,0 +1,17 @@
+<% title "Imagenes" %>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+  </tr>
+  <% for imagen in @imagenes %>
+    <tr>
+      <td><%=h imagen.nombre %></td>
+      <td><%= link_to "Show", imagen %></td>
+      <td><%= link_to "Edit", edit_imagen_path(imagen) %></td>
+      <td><%= link_to "Destroy", imagen, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Imagen", new_imagen_path %></p>

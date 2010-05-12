@@ -1,10 +1,39 @@
 class Recortable < ActiveRecord::Base
 
   belongs_to :modelo
+  has_many :imagenes
 
+  after_save :genera_imagenes
 
   def self.lista_select_complejidad
     ["Muy sencillo", "Sencillo", "Moderado", "Complejo", "Muy complejo"]
+  end
+
+  def genera_imagenes
+    self.imagenes.destroy_all
+    g = Globo.new
+    ruta = g.genera
+    i = self.imagenes.new
+    i.imagen = File.new(ruta + "/image000.jpg")
+    i.save
+
+    i = self.imagenes.new
+    i.imagen = File.new(ruta + "/image001.jpg")
+    i.save
+    
+    i = self.imagenes.new
+    i.imagen = File.new(ruta + "/image002.jpg")
+    i.save
+
+    i = self.imagenes.new
+    i.imagen = File.new(ruta + "/image003.jpg")
+    i.save
+
+    i = self.imagenes.new
+    i.imagen = File.new(ruta + "/image004.jpg")
+    i.save
+
+
   end
 
 end

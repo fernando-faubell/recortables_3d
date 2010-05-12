@@ -1381,7 +1381,28 @@ a {
   font-weight: bold;
   color: blue; }
 
-/* line 40, ../../app/stylesheets/application.sass */
+/* line 1, ../../app/stylesheets/easySlider.sass */
+#slider ul, #slider li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* line 6, ../../app/stylesheets/easySlider.sass */
+#slider, #slider li {
+  width: 480px;
+  height: 480px;
+  overflow: hidden; }
+
+/* line 11, ../../app/stylesheets/easySlider.sass */
+span#prevBtn a {
+  display: inline;
+  cursor: pointer;
+  background: url(images/rails.png) no-repeat;
+  width: 51px;
+  height: 19px;
+  text-indent: -9000px; }
+
+/* line 41, ../../app/stylesheets/application.sass */
 body .container {
   width: 970px;
   margin: 0 auto;
@@ -1392,7 +1413,7 @@ body .container {
   body .container {
     display: block; }
 
-/* line 44, ../../app/stylesheets/application.sass */
+/* line 45, ../../app/stylesheets/application.sass */
 #container {
   display: inline;
   float: left;
@@ -1407,7 +1428,7 @@ body .container {
   * html #container {
     overflow-x: hidden; }
 
-/* line 10, ../../app/stylesheets/application.sass */
+/* line 11, ../../app/stylesheets/application.sass */
 body.three-columns #header, body.three-columns #footer {
   display: inline;
   float: left;
@@ -1416,7 +1437,7 @@ body.three-columns #header, body.three-columns #footer {
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-columns #header, * html body.three-columns #footer {
     overflow-x: hidden; }
-/* line 12, ../../app/stylesheets/application.sass */
+/* line 13, ../../app/stylesheets/application.sass */
 body.three-columns #left-side {
   display: inline;
   float: left;
@@ -1425,7 +1446,7 @@ body.three-columns #left-side {
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-columns #left-side {
     overflow-x: hidden; }
-/* line 14, ../../app/stylesheets/application.sass */
+/* line 15, ../../app/stylesheets/application.sass */
 body.three-columns #content {
   display: inline;
   float: left;
@@ -1434,7 +1455,7 @@ body.three-columns #content {
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.three-columns #content {
     overflow-x: hidden; }
-/* line 16, ../../app/stylesheets/application.sass */
+/* line 17, ../../app/stylesheets/application.sass */
 body.three-columns #ads-and-stuff {
   display: inline;
   float: left;
@@ -1444,7 +1465,7 @@ body.three-columns #ads-and-stuff {
   * html body.three-columns #ads-and-stuff {
     overflow-x: hidden; }
 
-/* line 22, ../../app/stylesheets/application.sass */
+/* line 23, ../../app/stylesheets/application.sass */
 body.two-columns #header, body.two-columns #footer {
   display: inline;
   float: left;
@@ -1453,7 +1474,7 @@ body.two-columns #header, body.two-columns #footer {
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.two-columns #header, * html body.two-columns #footer {
     overflow-x: hidden; }
-/* line 24, ../../app/stylesheets/application.sass */
+/* line 25, ../../app/stylesheets/application.sass */
 body.two-columns #left-side {
   display: inline;
   float: left;
@@ -1462,7 +1483,7 @@ body.two-columns #left-side {
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.two-columns #left-side {
     overflow-x: hidden; }
-/* line 26, ../../app/stylesheets/application.sass */
+/* line 27, ../../app/stylesheets/application.sass */
 body.two-columns #content {
   display: inline;
   float: left;
@@ -1472,7 +1493,7 @@ body.two-columns #content {
   * html body.two-columns #content {
     overflow-x: hidden; }
 
-/* line 32, ../../app/stylesheets/application.sass */
+/* line 33, ../../app/stylesheets/application.sass */
 body.one-column #header {
   display: inline;
   float: left;
@@ -1481,7 +1502,7 @@ body.one-column #header {
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.one-column #header {
     overflow-x: hidden; }
-/* line 34, ../../app/stylesheets/application.sass */
+/* line 35, ../../app/stylesheets/application.sass */
 body.one-column #content {
   display: inline;
   float: left;
@@ -1490,7 +1511,7 @@ body.one-column #content {
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html body.one-column #content {
     overflow-x: hidden; }
-/* line 36, ../../app/stylesheets/application.sass */
+/* line 37, ../../app/stylesheets/application.sass */
 body.one-column #footer {
   display: inline;
   float: left;
@@ -1500,7 +1521,7 @@ body.one-column #footer {
   * html body.one-column #footer {
     overflow-x: hidden; }
 
-/* line 77, ../../app/stylesheets/application.sass */
+/* line 78, ../../app/stylesheets/application.sass */
 #main-menu {
   display: inline;
   float: left;
@@ -1510,28 +1531,28 @@ body.one-column #footer {
   * html #main-menu {
     overflow-x: hidden; }
 
-/* line 80, ../../app/stylesheets/application.sass */
+/* line 81, ../../app/stylesheets/application.sass */
 #login_menu {
   margin: 10px;
   text-align: right; }
 
-/* line 84, ../../app/stylesheets/application.sass */
+/* line 85, ../../app/stylesheets/application.sass */
 #header {
   background-image: url(/images/header_background.png);
   background-repeat: no-repeat;
   margin-bottom: 0.5em; }
 
-/* line 89, ../../app/stylesheets/application.sass */
+/* line 90, ../../app/stylesheets/application.sass */
 #header_title {
   font-size: 1.5em;
   text-align: right;
   margin: 10px; }
 
-/* line 94, ../../app/stylesheets/application.sass */
+/* line 95, ../../app/stylesheets/application.sass */
 #content {
   min-height: 200px; }
 
-/* line 97, ../../app/stylesheets/application.sass */
+/* line 98, ../../app/stylesheets/application.sass */
 #footer {
   float: right;
   text-align: right;
@@ -1539,22 +1560,22 @@ body.one-column #footer {
   font-size: 0.9em; }
 
 /* generico */
-/* line 103, ../../app/stylesheets/application.sass */
+/* line 104, ../../app/stylesheets/application.sass */
 body {
   font-size: 0.8em;
   font-family: arial; }
 
-/* line 107, ../../app/stylesheets/application.sass */
+/* line 108, ../../app/stylesheets/application.sass */
 td, th {
   padding: 0;
   margin: 0; }
 
-/* line 111, ../../app/stylesheets/application.sass */
+/* line 112, ../../app/stylesheets/application.sass */
 p {
   padding: 0;
   margin: 0; }
 
-/* line 115, ../../app/stylesheets/application.sass */
+/* line 116, ../../app/stylesheets/application.sass */
 a {
   text-decoration: none;
   color: blue; }
@@ -1571,31 +1592,31 @@ a {
   a:active {
     color: blue; }
 
-/* line 119, ../../app/stylesheets/application.sass */
+/* line 120, ../../app/stylesheets/application.sass */
 h1 {
   font-size: 1.5em;
   padding-top: .5em; }
 
-/* line 123, ../../app/stylesheets/application.sass */
+/* line 124, ../../app/stylesheets/application.sass */
 .acciones {
   text-align: right; }
 
-/* line 126, ../../app/stylesheets/application.sass */
+/* line 127, ../../app/stylesheets/application.sass */
 .invisible {
   display: none; }
 
-/* line 129, ../../app/stylesheets/application.sass */
+/* line 130, ../../app/stylesheets/application.sass */
 #password, #login {
   width: 10em;
   margin: 0;
   padding: 0; }
 
-/* line 134, ../../app/stylesheets/application.sass */
+/* line 135, ../../app/stylesheets/application.sass */
 input[type="password"] {
   background-color: #fff; }
 
 /* session */
-/* line 138, ../../app/stylesheets/application.sass */
+/* line 139, ../../app/stylesheets/application.sass */
 form#form_session {
   display: inline;
   float: left;
@@ -1608,22 +1629,22 @@ form#form_session {
     overflow-x: hidden; }
 
 /* paginacion */
-/* line 145, ../../app/stylesheets/application.sass */
+/* line 146, ../../app/stylesheets/application.sass */
 .pagination {
   padding-bottom: .5em;
   text-align: right; }
-  /* line 149, ../../app/stylesheets/application.sass */
+  /* line 150, ../../app/stylesheets/application.sass */
   .pagination a {
     padding: 1px 5px;
     margin: 1px;
     border: 1px solid #ccc;
     text-decoration: none;
     color: #00f; }
-    /* line 156, ../../app/stylesheets/application.sass */
+    /* line 157, ../../app/stylesheets/application.sass */
     .pagination a:hover, .pagination a:active {
       border: 1px solid #00f;
       color: #000; }
-  /* line 161, ../../app/stylesheets/application.sass */
+  /* line 162, ../../app/stylesheets/application.sass */
   .pagination span.current {
     padding: 2px 5px;
     margin: 1px;
@@ -1631,7 +1652,7 @@ form#form_session {
     font-weight: bold;
     background-color: #00f;
     color: #fff; }
-  /* line 169, ../../app/stylesheets/application.sass */
+  /* line 170, ../../app/stylesheets/application.sass */
   .pagination span.disabled {
     padding: 2px 5px;
     margin: 1px;
@@ -1639,58 +1660,58 @@ form#form_session {
     color: #ccc; }
 
 /* show */
-/* line 177, ../../app/stylesheets/application.sass */
+/* line 178, ../../app/stylesheets/application.sass */
 .show {
   border: 1px solid #ccc;
   padding: .5em;
   overflow: hidden; }
-  /* line 182, ../../app/stylesheets/application.sass */
+  /* line 183, ../../app/stylesheets/application.sass */
   .show form {
     border: none;
     padding: 0; }
-  /* line 186, ../../app/stylesheets/application.sass */
+  /* line 187, ../../app/stylesheets/application.sass */
   .show fieldset {
     border: none;
     padding: 1em; }
-    /* line 190, ../../app/stylesheets/application.sass */
+    /* line 191, ../../app/stylesheets/application.sass */
     .show fieldset legend {
       margin-left: -0.75em; }
-    /* line 193, ../../app/stylesheets/application.sass */
+    /* line 194, ../../app/stylesheets/application.sass */
     .show fieldset ol {
       list-style-type: none;
       margin: 0; }
-      /* line 196, ../../app/stylesheets/application.sass */
+      /* line 197, ../../app/stylesheets/application.sass */
       .show fieldset ol li {
         display: block;
         margin-bottom: 0;
         padding-top: 0.2em;
         clear: both; }
-        /* line 201, ../../app/stylesheets/application.sass */
+        /* line 202, ../../app/stylesheets/application.sass */
         .show fieldset ol li label {
           float: left;
           width: 15%;
           display: block; }
 
-/* line 206, ../../app/stylesheets/application.sass */
+/* line 207, ../../app/stylesheets/application.sass */
 input[type="text"], input[type="password"], select {
   border: 1px solid #BBB; }
 
-/* line 211, ../../app/stylesheets/application.sass */
+/* line 212, ../../app/stylesheets/application.sass */
 form.formtastic fieldset ol li.error input, form.formtastic fieldset ol li.error select {
   border: 1px solid red; }
-/* line 213, ../../app/stylesheets/application.sass */
+/* line 214, ../../app/stylesheets/application.sass */
 form.formtastic fieldset ol li p.inline-errors {
   margin: 0;
   margin-bottom: 0.5em; }
-/* line 216, ../../app/stylesheets/application.sass */
+/* line 217, ../../app/stylesheets/application.sass */
 form.formtastic fieldset ol li label {
   width: 15%; }
 
-/* line 220, ../../app/stylesheets/application.sass */
+/* line 221, ../../app/stylesheets/application.sass */
 table.listado tr td, table.listado tr th {
   border-bottom: 1px solid #CCC; }
 
-/* line 250, ../../app/stylesheets/application.sass */
+/* line 251, ../../app/stylesheets/application.sass */
 #dos-columnas {
   display: inline;
   float: left;
@@ -1699,7 +1720,7 @@ table.listado tr td, table.listado tr th {
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html #dos-columnas {
     overflow-x: hidden; }
-  /* line 252, ../../app/stylesheets/application.sass */
+  /* line 253, ../../app/stylesheets/application.sass */
   #dos-columnas #izquierda {
     display: inline;
     float: left;
@@ -1708,7 +1729,7 @@ table.listado tr td, table.listado tr th {
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #izquierda {
       overflow-x: hidden; }
-  /* line 254, ../../app/stylesheets/application.sass */
+  /* line 255, ../../app/stylesheets/application.sass */
   #dos-columnas #derecha {
     display: inline;
     float: left;
@@ -1717,7 +1738,7 @@ table.listado tr td, table.listado tr th {
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #derecha {
       overflow-x: hidden; }
-  /* line 256, ../../app/stylesheets/application.sass */
+  /* line 257, ../../app/stylesheets/application.sass */
   #dos-columnas #busqueda {
     display: inline;
     float: left;
@@ -1726,7 +1747,7 @@ table.listado tr td, table.listado tr th {
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #busqueda {
       overflow-x: hidden; }
-  /* line 258, ../../app/stylesheets/application.sass */
+  /* line 259, ../../app/stylesheets/application.sass */
   #dos-columnas #formulario {
     display: inline;
     float: left;
@@ -1735,7 +1756,7 @@ table.listado tr td, table.listado tr th {
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #formulario {
       overflow-x: hidden; }
-  /* line 260, ../../app/stylesheets/application.sass */
+  /* line 261, ../../app/stylesheets/application.sass */
   #dos-columnas #subtitulo_sustitucion {
     display: inline;
     float: left;
@@ -1744,7 +1765,7 @@ table.listado tr td, table.listado tr th {
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #dos-columnas #subtitulo_sustitucion {
       overflow-x: hidden; }
-  /* line 262, ../../app/stylesheets/application.sass */
+  /* line 263, ../../app/stylesheets/application.sass */
   #dos-columnas #elementos {
     display: inline;
     float: left;
@@ -1754,7 +1775,7 @@ table.listado tr td, table.listado tr th {
     * html #dos-columnas #elementos {
       overflow-x: hidden; }
 
-/* line 265, ../../app/stylesheets/application.sass */
+/* line 266, ../../app/stylesheets/application.sass */
 #sustitucion {
   display: inline;
   float: left;
@@ -1763,7 +1784,7 @@ table.listado tr td, table.listado tr th {
   /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
   * html #sustitucion {
     overflow-x: hidden; }
-  /* line 267, ../../app/stylesheets/application.sass */
+  /* line 268, ../../app/stylesheets/application.sass */
   #sustitucion #subtitulo {
     display: inline;
     float: left;
@@ -1772,7 +1793,7 @@ table.listado tr td, table.listado tr th {
     /* line 101, ../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.8.17/frameworks/blueprint/stylesheets/blueprint/modules/_grid.sass */
     * html #sustitucion #subtitulo {
       overflow-x: hidden; }
-  /* line 269, ../../app/stylesheets/application.sass */
+  /* line 270, ../../app/stylesheets/application.sass */
   #sustitucion #elementos {
     display: inline;
     float: left;
@@ -1782,6 +1803,6 @@ table.listado tr td, table.listado tr th {
     * html #sustitucion #elementos {
       overflow-x: hidden; }
 
-/* line 276, ../../app/stylesheets/application.sass */
+/* line 277, ../../app/stylesheets/application.sass */
 .wait {
   background: url(/images/wait.gif) no-repeat center center; }

@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100303061140) do
+ActiveRecord::Schema.define(:version => 20100421121533) do
+
+  create_table "imagenes", :force => true do |t|
+    t.string   "nombre"
+    t.integer  "recortable_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "imagen_file_name"
+    t.string   "imagen_content_type"
+    t.integer  "imagen_file_size"
+    t.datetime "imagen_updated_at"
+  end
 
   create_table "modelos", :force => true do |t|
     t.string   "nombre"
@@ -18,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20100303061140) do
   end
 
   create_table "recortables", :force => true do |t|
-    t.string   "modelo"
+    t.integer  "modelo_id"
     t.string   "complejidad"
     t.string   "color_fondo"
     t.string   "color_aristas"
