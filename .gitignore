@@ -9,5 +9,6 @@ db/*.sqlite3
 tmp/*html
 config/query_reviewer.yml
 coverage
+public/system/**/*
 .idea
 nbproject

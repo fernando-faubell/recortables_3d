@@ -1,3 +1,10 @@
+%div{:id => "slider"}
+  - unless @recortable.imagenes.empty?
+    %ul
+      - @recortable.imagenes.each do |imagen|
+        %li
+          = image_tag imagen.imagen.url, :size => "400x400"
+
 - semantic_form_for @recortable do |f|
   = f.error_messages
   %br
@@ -29,10 +36,4 @@
   %p
   = link_to t(:cancelar), root_path
 
-- unless @recortable.imagenes.empty?
-  %div{:id => "slider"}
-    %ul
-      - @recortable.imagenes.each do |imagen|
-        %li
-          = image_tag imagen.imagen.url, :size => "480x480"
     
