@@ -11,7 +11,7 @@ class Recortable < ActiveRecord::Base
 
   def genera_imagenes
     self.imagenes.destroy_all
-    g = Globo.new(self)
+    g = Cono.new(self)
     ruta = g.genera
     i = self.imagenes.new
     i.imagen = File.new(ruta + "/image000.jpg")

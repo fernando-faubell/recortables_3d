@@ -2,13 +2,15 @@
 #slider ul, #slider li {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+}
 
 /* line 6, ../../app/stylesheets/easySlider.sass */
 #slider, #slider li {
   width: 480px;
   height: 480px;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* line 11, ../../app/stylesheets/easySlider.sass */
 span#prevBtn a {
@@ -17,4 +19,5 @@ span#prevBtn a {
   background: url(images/rails.png) no-repeat;
   width: 51px;
   height: 19px;
-  text-indent: -9000px; }
+  text-indent: -9000px;
+}
