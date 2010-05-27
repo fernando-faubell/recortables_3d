@@ -1,0 +1,1 @@
+Plugin con las personalizaciones de las recetas de Capistrano.
