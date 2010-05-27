@@ -8,14 +8,14 @@ $(document).ready(function(){
   $('#colorpicker_recortable_color_fondo').farbtastic('#recortable_color_fondo');
   $('#colorpicker_recortable_color_aristas').farbtastic('#recortable_color_aristas');
 
-
-
-  //$("div#fotos").slideView()
- 
- 
-$("#slider").easySlider({
+  $("#slider").easySlider({
               prevText: 'Anterior',
-              nextText: 'Siguiente'
-})
+              nextText: 'Siguiente'})
+
+
+
+  $("#pruebas").hover( function() {
+    $("#imagen_cabecera").attr("src"), function() {return "images/esfera20.jpg"};
+  })
 
 });

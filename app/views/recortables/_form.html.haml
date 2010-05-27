@@ -3,8 +3,13 @@
     %ul
       - @recortable.imagenes.each do |imagen|
         %li
-          = image_tag imagen.imagen.url, :size => "400x400"
+          = image_tag imagen.imagen.url, :size => "300x300"
+  - else
+    %ul
+      %li
+        = image_tag "esfera320.jpg", :id => "imagen_cabecera"
 
+%div{:id => "pruebas"}= link_to "google.es"
 - semantic_form_for @recortable do |f|
   = f.error_messages
   %br

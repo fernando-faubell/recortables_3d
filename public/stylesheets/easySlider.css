@@ -7,13 +7,23 @@
 
 /* line 6, ../../app/stylesheets/easySlider.sass */
 #slider, #slider li {
-  width: 480px;
-  height: 480px;
+  width: 300px;
+  height: 300px;
   overflow: hidden;
 }
 
 /* line 11, ../../app/stylesheets/easySlider.sass */
 span#prevBtn a {
+  display: inline;
+  cursor: pointer;
+  background: url(images/rails.png) no-repeat;
+  width: 51px;
+  height: 19px;
+  text-indent: -9000px;
+}
+
+/* line 19, ../../app/stylesheets/easySlider.sass */
+span#nextBtn a {
   display: inline;
   cursor: pointer;
   background: url(images/rails.png) no-repeat;
