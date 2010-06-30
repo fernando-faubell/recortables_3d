@@ -4,11 +4,10 @@ class Esfera < Figura
 
     @ejecutable = RUTA_EJECUTABLES + "esferaglx"
 
-    #num_gajos num_U num_V textura.xxx anchoTexX anchoTexY despTexX despTexY red green blue RepiteH RepiteV edge_red edge_green edge_blue edge_size path_results End
-
-    num_gajos = 6
-    num_u = 4
-    num_v = 6
+    # esferaglx textura.rgb ancho alto anchoTexX anchoTexY despTexX despTexY RepiteH RepiteV red green blue edge_red edge_green edge_blue edge_size path_results Mode radio nivel(0-3)
+    # esferaglx google_logo.rgb 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 1.0 /tmp 0 1 1
+    ancho = 512
+    alto = 512
 
     # Parametros de textura
     textura = "no_textura" #RAILS_ROOT + "/public/images/google_logo.jpg"
@@ -29,10 +28,12 @@ class Esfera < Figura
     # Parametro para que genere las imagenes.
     modo = 10
 
-    @parametros = " #{num_gajos} #{num_u} #{num_v} #{textura} #{ancho_tex_x}" <<
-                  " #{ancho_tex_y} #{desp_tex_x} #{desp_tex_y} #{red} #{green}" <<
-                  "  #{blue} #{repite_h} #{repite_v} #{edge_red} #{edge_green}" <<
-                  "  #{edge_blue} #{aristas_tamanyo} #{@directorio_temporal} #{modo}"
+    radio = 1
+    nivel = 1
+    @parametros = " #{textura} #{ancho} #{alto} #{ancho_tex_x}" <<
+                  " #{ancho_tex_y} #{desp_tex_x} #{desp_tex_y} #{repite_h} #{repite_v} #{red} #{green}" <<
+                  " #{blue} #{edge_red} #{edge_green}" <<
+                  " #{edge_blue} #{aristas_tamanyo} #{@directorio_temporal} #{modo} #{radio} #{nivel}"
   end
 
 end
