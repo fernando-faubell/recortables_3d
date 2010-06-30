@@ -9,10 +9,10 @@ $(document).ready(function(){
   $('#colorpicker_recortable_color_aristas').farbtastic('#recortable_color_aristas');
 
   $("#slider").easySlider({
-              prevText: 'Anterior',
-              nextText: 'Siguiente'})
+              prevText: '',
+              nextText: ''})
 
-
+//  $("#slider").easySlider()
 
   $("#pruebas").hover( function() {
     $("#imagen_cabecera").attr("src"), function() {return "images/esfera20.jpg"};

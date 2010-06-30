@@ -17,6 +17,18 @@ es:
   textura: "Textura"
 
 
+##### Grosores
+
+
+  muy_fino: "Muy Fino"
+  normal: "Normal"
+  medio: "Medio"
+  grueso: "Grueso"
+
+
+
+
+
 ##### Modelos
 
   globo: "Globo aerostatico"

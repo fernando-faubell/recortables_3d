@@ -7,27 +7,40 @@
 
 /* line 6, ../../app/stylesheets/easySlider.sass */
 #slider, #slider li {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
 }
 
 /* line 11, ../../app/stylesheets/easySlider.sass */
-span#prevBtn a {
-  display: inline;
-  cursor: pointer;
-  background: url(images/rails.png) no-repeat;
-  width: 51px;
-  height: 19px;
-  text-indent: -9000px;
+div#slider {
+  margin-left: 335px;
 }
 
-/* line 19, ../../app/stylesheets/easySlider.sass */
-span#nextBtn a {
-  display: inline;
-  cursor: pointer;
-  background: url(images/rails.png) no-repeat;
-  width: 51px;
-  height: 19px;
-  text-indent: -9000px;
+/* line 15, ../../app/stylesheets/easySlider.sass */
+#prevBtn, #nextBtn {
+  display: block;
+  width: 30px;
+  height: 77px;
+  position: absolute;
+  margin-left: 250px;
+  top: 71px;
+}
+
+/* line 23, ../../app/stylesheets/easySlider.sass */
+#nextBtn {
+  margin-left: 750px;
+}
+
+/* line 26, ../../app/stylesheets/easySlider.sass */
+#prevBtn a, #nextBtn a {
+  display: block;
+  width: 30px;
+  height: 77px;
+  background: url(/images/prev.gif) no-repeat 0 0;
+}
+
+/* line 32, ../../app/stylesheets/easySlider.sass */
+#nextBtn a {
+  background: url(/images/next.gif) no-repeat 0 0;
 }

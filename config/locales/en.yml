@@ -18,6 +18,10 @@ en:
   grosor_aristas: "Edge thickness"
   textura: "Texture"
 
+  muy_fino: "Tiny"
+  normal: "Normal"
+  medio: "Medium"
+  grueso: "Thick"
 
 
 ### Modelos

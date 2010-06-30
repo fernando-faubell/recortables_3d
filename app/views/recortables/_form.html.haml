@@ -3,20 +3,20 @@
     %ul
       - @recortable.imagenes.each do |imagen|
         %li
-          = image_tag imagen.imagen.url, :size => "300x300"
+          = image_tag imagen.imagen.url, :size => "400x400", :id => "imagen_cabecera"
   - else
     %ul
       %li
         = image_tag "esfera320.jpg", :id => "imagen_cabecera"
 
-%div{:id => "pruebas"}= link_to "google.es"
 - semantic_form_for @recortable do |f|
   = f.error_messages
   %br
   - f.inputs do
     /= f.input :modelo_id, :as => :radio, :collection => @modelos
     - @modelos.each do |modelo|
-      = image_tag(modelo[0].downcase + ".png")
+      /= image_tag(modelo[0].downcase + ".png")
+      = modelo[0]
       = f.radio_button :modelo_id, modelo[1].to_i
   %br
   - f.inputs do
@@ -27,7 +27,7 @@
     = f.text_field :color_aristas
     #colorpicker_recortable_color_aristas
     = f.label t :grosor_aristas
-    = f.text_field :grosor_aristas
+    = f.input :grosor_aristas, :collection => @grosor_aristas
   %br
   - f.inputs :name => "Fondo" do
     = f.label t :color_fondo

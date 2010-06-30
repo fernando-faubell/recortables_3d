@@ -1,25 +1,38 @@
 #slider ul, #slider li
-  :margin 0
-  :padding 0
-  :list-style none
+  margin: 0
+  padding: 0
+  list-style: none
 
 #slider, #slider li
-  :width 300px
-  :height 300px
-  :overflow hidden
+  width: 400px
+  height: 400px
+  overflow: hidden
 
-span#prevBtn a
-  :display inline
-  :cursor pointer
-  :background url(images/rails.png) no-repeat
-  :width 51px
-  :height 19px
-  :text-indent -9000px
+div#slider
+  margin-left: 335px
 
-span#nextBtn a
-  :display inline
-  :cursor pointer
-  :background url(images/rails.png) no-repeat
-  :width 51px
-  :height 19px
-  :text-indent -9000px
+
+#prevBtn, #nextBtn
+  :display block
+  :width 30px
+  :height 77px
+  :position absolute
+  :margin-left 250px
+  :top 71px
+
+#nextBtn
+  :margin-left 750px
+
+#prevBtn a, #nextBtn a
+  display: block
+  width: 30px
+  height: 77px
+  background: url(/images/prev.gif) no-repeat 0 0
+
+#nextBtn a
+  background: url(/images/next.gif) no-repeat 0 0
+
+
+
+
+

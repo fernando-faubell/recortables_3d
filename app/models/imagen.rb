@@ -14,15 +14,10 @@
 #
 
 class Imagen < ActiveRecord::Base
+  
   attr_accessible :nombre
-
-
-
-  has_attached_file :imagen
-
-
-
-
+  belongs_to :recortable
+  has_attached_file :imagen#, :styles => {}, :processors => [:ppm_to_jpg]
 
 
 

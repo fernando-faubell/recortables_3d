@@ -59,7 +59,8 @@ class RecortablesController < ApplicationController
 
   def carga_combos
     @modelos = Modelo.lista_select    
-    @complejidad = Recortable.lista_select_complejidad    
+    @complejidad = Recortable.lista_select_complejidad
+    @grosor_aristas = Recortable.lista_select_grosor_aristas
   end
   private :carga_combos
 
