@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100421121533) do
+ActiveRecord::Schema.define(:version => 20100701145530) do
 
   create_table "imagenes", :force => true do |t|
     t.string   "nombre"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20100421121533) do
     t.string   "textura"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "nombre",         :limit => 24
   end
 
 end

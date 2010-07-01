@@ -19,8 +19,8 @@ class Esfera < Figura
     repite_v = 0
  
     # Colores de fondo y aristas.
-    red, green, blue = html_to_rgb esfera.color_fondo
-    edge_red, edge_green, edge_blue = html_to_rgb esfera.color_aristas
+    rojo, verde, azul = html_to_rgb esfera.color_fondo
+    aristas_rojo, aristas_verde, aristas_azul = html_to_rgb esfera.color_aristas
 
     # Grosor de las aristas.
     aristas_tamanyo = grueso_aristas(esfera.grosor_aristas)
@@ -31,9 +31,9 @@ class Esfera < Figura
     radio = 1
     nivel = 1
     @parametros = " #{textura} #{ancho} #{alto} #{ancho_tex_x}" <<
-                  " #{ancho_tex_y} #{desp_tex_x} #{desp_tex_y} #{repite_h} #{repite_v} #{red} #{green}" <<
-                  " #{blue} #{edge_red} #{edge_green}" <<
-                  " #{edge_blue} #{aristas_tamanyo} #{@directorio_temporal} #{modo} #{radio} #{nivel}"
+                  " #{ancho_tex_y} #{desp_tex_x} #{desp_tex_y} #{repite_h} #{repite_v} #{rojo} #{verde}" <<
+                  " #{azul} #{aristas_rojo} #{aristas_verde}" <<
+                  " #{aristas_azul} #{aristas_tamanyo} #{@directorio_temporal} #{modo} #{radio} #{nivel}"
   end
 
 end

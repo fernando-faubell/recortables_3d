@@ -11,14 +11,15 @@
 #  textura        :string(255)
 #  created_at     :datetime
 #  updated_at     :datetime
+#  nombre         :string(24)
 #
 
 class Recortable < ActiveRecord::Base
 
-  belongs_to :modelo
+  #belongs_to :modelo
   has_many :imagenes
 
-  validates_presence_of :modelo_id
+  #validates_presence_of :modelo_id
   
   after_save :genera_imagenes
 

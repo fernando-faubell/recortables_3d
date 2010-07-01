@@ -12,12 +12,29 @@
 - semantic_form_for @recortable do |f|
   = f.error_messages
   %br
+  - f.inputs :id => "Bolos" do
+
+    = f.radio_button :nombre, "Bolo16"
+    = f.radio_button :nombre, "Bolo35", :label => "Bolo 35"
+    = f.radio_button :nombre, "Bolo70", :label => "Bolo 70"
+    = f.radio_button :nombre, "Bolo154", :label => "Bolo 154"
+    = f.radio_button :nombre, "Bolo340", :label => "Bolo 340"
+
   - f.inputs do
-    /= f.input :modelo_id, :as => :radio, :collection => @modelos
-    - @modelos.each do |modelo|
-      /= image_tag(modelo[0].downcase + ".png")
-      = modelo[0]
-      = f.radio_button :modelo_id, modelo[1].to_i
+
+    = f.radio_button :nombre, "Cono_r_h"
+    = f.radio_button :nombre, "Cono_r_2h"
+    = f.radio_button :nombre, "Cono_2r_h"
+    = f.radio_button :nombre, "Cono_4r_h"
+
+  - f.inputs do
+
+    = f.radio_button :nombre, "Esfera20"
+    = f.radio_button :nombre, "Esfera80"
+    = f.radio_button :nombre, "Esfera320"
+
+
+  
   %br
   - f.inputs do
     = f.input :complejidad, :as => :radio, :collection => @complejidad
