@@ -1,46 +1,93 @@
 /* line 1, ../../app/stylesheets/easySlider.sass */
-#slider ul, #slider li {
+#slider_imagenes ul, #slider_imagenes li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 /* line 6, ../../app/stylesheets/easySlider.sass */
-#slider, #slider li {
+#slider_imagenes, #slider_imagenes li {
   width: 400px;
   height: 400px;
   overflow: hidden;
 }
 
 /* line 11, ../../app/stylesheets/easySlider.sass */
-div#slider {
-  margin-left: 335px;
+div#slider_imagenes {
+  margin-left: 285px;
 }
 
-/* line 15, ../../app/stylesheets/easySlider.sass */
-#prevBtn, #nextBtn {
+/* line 14, ../../app/stylesheets/easySlider.sass */
+#prevBtn_imagenes, #nextBtn_imagenes {
   display: block;
   width: 30px;
-  height: 77px;
+  height: 30px;
   position: absolute;
-  margin-left: 250px;
-  top: 71px;
+  margin-left: 142px;
+  top: 70px;
 }
 
-/* line 23, ../../app/stylesheets/easySlider.sass */
-#nextBtn {
-  margin-left: 750px;
+/* line 22, ../../app/stylesheets/easySlider.sass */
+#nextBtn_imagenes {
+  margin-left: 828px;
 }
 
-/* line 26, ../../app/stylesheets/easySlider.sass */
-#prevBtn a, #nextBtn a {
+/* line 25, ../../app/stylesheets/easySlider.sass */
+#prevBtn_imagenes a, #nextBtn_imagenes a {
   display: block;
   width: 30px;
-  height: 77px;
+  height: 30px;
   background: url(/images/prev.gif) no-repeat 0 0;
 }
 
-/* line 32, ../../app/stylesheets/easySlider.sass */
-#nextBtn a {
+/* line 31, ../../app/stylesheets/easySlider.sass */
+#nextBtn_imagenes a {
+  background: url(/images/next.gif) no-repeat 0 0;
+}
+
+/* line 37, ../../app/stylesheets/easySlider.sass */
+#slider_formulario ul, #slider_formulario li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 43, ../../app/stylesheets/easySlider.sass */
+#slider_formulario, #slider_formulario li {
+  width: 970px;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* line 50, ../../app/stylesheets/easySlider.sass */
+div#slider_formulario {
+  margin-left: 0px;
+}
+
+/* line 55, ../../app/stylesheets/easySlider.sass */
+#prevBtn_formulario, #nextBtn_formulario {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  margin-left: 10px;
+  top: 370px;
+}
+
+/* line 63, ../../app/stylesheets/easySlider.sass */
+#nextBtn_formulario {
+  margin-left: 930px;
+}
+
+/* line 66, ../../app/stylesheets/easySlider.sass */
+#prevBtn_formulario a, #nextBtn_formulario a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(/images/prev.gif) no-repeat 0 0;
+}
+
+/* line 72, ../../app/stylesheets/easySlider.sass */
+#nextBtn_formulario a {
   background: url(/images/next.gif) no-repeat 0 0;
 }

@@ -11,7 +11,7 @@
     = f.error_messages
     %ul
       %li
-        %div.caja
+        %div.pantalla_formulario
           %table
             %tr
               %td
@@ -51,32 +51,41 @@
                 = f.label "Esfera 320"
                 = f.radio_button :nombre, "Esfera320"
       %li
-        %div.caja
-          = f.label t(:color_fondo)
-          = f.text_field :color_fondo, {:class => "selector_color"}
-          %div{:id => "colorpicker_recortable_color_fondo", :class => "picker"}
-          = f.label t(:textura)
-          = f.file_field :textura
-          - if @recortable.textura
-            = image_tag @recortable.textura.url(:thumb)
-
-          %hr
-          %div
-            = f.label t(:color_aristas)
-            = f.text_field :color_aristas, {:class => "selector_color"}
-            %div{:id => "colorpicker_recortable_color_aristas", :class => "picker"}
-          = f.label t(:grosor_aristas)
-          %fieldset
-            = f.label "Fino"
-            = f.radio_button :grosor_aristas, "Fino"
-            = f.label "Medio"
-            = f.radio_button :grosor_aristas, "Medio"
-            = f.label "Grueso"
-            = f.radio_button :grosor_aristas, "Grueso"
+        %div.pantalla_formulario
+          %table
+            %tr
+              %td
+                = f.label t(:color_fondo)
+                %br
+                = f.text_field :color_fondo, {:class => "selector_color"}
+                %div{:id => "colorpicker_recortable_color_fondo", :class => "picker"}
+                %br
+                = f.label t(:textura)
+                %br
+                = f.file_field :textura
+                - if @recortable.textura
+                  %br
+                  = image_tag @recortable.textura.url(:thumb)
+              %td
+                = f.label t(:color_aristas)
+                %br
+                = f.text_field :color_aristas, {:class => "selector_color"}
+                %div{:id => "colorpicker_recortable_color_aristas", :class => "picker"}
+                = f.label t(:grosor_aristas)
+                %br
+                = f.label "Fino"
+                = f.radio_button :grosor_aristas, "Fino"
+                %br
+                = f.label "Medio"
+                = f.radio_button :grosor_aristas, "Medio"
+                %br
+                = f.label "Grueso"
+                = f.radio_button :grosor_aristas, "Grueso"
+          %br
 
           = f.submit t(:previsualizar)
       %li
-        %div.caja
+        %div.pantalla_formulario
           = f.submit t(:generar)
           %p
           = link_to t(:cancelar), root_path

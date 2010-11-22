@@ -32,6 +32,7 @@ Rails::Initializer.run do |config|
   # Mejora de los formularios
   config.gem 'formtastic'
 
+  # Ficheros adjuntos para las texturas.
   config.gem "paperclip"
 
   # Only load the plugins named here, in the order given (default is alphabetical).

@@ -6,6 +6,11 @@
 @import "easySlider"
 //@import "notificaciones"
 
+
+.invisible
+  display: none
+  visibility: hidden
+
 =tres-columnas(!header,!footer,!sidebar,!content)
   +container
   background-color: #fff
@@ -22,6 +27,79 @@
 
 div.tres-columnas
   +tres-columnas("#header","#footer", "#sidebar", "#content")
+
+div.pantalla_formulario
+  background-color: #aaa
+  width: 970px
+  height: 500px
+  margin-top: 0px
+  border-radius: 10px
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+
+
+.caja
+  margin: 5em auto
+  width: 955px
+  height: 400px
+  padding: 3px
+  border: 1px solid #cccccc
+  -moz-border-radius: 10px
+  -webkit-box-shadow: 2px 2px 5px #999999
+  -moz-box-shadow: 2px 2px 5px #999999
+  .title
+    font-weight: bold
+    background-color: #eeeeee
+    padding: 5px
+    color: #333333
+    -moz-border-radius-topleft: 5px
+    -moz-border-radius-topright: 5px
+  form
+    padding: 10px
+    .acciones
+      text-align: right
+
+
+
+
+
+
+
+input.selector_color
+  width: 80px
+
+td
+  vertical-align: top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Layout de dos columnas
 //=two-columns(!header,!left,!center,!footer)

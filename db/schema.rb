@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100701145530) do
+ActiveRecord::Schema.define(:version => 20101002103654) do
 
   create_table "imagenes", :force => true do |t|
     t.string   "nombre"
@@ -37,7 +37,11 @@ ActiveRecord::Schema.define(:version => 20100701145530) do
     t.string   "textura"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "nombre",         :limit => 24
+    t.string   "nombre",               :limit => 24
+    t.string   "textura_file_name"
+    t.string   "textura_content_type"
+    t.integer  "textura_file_size"
+    t.datetime "textura_updated_at"
   end
 
 end

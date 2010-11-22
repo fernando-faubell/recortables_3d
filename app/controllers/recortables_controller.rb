@@ -21,7 +21,7 @@ class RecortablesController < ApplicationController
       if params[:commit] == t(:previsualizar)
         redirect_to edit_recortable_path(@recortable)
       else
-        redirect_to root_path
+        redirect_to @recortable
       end
 
     else

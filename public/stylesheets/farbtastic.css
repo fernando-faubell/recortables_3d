@@ -16,9 +16,30 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
+
 .farbtastic {
+  -moz-background-clip:border;
+  -moz-background-inline-policy:continuous;
+  -moz-background-origin:padding;
+  background:#555555 none repeat scroll 0 0;
+  border:1px solid #AAAAAA;
+  left:0;
+  position:relative;
+  top:1px;
+  z-index:99999999;
+}
+.picker {
+  left: inherit;
+  position: absolute;
+  top:auto;
+  width:200px;
+}
+
+
+/*.farbtastic {
   position: relative;
 }
+*/
 .farbtastic * {
   position: absolute;
   cursor: crosshair;
