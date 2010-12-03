@@ -16,29 +16,6 @@ $(document).ready(function(){
     $('#colorpicker_recortable_color_aristas').toggleClass("invisible");
   });
 
-
-
-//  $('#colorpicker_recortable_color_fondo').position({
-//    of: $('#recortable_color_fondo' ),
-//    my: "center",
-//    at: "center",
-//    offset: "0 0",
-//    collision: "none"
-//  });
-//
-//  $('#colorpicker_recortable_color_aristas').position({
-//    of: $('#recortable_color_aristas' ),
-//    my: "left top",
-//    at: "center center",
-//
-//    collision: "fit"
-//  });
-
-
-
-
-
-
   $('#colorpicker_recortable_color_fondo').farbtastic('#recortable_color_fondo');
   $('#colorpicker_recortable_color_aristas').farbtastic('#recortable_color_aristas');
 
@@ -50,7 +27,8 @@ $(document).ready(function(){
               prevId: 'prevBtn_imagenes',
               prevText: '',
               nextId: 'nextBtn_imagenes',
-              nextText: ''})
+              nextText: '',
+              orientation: 'horizontal'})
 
   $("#slider_formulario").easySlider({
               prevId: 'prevBtn_formulario',
@@ -60,9 +38,9 @@ $(document).ready(function(){
               orientation: 'horizontal'})
 
 
-  $("#pruebas").hover( function() {
-    $("#imagen_cabecera").attr("src"), function() {return "images/esfera20.jpg"};
-  })
+//  $("#pruebas").hover( function() {
+//    $("#imagen_cabecera").attr("src"), function() {return "images/esfera20.jpg"};
+//  })
 
   $('input:radio[name^="recortable[nombre]"]').click(function(){
     identificador = $(this).attr('id');

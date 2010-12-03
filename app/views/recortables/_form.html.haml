@@ -1,9 +1,13 @@
 %div{:id => "slider_imagenes"}
-
   %ul
-  - lista_imagenes_recortable.each do |i|
-    %li
-      = image_tag i, :size => "400x400", :id => "imagen_cabecera"
+    %li= image_tag "bolo16.jpg" , :size => "400x400", :id => "imagen_cabecera"
+    %li= image_tag "esfera320.jpg" , :size => "400x400", :id => "imagen_cabecera"
+
+
+/  %ul
+/  - lista_imagenes_recortable.each do |i|
+/    %li
+/      = image_tag i, :size => "400x400", :id => "imagen_cabecera"
 
 
 %div{:id => "slider_formulario"}
@@ -52,29 +56,40 @@
                 = f.radio_button :nombre, "Esfera320"
       %li
         %div.caja
-          = f.label t(:color_fondo)
-          = f.text_field :color_fondo, {:class => "selector_color"}
-          %div{:id => "colorpicker_recortable_color_fondo", :class => "picker"}
-          = f.label t(:textura)
-          = f.file_field :textura
-          - if @recortable.textura
-            = image_tag @recortable.textura.url(:thumb)
 
-          %hr
-          %div
+          %div.bloque.c_fondo
+            = f.label t(:color_fondo)
+            %br
+            = f.text_field :color_fondo, {:class => "selector_color"}
+            %div{:id => "colorpicker_recortable_color_fondo", :class => "picker"}
+
+          %div.bloque.c_aristas
             = f.label t(:color_aristas)
+            %br
             = f.text_field :color_aristas, {:class => "selector_color"}
             %div{:id => "colorpicker_recortable_color_aristas", :class => "picker"}
-          = f.label t(:grosor_aristas)
-          %fieldset
-            = f.label "Fino"
-            = f.radio_button :grosor_aristas, "Fino"
-            = f.label "Medio"
-            = f.radio_button :grosor_aristas, "Medio"
-            = f.label "Grueso"
-            = f.radio_button :grosor_aristas, "Grueso"
 
-          = f.submit t(:previsualizar)
+          %div.bloque.g_aristas
+            = f.radio_button :grosor_aristas, "Fino"
+            = f.label "Fino"
+            %br
+            = f.radio_button :grosor_aristas, "Normal"
+            = f.label "Normal"
+            %br
+            = f.radio_button :grosor_aristas, "Medio"
+            = f.label "Medio"
+            %br
+            = f.radio_button :grosor_aristas, "Grueso"
+            = f.label "Grueso"
+
+          %div.bloque.textura
+            = f.label t(:textura)
+            %br
+            = f.file_field :textura, :size => "10"
+            - if @recortable.textura
+              = image_tag @recortable.textura.url(:thumb)
+          %div.bloque.previsualizar
+            = f.submit t(:previsualizar)
       %li
         %div.caja
           = f.submit t(:generar)

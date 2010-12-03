@@ -1243,8 +1243,8 @@ div#slider_imagenes {
 /* line 14, ../../app/stylesheets/easySlider.sass */
 #prevBtn_imagenes, #nextBtn_imagenes {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 64px;
+  height: 64px;
   position: absolute;
   margin-left: 142px;
   top: 70px;
@@ -1258,14 +1258,14 @@ div#slider_imagenes {
 /* line 25, ../../app/stylesheets/easySlider.sass */
 #prevBtn_imagenes a, #nextBtn_imagenes a {
   display: block;
-  width: 30px;
-  height: 30px;
-  background: url(/images/prev.gif) no-repeat 0 0;
+  width: 64px;
+  height: 64px;
+  background: url(/images/flecha_izquierda.png) no-repeat 0 0;
 }
 
 /* line 31, ../../app/stylesheets/easySlider.sass */
 #nextBtn_imagenes a {
-  background: url(/images/next.gif) no-repeat 0 0;
+  background: url(/images/flecha_derecha.png) no-repeat 0 0;
 }
 
 /* line 37, ../../app/stylesheets/easySlider.sass */
@@ -1290,29 +1290,30 @@ div#slider_formulario {
 /* line 55, ../../app/stylesheets/easySlider.sass */
 #prevBtn_formulario, #nextBtn_formulario {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 64px;
+  height: 64px;
   position: absolute;
   margin-left: 10px;
-  top: 370px;
+  top: 800px;
+  /*top: 370px */
 }
 
-/* line 63, ../../app/stylesheets/easySlider.sass */
+/* line 64, ../../app/stylesheets/easySlider.sass */
 #nextBtn_formulario {
-  margin-left: 930px;
+  margin-left: 896px;
 }
 
-/* line 66, ../../app/stylesheets/easySlider.sass */
+/* line 67, ../../app/stylesheets/easySlider.sass */
 #prevBtn_formulario a, #nextBtn_formulario a {
   display: block;
-  width: 30px;
-  height: 30px;
-  background: url(/images/prev.gif) no-repeat 0 0;
+  width: 64px;
+  height: 64px;
+  background: url(/images/flecha_izquierda.png) no-repeat 0 0;
 }
 
-/* line 72, ../../app/stylesheets/easySlider.sass */
+/* line 73, ../../app/stylesheets/easySlider.sass */
 #nextBtn_formulario a {
-  background: url(/images/next.gif) no-repeat 0 0;
+  background: url(/images/flecha_derecha.png) no-repeat 0 0;
 }
 
 /* line 10, ../../app/stylesheets/application.sass */
@@ -1405,13 +1406,40 @@ div.pantalla_formulario {
 .caja form .acciones {
   text-align: right;
 }
+/* line 62, ../../app/stylesheets/application.sass */
+.caja .bloque {
+  margin: 2em auto;
+  height: 200px;
+  float: left;
+  width: 150px;
+}
+/* line 67, ../../app/stylesheets/application.sass */
+.caja .c_fondo {
+  width: 200px;
+}
+/* line 69, ../../app/stylesheets/application.sass */
+.caja .c_aristas {
+  width: 200px;
+}
+/* line 71, ../../app/stylesheets/application.sass */
+.caja .g_aristas {
+  width: 90px;
+}
+/* line 73, ../../app/stylesheets/application.sass */
+.caja .textura {
+  width: 300px;
+}
+/* line 75, ../../app/stylesheets/application.sass */
+.caja .previsualizar {
+  width: 110px;
+}
 
-/* line 68, ../../app/stylesheets/application.sass */
+/* line 81, ../../app/stylesheets/application.sass */
 input.selector_color {
   width: 80px;
 }
 
-/* line 71, ../../app/stylesheets/application.sass */
+/* line 84, ../../app/stylesheets/application.sass */
 td {
   vertical-align: top;
 }
