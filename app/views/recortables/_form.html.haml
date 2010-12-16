@@ -1,99 +1,111 @@
-%div{:id => "slider_imagenes"}
-  %ul
-    %li= image_tag "bolo16.jpg" , :size => "400x400", :id => "imagen_cabecera"
-    %li= image_tag "esfera320.jpg" , :size => "400x400", :id => "imagen_cabecera"
+#formulario
+  %div{:id => "slider_formulario"}
+    - semantic_form_for @recortable, :html => {:multipart => true, :class => "bp"} do |f|
+      /= f.error_messages
+      %ul
+        %li
+          %div.caja
+            %table
+              %tr
+                %td
+                  = f.radio_button :nombre, "Bolo16"
+                  = f.label "Bolo 16"
+                  %br
+                  = f.radio_button :nombre, "Bolo35"
+                  = f.label "Bolo 35"
+                  %br
+                  = f.radio_button :nombre, "Bolo70"
+                  = f.label "Bolo 70"
+                  %br
+                  = f.radio_button :nombre, "Bolo154"
+                  = f.label "Bolo 154"
+                  %br
+                  = f.radio_button :nombre, "Bolo340"
+                  = f.label "Bolo 340"
+                %td
+                  = f.radio_button :nombre, "Cono_r_h"
+                  = f.label "Cono r=h"
+                  %br
+                  = f.radio_button :nombre, "Cono_r_2h"
+                  = f.label "Cono r=2h"
+                  %br
+                  = f.radio_button :nombre, "Cono_2r_h"
+                  = f.label "Cono 2r=h"
+                  %br
+                  = f.radio_button :nombre, "Cono_4r_h"
+                  = f.label "Cono 4r=h"
+                %td
+                  = f.radio_button :nombre, "Esfera20"
+                  = f.label "Esfera 20"
+                  %br
+                  = f.radio_button :nombre, "Esfera80"
+                  = f.label "Esfera 80"
+                  %br
+                  = f.radio_button :nombre, "Esfera320"
+                  = f.label "Esfera 320"
+        %li
+          %div.caja
+            %div.bloque.c_fondo
+              = f.label t(:color_fondo)
+              %br
+              = f.text_field :color_fondo, {:class => "selector_color"}
+              %div{:id => "colorpicker_recortable_color_fondo", :class => "picker"}
+
+            %div.bloque.c_aristas
+              = f.label t(:color_aristas)
+              %br
+              = f.text_field :color_aristas, {:class => "selector_color"}
+              %div{:id => "colorpicker_recortable_color_aristas", :class => "picker"}
+
+            %div.bloque.g_aristas
+              = f.radio_button :grosor_aristas, "Fino"
+              = f.label "Fino"
+              %br
+              = f.radio_button :grosor_aristas, "Normal"
+              = f.label "Normal"
+              %br
+              = f.radio_button :grosor_aristas, "Medio"
+              = f.label "Medio"
+              %br
+              = f.radio_button :grosor_aristas, "Grueso"
+              = f.label "Grueso"
+
+            %div.bloque.textura
+              = f.label t(:textura)
+              %br
+              = f.file_field :textura, :size => "10"
+              - if @recortable.textura
+                = image_tag @recortable.textura.url(:thumb)
+              %table
+                %tr
+                  %td
+                  %td X
+                  %td Y
+                %tr
+                  %td Tamaño
+                  %td= f.text_field :tamanyo_x
+                  %td= f.text_field :tamanyo_y
+                %tr
+                  %td Desplazamiento
+                  %td= f.text_field :posicion_x
+                  %td= f.text_field :posicion_y
+                %tr
+                  %td Repetir
+                  %td= f.check_box :repetir_x
+                  %td= f.check_box :repetir_y
 
 
-/  %ul
-/  - lista_imagenes_recortable.each do |i|
-/    %li
-/      = image_tag i, :size => "400x400", :id => "imagen_cabecera"
+              
+              
 
 
-%div{:id => "slider_formulario"}
-  - semantic_form_for @recortable, :html => {:multipart => true} do |f|
-    = f.error_messages
-    %ul
-      %li
-        %div.caja
-          %table
-            %tr
-              %td
-                = f.label "Bolo 16"
-                = f.radio_button :nombre, "Bolo16"
-                %br
-                = f.label "Bolo 35"
-                = f.radio_button :nombre, "Bolo35"
-                %br
-                = f.label "Bolo 70"
-                = f.radio_button :nombre, "Bolo70"
-                %br
-                = f.label "Bolo 154"
-                = f.radio_button :nombre, "Bolo154"
-                %br
-                = f.label "Bolo 340"
-                = f.radio_button :nombre, "Bolo340"                
-              %td
-                = f.label "Cono r=h"
-                = f.radio_button :nombre, "Cono_r_h"
-                %br
-                = f.label "Cono r=2h"
-                = f.radio_button :nombre, "Cono_r_2h"
-                %br
-                = f.label "Cono 2r=h"
-                = f.radio_button :nombre, "Cono_2r_h"
-                %br
-                = f.label "Cono 4r=h"
-                = f.radio_button :nombre, "Cono_4r_h"                
-              %td
-                = f.label "Esfera 20"
-                = f.radio_button :nombre, "Esfera20"
-                %br
-                = f.label "Esfera 80"
-                = f.radio_button :nombre, "Esfera80"
-                %br
-                = f.label "Esfera 320"
-                = f.radio_button :nombre, "Esfera320"
-      %li
-        %div.caja
 
-          %div.bloque.c_fondo
-            = f.label t(:color_fondo)
-            %br
-            = f.text_field :color_fondo, {:class => "selector_color"}
-            %div{:id => "colorpicker_recortable_color_fondo", :class => "picker"}
-
-          %div.bloque.c_aristas
-            = f.label t(:color_aristas)
-            %br
-            = f.text_field :color_aristas, {:class => "selector_color"}
-            %div{:id => "colorpicker_recortable_color_aristas", :class => "picker"}
-
-          %div.bloque.g_aristas
-            = f.radio_button :grosor_aristas, "Fino"
-            = f.label "Fino"
-            %br
-            = f.radio_button :grosor_aristas, "Normal"
-            = f.label "Normal"
-            %br
-            = f.radio_button :grosor_aristas, "Medio"
-            = f.label "Medio"
-            %br
-            = f.radio_button :grosor_aristas, "Grueso"
-            = f.label "Grueso"
-
-          %div.bloque.textura
-            = f.label t(:textura)
-            %br
-            = f.file_field :textura, :size => "10"
-            - if @recortable.textura
-              = image_tag @recortable.textura.url(:thumb)
-          %div.bloque.previsualizar
-            = f.submit t(:previsualizar)
-      %li
-        %div.caja
-          = f.submit t(:generar)
-          %p
-          = link_to t(:cancelar), root_path
+            %div.bloque.previsualizar
+              = f.submit t(:previsualizar)
+        %li
+          %div.caja
+            = f.submit t(:generar)
+            %p
+            = link_to t(:cancelar), root_path
 
     

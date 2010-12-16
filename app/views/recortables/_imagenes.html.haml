@@ -1,0 +1,6 @@
+#imagenes
+  %div{:id => "slider_imagenes"}
+    %ul
+      - lista_imagenes_recortable.each do |i|
+        %li
+          = image_tag i, :size => "300x300", :id => "imagen_cabecera"

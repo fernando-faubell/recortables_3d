@@ -1,4 +1,5 @@
 class ImagenesController < ApplicationController
+
   def index
     @imagenes = Imagen.all
   end

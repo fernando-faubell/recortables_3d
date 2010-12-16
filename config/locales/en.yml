@@ -2,28 +2,4 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  titulo: "Papers???"
-  nuevo_recortable: "New paper"
-  recortable_creado: "Paper created."
-  recortable_actualizado: "Paper updated."
-  previsualizar: "Preview"
-  generar: "Generate"
-  cancelar: "Cancel"
-  nuevo_recortable: "New paper doll"
-
-  modelo: "Model"
-  complejidad: "Complexity"
-  color_fondo: "Background color"
-  color_aristas: "Edge color"
-  grosor_aristas: "Edge thickness"
-  textura: "Texture"
-
-  muy_fino: "Tiny"
-  normal: "Normal"
-  medio: "Medium"
-  grueso: "Thick"
-
-
-### Modelos
-
-  globo: "Ballooning"
+  hello: "Hello world"

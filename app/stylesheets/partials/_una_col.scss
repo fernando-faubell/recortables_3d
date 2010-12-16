@@ -1,0 +1,6 @@
+body.una-col {
+  #container {
+    @include container; }
+  #cabecera, #pie, #imagenes, #formulario {
+    @include column($blueprint-grid-columns); }
+}

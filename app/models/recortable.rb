@@ -27,7 +27,14 @@ class Recortable < ActiveRecord::Base
   
   after_save :genera_imagenes
 
-  has_attached_file :textura , :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  has_attached_file :textura,
+    :styles => { :previo => "512x512!", :final => "2048x2048!"},
+    :convert_options => {:all => "-depth 8"},
+    :format => {:all =>"rgb"},
+    :processors => [:transformaciones]
+
+#:current_geometry, :target_geometry, :format, :whiny, :convert_options, :source_file_options
+
 
   def self.lista_select_complejidad
     ["Muy sencillo", "Sencillo", "Moderado", "Complejo", "Muy complejo"]
@@ -40,7 +47,6 @@ class Recortable < ActiveRecord::Base
 
 
   def genera_imagenes
-
     case self.nombre
     when "Bolo16"
       figura = Bolo.new(self)

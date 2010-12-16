@@ -1,0 +1,324 @@
+@import "base"
+@import "partials/base"
+//@import "formtastic"
+//@import "formtastic_changes"
+//@import "recortables"
+@import "easySlider"
+//@import "notificaciones"
+
+
+.invisible
+  display: none
+  visibility: hidden
+
+=tres-columnas(!header,!footer,!sidebar,!content)
+  +container
+  background-color: #fff
+  #{!header}, #{!footer}
+    background-color: #111
+    +column(24)
+  #{!sidebar}
+    background-color: #2ee
+    +column(24)
+  #{!content}
+    background-color: #fff
+    +column(24, true)
+
+
+div.tres-columnas
+  +tres-columnas("#header","#footer", "#sidebar", "#content")
+
+div.pantalla_formulario
+  background-color: #aaa
+  width: 970px
+  height: 500px
+  margin-top: 0px
+  border-radius: 10px
+  -moz-border-radius: 10px
+  -webkit-border-radius: 10px
+
+
+.caja
+  margin: 5em auto
+  width: 955px
+  height: 380px
+  padding: 3px
+  border: 1px solid #cccccc
+  -moz-border-radius: 10px
+  -webkit-box-shadow: 2px 2px 5px #999999
+  -moz-box-shadow: 2px 2px 5px #999999
+  .title
+    font-weight: bold
+    background-color: #eeeeee
+    padding: 5px
+    color: #333333
+    -moz-border-radius-topleft: 5px
+    -moz-border-radius-topright: 5px
+  form
+    padding: 10px
+    .acciones
+      text-align: right
+
+  .bloque
+    margin: 2em auto
+    height: 200px
+    float: left
+    width: 150px
+  .c_fondo
+    width: 200px
+  .c_aristas
+    width: 200px
+  .g_aristas
+    width: 90px
+  .textura
+    width: 300px
+  .previsualizar
+    width: 110px
+
+
+
+
+input.selector_color
+  width: 80px
+
+td
+  vertical-align: top
+
+
+
+
+
+//Layout de dos columnas
+//=two-columns(!header,!left,!center,!footer)
+//  #{!header}, #{!footer}
+//    +column(24)
+//  #{!left}
+//    +column(4)
+//  #{!center}
+//    +column(20, "last")
+
+
+//Layout de una columna
+//=one-column(!header,!center,!footer)
+//  #{!header}
+//    +column(24)
+//  #{!center}
+//    +column(24)
+//  #{!footer}
+//    +column(24)
+
+
+
+
+
+//body
+//  .container
+//    +container
+//    +showgrid
+
+//#container
+//  +column(24)
+//  :margin 0
+//  :margin 20px auto
+//  :display block
+//  :float none
+//  :background #fff
+
+//Comentado de momento
+//  #container
+//    :background-image url(/images/s2dlogo.jpg)
+//    :background-repeat no-repeat
+    //+showgrid
+    //:background #fff
+
+//body.three-columns
+//  +three-columns("#header","#left-side","#content","#ads-and-stuff","#footer")
+
+//body.two-columns
+//  +two-columns("#header","#left-side","#content","#footer")
+
+//body.one-column
+//  +one-column("#header", "#content","#footer")
+
+
+//=a_la_derecha
+//  :float right
+//  :text-align right
+
+//=a_la_izquierda
+//  :float left
+//  :text-align left
+
+//#main-menu
+//  +column(24)
+
+//#login_menu
+//  :margin 10px
+//  :text-align right
+
+//#header
+//  :background-image url(/images/header_background.png)
+//  :background-repeat no-repeat
+//  :margin-bottom 0.5em
+
+//#header_title
+//  :font-size 1.5em
+//  :text-align right
+//  :margin 10px
+
+//#content
+//  :min-height 200px
+
+//#footer
+//  +a_la_derecha
+//  :padding 5px
+//  :font-size 0.9em
+
+/* generico */
+//body
+//  :font-size 0.8em
+//  :font-family arial
+
+//td, th
+//  :padding 0
+//  :margin 0
+
+//p
+//  :padding 0
+//  :margin 0
+
+//a
+//  :text-decoration none
+//  +link-colors(#00f, #414141, #00f, #00f, #00f)
+
+//h1
+//  :font-size 1.5em
+//  :padding-top .5em
+
+//.acciones
+//  :text-align right
+
+//.invisible
+//  :display none
+
+//#password, #login
+//  :width 10em
+//  :margin 0
+//  :padding 0
+
+//input[type="password"]
+//  :background-color #fff
+
+/* session
+//form#form_session
+//  +column(8)
+//  :border 1px solid #ccc
+//  :padding .5em
+
+
+/* paginacion
+//.pagination
+//  :padding-bottom .5em
+//  :text-align right
+
+//  a
+//    :padding 1px 5px
+//    :margin 1px
+//    :border 1px solid #ccc
+//    :text-decoration none
+//    :color #00f
+
+//    &:hover, &:active
+//      :border 1px solid #00f
+//      :color #000
+
+//  span
+//    &.current
+//      :padding 2px 5px
+//      :margin 1px
+//      :border 1px solid #00f
+//      :font-weight bold
+//      :background-color #00f
+//      :color #fff
+
+//    &.disabled
+//      :padding 2px 5px
+//      :margin 1px
+//      :border 1px solid #ccc
+//      :color #ccc
+
+
+/* show
+//.show
+//  :border 1px solid #ccc
+//  :padding .5em
+//  :overflow hidden
+
+//  form
+//    :border none
+//    :padding 0
+
+//  fieldset
+//    :border none
+//    :padding 1em
+
+//    legend
+//      :margin-left -0.75em
+
+//    ol
+//      :list-style-type none
+//      :margin 0
+//      li
+//        :display block
+//        :margin-bottom 0
+//        :padding-top 0.2em
+//        :clear both
+//        label
+//          :float left
+//          :width 15%
+//          :display block
+
+//input[type="text"], input[type="password"], select
+//  :border 1px solid #BBB
+
+// Errores en los formularios
+//form.formtastic fieldset ol li
+//  &.error input, &.error select
+//    :border 1px solid red
+//  p.inline-errors
+//    :margin 0
+//    :margin-bottom 0.5em
+//  label
+//    :width 15%
+
+//table.listado tr
+//  td, th
+//    :border-bottom 1px solid #CCC
+
+
+//#dos-columnas
+//  +column(24)
+//  #izquierda
+//    +column(16)
+//  #derecha
+//    +column(7)
+//  #busqueda
+//    +column(14)
+//  #formulario
+//    +column(9)
+//  #subtitulo_sustitucion
+//    +column(2)
+//  #elementos
+//    +column(15)
+
+//#sustitucion
+//  +column(22)
+//  #subtitulo
+//    +column(2)
+//  #elementos
+//    +column(20, "last")
+
+
+//.wait
+//  :background url(/images/wait.gif) no-repeat center center
+

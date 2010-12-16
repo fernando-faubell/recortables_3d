@@ -1,0 +1,64 @@
+
+form.bp input.text,
+form.bp input.title,
+form.bp input[type="email"],
+form.bp input[type="text"],
+form.bp input[type="password"] {
+
+width:80px;
+
+}
+
+.invisible {
+  display: none;
+  visibility: hidden; }
+
+div.pantalla_formulario {
+  background-color: #0022aa;
+  width: 970px;
+  height: 300px;
+  margin-top: 0px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; }
+
+.caja {
+  margin: 0 auto;
+  width: 910px;
+  height: 300px;
+  padding: 3px;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 5px #999999;
+  -moz-box-shadow: 2px 2px 5px #999999;
+  .title {
+    font-weight: bold;
+    background-color: #eeeeee;
+    padding: 5px;
+    color: #333333;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px; }
+  form {
+    padding: 10px;
+    .acciones {
+      text-align: right; } }
+  .bloque {
+    margin: 2em auto;
+    height: 200px;
+    float: left;
+    width: 150px; }
+  .c_fondo {
+    width: 200px; }
+  .c_aristas {
+    width: 200px; }
+  .g_aristas {
+    width: 90px;
+    text-align: left; }
+  .textura {
+    width: 300px;
+    height: 200px; }
+  .previsualizar {
+    width: 110px; } }
+
+td {
+  vertical-align: top; }

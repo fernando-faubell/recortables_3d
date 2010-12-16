@@ -1,23 +1,23 @@
-/* line 1, ../../app/stylesheets/easySlider.sass */
+/* line 1, ../../app/stylesheets/easySlider.scss */
 #slider_imagenes ul, #slider_imagenes li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 6, ../../app/stylesheets/easySlider.sass */
+/* line 6, ../../app/stylesheets/easySlider.scss */
 #slider_imagenes, #slider_imagenes li {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 320px;
   overflow: hidden;
 }
 
-/* line 11, ../../app/stylesheets/easySlider.sass */
+/* line 11, ../../app/stylesheets/easySlider.scss */
 div#slider_imagenes {
-  margin-left: 285px;
+  margin-left: 335px;
 }
 
-/* line 14, ../../app/stylesheets/easySlider.sass */
+/* line 15, ../../app/stylesheets/easySlider.scss */
 #prevBtn_imagenes, #nextBtn_imagenes {
   display: block;
   width: 64px;
@@ -27,12 +27,12 @@ div#slider_imagenes {
   top: 70px;
 }
 
-/* line 22, ../../app/stylesheets/easySlider.sass */
+/* line 23, ../../app/stylesheets/easySlider.scss */
 #nextBtn_imagenes {
   margin-left: 828px;
 }
 
-/* line 25, ../../app/stylesheets/easySlider.sass */
+/* line 26, ../../app/stylesheets/easySlider.scss */
 #prevBtn_imagenes a, #nextBtn_imagenes a {
   display: block;
   width: 64px;
@@ -40,47 +40,47 @@ div#slider_imagenes {
   background: url(/images/flecha_izquierda.png) no-repeat 0 0;
 }
 
-/* line 31, ../../app/stylesheets/easySlider.sass */
+/* line 32, ../../app/stylesheets/easySlider.scss */
 #nextBtn_imagenes a {
   background: url(/images/flecha_derecha.png) no-repeat 0 0;
 }
 
-/* line 37, ../../app/stylesheets/easySlider.sass */
+/* line 37, ../../app/stylesheets/easySlider.scss */
 #slider_formulario ul, #slider_formulario li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 43, ../../app/stylesheets/easySlider.sass */
+/* line 42, ../../app/stylesheets/easySlider.scss */
 #slider_formulario, #slider_formulario li {
-  width: 970px;
-  height: 500px;
+  width: 960px;
+  height: 400px;
   overflow: hidden;
 }
 
-/* line 50, ../../app/stylesheets/easySlider.sass */
+/* line 49, ../../app/stylesheets/easySlider.scss */
 div#slider_formulario {
   margin-left: 0px;
 }
 
-/* line 55, ../../app/stylesheets/easySlider.sass */
+/* line 52, ../../app/stylesheets/easySlider.scss */
 #prevBtn_formulario, #nextBtn_formulario {
   display: block;
   width: 64px;
   height: 64px;
   position: absolute;
   margin-left: 10px;
-  top: 800px;
+  top: 480px;
   /*top: 370px */
 }
 
-/* line 64, ../../app/stylesheets/easySlider.sass */
+/* line 61, ../../app/stylesheets/easySlider.scss */
 #nextBtn_formulario {
   margin-left: 896px;
 }
 
-/* line 67, ../../app/stylesheets/easySlider.sass */
+/* line 64, ../../app/stylesheets/easySlider.scss */
 #prevBtn_formulario a, #nextBtn_formulario a {
   display: block;
   width: 64px;
@@ -88,7 +88,7 @@ div#slider_formulario {
   background: url(/images/flecha_izquierda.png) no-repeat 0 0;
 }
 
-/* line 73, ../../app/stylesheets/easySlider.sass */
+/* line 70, ../../app/stylesheets/easySlider.scss */
 #nextBtn_formulario a {
   background: url(/images/flecha_derecha.png) no-repeat 0 0;
 }

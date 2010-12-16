@@ -1,118 +1,83 @@
-@import "base"
-@import "partials/base"
+@import "base";
+@import "partials/base";
+
 //@import "formtastic"
 //@import "formtastic_changes"
 //@import "recortables"
-@import "easySlider"
+@import "easySlider";
+
 //@import "notificaciones"
 
+.invisible {
+  display: none;
+  visibility: hidden; }
 
-.invisible
-  display: none
-  visibility: hidden
+@mixin tres-columnas($header, $footer, $sidebar, $content) {
+  @include container;
+  background-color: white;
+  #{$header}, #{$footer} {
+    background-color: #111111;
+    @include column(24); }
+  #{$sidebar} {
+    background-color: #22eeee;
+    @include column(24); }
+  #{$content} {
+    background-color: white;
+    @include column(24, true); } }
 
-=tres-columnas(!header,!footer,!sidebar,!content)
-  +container
-  background-color: #fff
-  #{!header}, #{!footer}
-    background-color: #111
-    +column(24)
-  #{!sidebar}
-    background-color: #2ee
-    +column(24)
-  #{!content}
-    background-color: #fff
-    +column(24, true)
+div.tres-columnas {
+  @include tres-columnas("#header", "#footer", "#sidebar", "#content"); }
 
+div.pantalla_formulario {
+  background-color: #aaaaaa;
+  width: 970px;
+  height: 500px;
+  margin-top: 0px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; }
 
-div.tres-columnas
-  +tres-columnas("#header","#footer", "#sidebar", "#content")
+.caja {
+  margin: 5em auto;
+  width: 955px;
+  height: 380px;
+  padding: 3px;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 5px #999999;
+  -moz-box-shadow: 2px 2px 5px #999999;
+  .title {
+    font-weight: bold;
+    background-color: #eeeeee;
+    padding: 5px;
+    color: #333333;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px; }
+  form {
+    padding: 10px;
+    .acciones {
+      text-align: right; } }
+  .bloque {
+    margin: 2em auto;
+    height: 200px;
+    float: left;
+    width: 150px; }
+  .c_fondo {
+    width: 200px; }
+  .c_aristas {
+    width: 200px; }
+  .g_aristas {
+    width: 90px; }
+  .textura {
+    width: 300px; }
+  .previsualizar {
+    width: 110px; } }
 
-div.pantalla_formulario
-  background-color: #aaa
-  width: 970px
-  height: 500px
-  margin-top: 0px
-  border-radius: 10px
-  -moz-border-radius: 10px
-  -webkit-border-radius: 10px
+input.selector_color {
+  width: 80px; }
 
-
-.caja
-  margin: 5em auto
-  width: 955px
-  height: 400px
-  padding: 3px
-  border: 1px solid #cccccc
-  -moz-border-radius: 10px
-  -webkit-box-shadow: 2px 2px 5px #999999
-  -moz-box-shadow: 2px 2px 5px #999999
-  .title
-    font-weight: bold
-    background-color: #eeeeee
-    padding: 5px
-    color: #333333
-    -moz-border-radius-topleft: 5px
-    -moz-border-radius-topright: 5px
-  form
-    padding: 10px
-    .acciones
-      text-align: right
-
-  .bloque
-    margin: 2em auto
-    height: 200px
-    float: left
-    width: 150px
-  .c_fondo
-    width: 200px
-  .c_aristas
-    width: 200px
-  .g_aristas
-    width: 90px
-  .textura
-    width: 300px
-  .previsualizar
-    width: 110px
-
-
-
-
-input.selector_color
-  width: 80px
-
-td
-  vertical-align: top
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+td {
+  vertical-align: top; }
 
 //Layout de dos columnas
 //=two-columns(!header,!left,!center,!footer)
@@ -123,7 +88,6 @@ td
 //  #{!center}
 //    +column(20, "last")
 
-
 //Layout de una columna
 //=one-column(!header,!center,!footer)
 //  #{!header}
@@ -132,10 +96,6 @@ td
 //    +column(24)
 //  #{!footer}
 //    +column(24)
-
-
-
-
 
 //body
 //  .container
@@ -154,8 +114,8 @@ td
 //  #container
 //    :background-image url(/images/s2dlogo.jpg)
 //    :background-repeat no-repeat
-    //+showgrid
-    //:background #fff
+// //+showgrid
+// //:background #fff
 
 //body.three-columns
 //  +three-columns("#header","#left-side","#content","#ads-and-stuff","#footer")
@@ -165,7 +125,6 @@ td
 
 //body.one-column
 //  +one-column("#header", "#content","#footer")
-
 
 //=a_la_derecha
 //  :float right
@@ -235,14 +194,13 @@ td
 //input[type="password"]
 //  :background-color #fff
 
-/* session
+/* session */
 //form#form_session
 //  +column(8)
 //  :border 1px solid #ccc
 //  :padding .5em
 
-
-/* paginacion
+/* paginacion */
 //.pagination
 //  :padding-bottom .5em
 //  :text-align right
@@ -273,8 +231,7 @@ td
 //      :border 1px solid #ccc
 //      :color #ccc
 
-
-/* show
+/* show */
 //.show
 //  :border 1px solid #ccc
 //  :padding .5em
@@ -321,7 +278,6 @@ td
 //  td, th
 //    :border-bottom 1px solid #CCC
 
-
 //#dos-columnas
 //  +column(24)
 //  #izquierda
@@ -344,7 +300,5 @@ td
 //  #elementos
 //    +column(20, "last")
 
-
 //.wait
 //  :background url(/images/wait.gif) no-repeat center center
-
