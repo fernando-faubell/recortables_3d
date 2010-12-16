@@ -2,6 +2,9 @@ $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory
 require "rvm/capistrano"                  # Load RVM's capistrano plugin.
 set :rvm_ruby_string, '1.8.7@recortables'        # Or whatever env you want it to run in.
 
+require 'bundler/capistrano'
+
+
 set :application, "recortables_3d"
 set :repository,  "http://github.com/ferraniki/recortables_3d.git"
 
