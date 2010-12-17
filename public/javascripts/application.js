@@ -1,22 +1,20 @@
 $(document).ready(function(){
 
-  $('#colorpicker_recortable_color_fondo').addClass("invisible");
-  $('#colorpicker_recortable_color_aristas').addClass("invisible");
+//  $('#colorpicker_recortable_color_fondo').addClass("invisible")
+//  $('#colorpicker_recortable_color_aristas').addClass("invisible")
+//
+//
+//  $('#recortable_color_fondo').click( function() {
+//    $('#colorpicker_recortable_color_fondo').toggleClass("invisible");
+    //$("*").click(function(){$('#colorpicker_recortable_color_fondo').addClass("invisible")});
+//  })
+//
+//  $('#recortable_color_aristas').click( function() {
+//    $('#colorpicker_recortable_color_aristas').toggleClass("invisible")
+//  })
 
-  $('#recortable_color_fondo').click( function() {
-    $('#colorpicker_recortable_color_fondo').toggleClass("invisible");
-  });
-
-  $('#recortable_color_aristas').click( function() {
-    $('#colorpicker_recortable_color_aristas').toggleClass("invisible");
-  });
-
-  $('#colorpicker_recortable_color_fondo').farbtastic('#recortable_color_fondo');
-  $('#colorpicker_recortable_color_aristas').farbtastic('#recortable_color_aristas');
-
-
-
-
+  $('#colorpicker_recortable_color_fondo').farbtastic('#recortable_color_fondo')
+  $('#colorpicker_recortable_color_aristas').farbtastic('#recortable_color_aristas')
 
   $("#slider_imagenes").easySlider({
               prevId: 'prevBtn_imagenes',

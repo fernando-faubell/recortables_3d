@@ -70,14 +70,14 @@ div#slider_formulario {
   width: 64px;
   height: 64px;
   position: absolute;
-  margin-left: 10px;
-  top: 480px;
+  margin-left: 30px;
+  top: 620px;
   /*top: 370px */
 }
 
 /* line 61, ../../app/stylesheets/easySlider.scss */
 #nextBtn_formulario {
-  margin-left: 896px;
+  margin-left: 876px;
 }
 
 /* line 64, ../../app/stylesheets/easySlider.scss */
