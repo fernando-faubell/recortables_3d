@@ -21,6 +21,10 @@ gem 'formtastic', '1.2.2'
 #Ficheros adjuntos
 gem "paperclip", '2.3.6'
 
+gem "bundler"
+
+gem "rack", "1.2.1"
+
 
 
 # Use unicorn as the web server

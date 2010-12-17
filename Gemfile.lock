@@ -85,10 +85,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   compass (= 0.10.6)
   formtastic (= 1.2.2)
   haml (= 3.0.24)
   http_accept_language!
   mysql2
   paperclip (= 2.3.6)
+  rack (= 1.2.1)
   rails (= 3.0.3)
