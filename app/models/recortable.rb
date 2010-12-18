@@ -48,62 +48,34 @@ class Recortable < ActiveRecord::Base
 
   def genera_imagenes
 
-    Figura.new(self)
+    figura = Figura.new(self)
 
+    if figura
 
+      self.imagenes.destroy_all
+      ruta = figura.directorio_temporal
 
+      i = self.imagenes.new
+      i.imagen = File.new(ruta + "/image000.jpg")
+      i.save
 
-#    case self.nombre
-#    when "Bolo16"
-#      figura = Bolo.new(self)
-#    when "Bolo35"
-#      figura = Bolo.new(self)
-#    when "Bolo70"
-#      figura = Bolo.new(self)
-#    when "Bolo154"
-#      figura = Bolo.new(self)
-#    when "Bolo340"
-#      figura = Bolo.new(self)
-#    when "Cono_r_h"
-#      figura = Cono.new(self)
-#    when "Cono_r_2h"
-#      figura = Cono.new(self)
-#    when "Cono_2r_h"
-#      figura = Cono.new(self)
-#    when "Cono_4r_h"
-#      figura = Cono.new(self)
-#    when "Esfera20"
-#      figura = Esfera.new(self)
-#    when "Esfera80"
-#      figura = Esfera.new(self)
-#    when "Esfera320"
-#      figura = Esfera.new(self)
-#    end
+      i = self.imagenes.new
+      i.imagen = File.new(ruta + "/image001.jpg")
+      i.save
 
-#    if figura
-#      self.imagenes.destroy_all
-#      ruta = figura.genera
-#
-#      if false && self.modelo.nombre != "Globo"
-#        i = self.imagenes.new
-#        i.imagen = File.new(ruta + "/image000.ppm")
-#        i.save
-#
-#        i = self.imagenes.new
-#        i.imagen = File.new(ruta + "/image001.ppm")
-#        i.save
-#
-#        i = self.imagenes.new
-#        i.imagen = File.new(ruta + "/image002.ppm")
-#        i.save
-#
-#        i = self.imagenes.new
-#        i.imagen = File.new(ruta + "/image003.ppm")
-#        i.save
-#
-#        i = self.imagenes.new
-#        i.imagen = File.new(ruta + "/image004.ppm")
-#        i.save
+      i = self.imagenes.new
+      i.imagen = File.new(ruta + "/image002.jpg")
+      i.save
+
+      i = self.imagenes.new
+      i.imagen = File.new(ruta + "/image003.jpg")
+      i.save
+
+      i = self.imagenes.new
+      i.imagen = File.new(ruta + "/image004.jpg")
+      i.save
+
+    end
 #      else
 #        i = self.imagenes.new
 #        i.imagen = File.new(ruta + "/image000.jpg")

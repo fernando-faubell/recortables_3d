@@ -1,11 +1,16 @@
 class Figura
 
-  EJECUTABLE = "/home/recortables/bin/main"
+  EJECUTABLE = "export DISPLAY=:0 /home/recortables/bin/main"
 
   def initialize(figura)
     @directorio_temporal = directorio_aleatorio
     #parametros(nombre_figura)
     genera_fotos(figura)
+    convierte    
+  end
+
+  def directorio_temporal
+    @directorio_temporal
   end
 
   def html_to_rgb(color_html)
@@ -21,7 +26,6 @@ class Figura
 
   def genera_fotos(figura)
     #anchoTexX anchoTexY despTexX despTexY RepiteH RepiteV red green blue edge_red edge_green edge_blue edge_size
-
     case figura.nombre
     when "Bolo16"
       `#{EJECUTABLE} bolo no_textura 512 512  1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0  0.0 0.0 0.0   3.0 #{@directorio_temporal} 10 4 4`
@@ -86,15 +90,15 @@ class Figura
   end
   private :directorio_aleatorio
 
-#  def convierte
-#    #TODO: Rehacer...
-#    `convert #{@directorio_temporal}/image000.ppm #{@directorio_temporal}/image000.jpg`
-#    `convert #{@directorio_temporal}/image001.ppm #{@directorio_temporal}/image001.jpg`
-#    `convert #{@directorio_temporal}/image002.ppm #{@directorio_temporal}/image002.jpg`
-#    `convert #{@directorio_temporal}/image003.ppm #{@directorio_temporal}/image003.jpg`
-#    `convert #{@directorio_temporal}/image004.ppm #{@directorio_temporal}/image004.jpg`
-#  end
-#  protected :convierte
+  def convierte
+    #TODO: Rehacer...
+    `convert #{@directorio_temporal}/image000.ppm #{@directorio_temporal}/image000.jpg`
+    `convert #{@directorio_temporal}/image001.ppm #{@directorio_temporal}/image001.jpg`
+    `convert #{@directorio_temporal}/image002.ppm #{@directorio_temporal}/image002.jpg`
+    `convert #{@directorio_temporal}/image003.ppm #{@directorio_temporal}/image003.jpg`
+    `convert #{@directorio_temporal}/image004.ppm #{@directorio_temporal}/image004.jpg`
+  end
+  protected :convierte
 
 
 end
