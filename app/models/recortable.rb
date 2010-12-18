@@ -47,32 +47,38 @@ class Recortable < ActiveRecord::Base
 
 
   def genera_imagenes
-    case self.nombre
-    when "Bolo16"
-      figura = Bolo.new(self)
-    when "Bolo35"
-      figura = Bolo.new(self)
-    when "Bolo70"
-      figura = Bolo.new(self)
-    when "Bolo154"
-      figura = Bolo.new(self)
-    when "Bolo340"
-      figura = Bolo.new(self)
-    when "Cono_r_h"
-      figura = Cono.new(self)
-    when "Cono_r_2h"
-      figura = Cono.new(self)
-    when "Cono_2r_h"
-      figura = Cono.new(self)
-    when "Cono_4r_h"
-      figura = Cono.new(self)
-    when "Esfera20"
-      figura = Esfera.new(self)
-    when "Esfera80"
-      figura = Esfera.new(self)
-    when "Esfera320"
-      figura = Esfera.new(self)
-    end
+
+    Figura.new(self)
+
+
+
+
+#    case self.nombre
+#    when "Bolo16"
+#      figura = Bolo.new(self)
+#    when "Bolo35"
+#      figura = Bolo.new(self)
+#    when "Bolo70"
+#      figura = Bolo.new(self)
+#    when "Bolo154"
+#      figura = Bolo.new(self)
+#    when "Bolo340"
+#      figura = Bolo.new(self)
+#    when "Cono_r_h"
+#      figura = Cono.new(self)
+#    when "Cono_r_2h"
+#      figura = Cono.new(self)
+#    when "Cono_2r_h"
+#      figura = Cono.new(self)
+#    when "Cono_4r_h"
+#      figura = Cono.new(self)
+#    when "Esfera20"
+#      figura = Esfera.new(self)
+#    when "Esfera80"
+#      figura = Esfera.new(self)
+#    when "Esfera320"
+#      figura = Esfera.new(self)
+#    end
 
 #    if figura
 #      self.imagenes.destroy_all
