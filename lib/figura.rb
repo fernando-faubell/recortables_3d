@@ -1,6 +1,6 @@
 class Figura
 
-  EJECUTABLE = "export DISPLAY=:0 /home/recortables/bin/main"
+  EJECUTABLE = "export DISPLAY=:0 && /home/recortables/bin/main"
 
   def initialize(figura)
     @directorio_temporal = directorio_aleatorio

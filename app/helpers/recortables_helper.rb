@@ -38,7 +38,7 @@ module RecortablesHelper
       end
     else
       # Las imagenes del recortable
-      @recortable.imagenes.each do imagen
+      @recortable.imagenes.each do |imagen|
         array_imagenes << imagen.url
       end
     end
