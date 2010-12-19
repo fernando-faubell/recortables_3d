@@ -56,13 +56,13 @@ class Figura
   def grueso_aristas(valor)
     aux = "1.0"
     case valor
-    when "1"
+    when "Fino"
        aux = "1.0"
-    when "2"
+    when "Normal"
        aux = "2.0"
-    when "3"
+    when "Medio"
        aux = "3.0"
-    when "4"
+    when "Grueso"
        aux = "4.0"
     end
     return aux
