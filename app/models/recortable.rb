@@ -76,35 +76,7 @@ class Recortable < ActiveRecord::Base
       i.save
 
     end
-#      else
-#        i = self.imagenes.new
-#        i.imagen = File.new(ruta + "/image000.jpg")
-#        i.save
-#
-#        i = self.imagenes.new
-#        i.imagen = File.new(ruta + "/image001.jpg")
-#        i.save
-#
-#        i = self.imagenes.new
-#        i.imagen = File.new(ruta + "/image002.jpg")
-#        i.save
-#
-#        i = self.imagenes.new
-#        i.imagen = File.new(ruta + "/image003.jpg")
-#        i.save
-#
-#        i = self.imagenes.new
-#        i.imagen = File.new(ruta + "/image004.jpg")
-#        i.save
-#      end
-#
-#      #FileUtils.rm_rf(ruta)
-#    end
-
-
-
   end
-
 end
 
 

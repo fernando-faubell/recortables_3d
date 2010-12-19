@@ -37,10 +37,8 @@ module RecortablesHelper
           array_imagenes << "esfera320.jpg"
       end
     else
-      # Las imagenes del recortable
-      @recortable.imagenes.each do |imagen|
-        array_imagenes << imagen.url
-      end
+      # Imagenes del recortable.
+      array_imagenes = @recortable.imagenes.map{|k| k.imagen.url}
     end
   end
 end

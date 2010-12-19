@@ -6,7 +6,7 @@ class Figura
     @directorio_temporal = directorio_aleatorio
     #parametros(nombre_figura)
     genera_fotos(figura)
-    convierte    
+    #convierte
   end
 
   def directorio_temporal
@@ -25,36 +25,37 @@ class Figura
 
 
   def genera_fotos(figura)
-    #anchoTexX anchoTexY despTexX despTexY RepiteH RepiteV red green blue edge_red edge_green edge_blue edge_size
-    case figura.nombre
-    when "Bolo16"
-      `#{EJECUTABLE} bolo no_textura 512 512  1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0  0.0 0.0 0.0   3.0 #{@directorio_temporal} 10 4 4`
-    when "Bolo35"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 5 7`
-    when "Bolo70"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 7 10`
-    when "Bolo154"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 11 14`
-    when "Bolo340"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 17 21`
-    when "Cono_r_h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 2 1`
-    when "Cono_r_2h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 1`
-    when "Cono_2r_h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 2`
-    when "Cono_4r_h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 4`
-    when "Esfera20"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 0`
-    when "Esfera80"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 1`
-    when "Esfera320"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 2`
-    when "Esfera222"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 3`
-    end
 
+#    case figura.nombre
+#    when "Bolo16"
+#      `#{EJECUTABLE} bolo no_textura 512 512  1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0  0.0 0.0 0.0   3.0 #{@directorio_temporal} 10 4 4`
+#    when "Bolo35"
+#      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 5 7`
+#    when "Bolo70"
+#      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 7 10`
+#    when "Bolo154"
+#      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 11 14`
+#    when "Bolo340"
+#      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 17 21`
+#    when "Cono_r_h"
+#      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 2 1`
+#    when "Cono_r_2h"
+#      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 1`
+#    when "Cono_2r_h"
+#      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 2`
+#    when "Cono_4r_h"
+#      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 4`
+#    when "Esfera20"
+#      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 0`
+#    when "Esfera80"
+#      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 1`
+#    when "Esfera320"
+#      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 2`
+#    when "Esfera222"
+#      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 3`
+#    end
+
+    `cp #{RAILS_ROOT}/*.jpg #{@directorio_temporal}`
   end
 
 #  def genera_fotos
