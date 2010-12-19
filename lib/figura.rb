@@ -20,60 +20,53 @@ class Figura
 
     color_fondo = html_to_rgb(figura.color_fondo).join(" ")
     color_aristas = html_to_rgb(figura.color_aristas).join(" ")
+    grosor_aristas = grueso_aristas(figura.grosor_aristas)
     
     case figura.nombre
     when "Bolo16"
     #esferaglx textura.rgb           ancho alto anchoTexX anchoTexY despTexX despTexY RepiteH RepiteV red green blue edge_red edge_green edge_blue edge_size path_results Mode radio nivel(0-3)
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 4 4`
+      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 4 4`
     when "Bolo35"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 5 7`
+      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 5 7`
     when "Bolo70"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 7 10`
+      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 7 10`
     when "Bolo154"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 11 14`
+      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 11 14`
     when "Bolo340"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 17 21`
+      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 17 21`
     when "Cono_r_h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 2 1`
+      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 2 1`
     when "Cono_r_2h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 1`
+      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 1 1`
     when "Cono_2r_h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 2`
+      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 1 2`
     when "Cono_4r_h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 4`
+      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 1 4`
     when "Esfera20"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 0`
+      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 1 0`
     when "Esfera80"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 1`
+      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 1 1`
     when "Esfera320"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 2`
+      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 1 2`
     when "Esfera222"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 3`
+      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} #{grosor_aristas} #{@directorio_temporal} 10 1 3`
     end    
   end
 
-#  def genera_fotos
-#    puts "#{@ejecutable}#{@parametros}"
-#    `#{@ejecutable}#{@parametros}`
-#    convierte
-#    return @directorio_temporal
-#  end
-
-
-#  def grueso_aristas(valor)
-#    aux = 1.0
-#    case valor
-#    when "1"
-#       aux = 0.5
-#    when "2"
-#       aux = 1.0
-#    when "3"
-#       aux = 1.5
-#    when "4"
-#       aux = 2.0
-#    end
-#    return aux
-#  end
+  def grueso_aristas(valor)
+    aux = "1.0"
+    case valor
+    when "1"
+       aux = "1.0"
+    when "2"
+       aux = "2.0"
+    when "3"
+       aux = "3.0"
+    when "4"
+       aux = "4.0"
+    end
+    return aux
+  end
 
   def html_to_rgb(color_html)
     matcher = /^#(.{2})(.{2})(.{2})$/.match(color_html)
