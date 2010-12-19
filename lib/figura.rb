@@ -13,46 +13,42 @@ class Figura
     @directorio_temporal
   end
 
-  def html_to_rgb(color_html)
-    matcher = /^#(.{2})(.{2})(.{2})$/.match(color_html)
-    rojo  = sprintf("%0.03f", matcher[1].hex.to_f / 255)
-    verde = sprintf("%0.03f", matcher[2].hex.to_f / 255)
-    azul  = sprintf("%0.03f", matcher[3].hex.to_f / 255)
-    return [rojo, verde, azul]
-  end
-  protected :html_to_rgb
 
 
 
   def genera_fotos(figura)
 
+    color_fondo = html_to_rgb(figura.color_fondo).join(" ")
+    color_aristas = html_to_rgb(figura.color_aristas).join(" ")
+    
     case figura.nombre
     when "Bolo16"
-      `#{EJECUTABLE} bolo no_textura 512 512  1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0  0.0 0.0 0.0   3.0 #{@directorio_temporal} 10 4 4`
+    #esferaglx textura.rgb           ancho alto anchoTexX anchoTexY despTexX despTexY RepiteH RepiteV red green blue edge_red edge_green edge_blue edge_size path_results Mode radio nivel(0-3)
+      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 4 4`
     when "Bolo35"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 5 7`
+      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 5 7`
     when "Bolo70"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 7 10`
+      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 7 10`
     when "Bolo154"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 11 14`
+      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 11 14`
     when "Bolo340"
-      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 17 21`
+      `#{EJECUTABLE} bolo no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 17 21`
     when "Cono_r_h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 2 1`
+      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 2 1`
     when "Cono_r_2h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 1`
+      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 1`
     when "Cono_2r_h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 2`
+      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 2`
     when "Cono_4r_h"
-      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 4`
+      `#{EJECUTABLE} cono no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 4`
     when "Esfera20"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 0`
+      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 0`
     when "Esfera80"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 1`
+      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 1`
     when "Esfera320"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 2`
+      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 2`
     when "Esfera222"
-      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 1.0 1.0 1.0 0.0 0.0 0.0 3.0 #{@directorio_temporal} 10 1 3`
+      `#{EJECUTABLE} esfera no_textura 512 512 1.0 1.0 0.0 0.0 0 0 #{color_fondo} #{color_aristas} 3.0 #{@directorio_temporal} 10 1 3`
     end    
   end
 
@@ -78,6 +74,15 @@ class Figura
 #    end
 #    return aux
 #  end
+
+  def html_to_rgb(color_html)
+    matcher = /^#(.{2})(.{2})(.{2})$/.match(color_html)
+    rojo  = sprintf("%0.03f", matcher[1].hex.to_f / 255)
+    verde = sprintf("%0.03f", matcher[2].hex.to_f / 255)
+    azul  = sprintf("%0.03f", matcher[3].hex.to_f / 255)
+    return [rojo, verde, azul]
+  end
+  private :html_to_rgb
 
 
   def directorio_aleatorio
