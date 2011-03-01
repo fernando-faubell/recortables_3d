@@ -1,10 +1,9 @@
 #formulario
-  %div{:id => "slider_formulario"}
-    - semantic_form_for @recortable, :html => {:multipart => true, :class => "bp"} do |f|
-      /= f.error_messages
-      %ul
-        %li
-          %div.caja
+  %div{:class => "coda-slider-wrapper"}
+    %div{:class=>"coda-slider preload", :id=>"coda-slider-formulario"}
+      - form_for @recortable, :html => {:multipart => true, :class => "bp"} do |f|
+        %div.panel
+          %div.panel-wrapper
             %table
               %tr
                 %td
@@ -43,63 +42,54 @@
                   %br
                   = f.radio_button :nombre, "Esfera320"
                   = f.label "Esfera 320"
-        %li
-          %div.caja
-            %div.bloque.c_fondo
-              = f.label t(:color_fondo)
-              %br
-              = f.text_field :color_fondo, {:class => "selector_color"}
-              %div{:id => "colorpicker_recortable_color_fondo"}
-
-            %div.bloque.c_aristas
-              = f.label t(:color_aristas)
-              %br
-              = f.text_field :color_aristas, {:class => "selector_color"}
-              %div{:id => "colorpicker_recortable_color_aristas"}
-
-            %div.bloque.g_aristas
-              = f.radio_button :grosor_aristas, "Fino"
-              = f.label "Fino"
-              %br
-              = f.radio_button :grosor_aristas, "Normal"
-              = f.label "Normal"
-              %br
-              = f.radio_button :grosor_aristas, "Medio"
-              = f.label "Medio"
-              %br
-              = f.radio_button :grosor_aristas, "Grueso"
-              = f.label "Grueso"
-
-            %div.bloque.textura
-              = f.label t(:textura)
-              %br
-              = f.file_field :textura, :size => "10"
-              - if @recortable.textura
-                = image_tag @recortable.textura.url(:thumb)
-              %table
-                %tr
-                  %td
-                  %td X
-                  %td Y
-                %tr
-                  %td Tamaño
-                  %td= f.text_field :tamanyo_x
-                  %td= f.text_field :tamanyo_y
-                %tr
-                  %td Desplazamiento
-                  %td= f.text_field :posicion_x
-                  %td= f.text_field :posicion_y
-                %tr
-                  %td Repetir
-                  %td= f.check_box :repetir_x
-                  %td= f.check_box :repetir_y
-
-            %div.bloque.previsualizar
-              = f.submit t(:previsualizar)
-        %li
-          %div.caja
+        %div.panel
+          %div.panel-wrapper
+            = f.label t(:color_fondo)
+            %br
+            = f.text_field :color_fondo, {:class => "selector_color"}
+            %div{:id => "colorpicker_recortable_color_fondo"}
+            = f.label t(:color_aristas)
+            %br
+            = f.text_field :color_aristas, {:class => "selector_color"}
+            %div{:id => "colorpicker_recortable_color_aristas"}
+            = f.radio_button :grosor_aristas, "Fino"
+            = f.label "Fino"
+            %br
+            = f.radio_button :grosor_aristas, "Normal"
+            = f.label "Normal"
+            %br
+            = f.radio_button :grosor_aristas, "Medio"
+            = f.label "Medio"
+            %br
+            = f.radio_button :grosor_aristas, "Grueso"
+            = f.label "Grueso"
+            = f.label t(:textura)
+            %br
+            = f.file_field :textura, :size => "10"
+            - if @recortable.textura
+              = image_tag @recortable.textura.url(:thumb)
+            %table
+              %tr
+                %td
+                %td X
+                %td Y
+              %tr
+                %td Tamaño
+                %td= f.text_field :tamanyo_x
+                %td= f.text_field :tamanyo_y
+              %tr
+                %td Desplazamiento
+                %td= f.text_field :posicion_x
+                %td= f.text_field :posicion_y
+              %tr
+                %td Repetir
+                %td= f.check_box :repetir_x
+                %td= f.check_box :repetir_y
+            = f.submit t(:previsualizar)
+        %div.panel
+          %div.panel-wrapper
             = f.submit t(:generar)
             %p
             = link_to t(:cancelar), root_path
-
+        .clear
     

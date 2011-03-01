@@ -28,13 +28,10 @@ class Recortable < ActiveRecord::Base
   after_save :genera_imagenes
 
   has_attached_file :textura,
-    :styles => { :previo => "512x512!", :final => "2048x2048!"},
+    :styles => { :previo => {:geometry =>"512x512!", :format => "rgb"}, 
+                 :final => {:geometry => "2048x2048!", :format => "rgb"}},
     :convert_options => {:all => "-depth 8"},
-    :format => {:all =>"rgb"},
     :processors => [:transformaciones]
-
-#:current_geometry, :target_geometry, :format, :whiny, :convert_options, :source_file_options
-
 
   def self.lista_select_complejidad
     ["Muy sencillo", "Sencillo", "Moderado", "Complejo", "Muy complejo"]
@@ -43,8 +40,6 @@ class Recortable < ActiveRecord::Base
   def self.lista_select_grosor_aristas
     [[I18n.t(:muy_fino),"1"], [I18n.t(:normal), "2"], [I18n.t(:medio), "3"], [I18n.t(:grueso), "4"]]
   end
-
-
 
   def genera_imagenes
 

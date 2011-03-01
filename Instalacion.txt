@@ -1,0 +1,10 @@
+Descripción de instalación de Ubuntu. 
+
+-Instalación básica de Ubuntu.
+
+-Añadir la tarea Desktop para el entorno gráfico.
+
+
+-Instalar rvm (información en la página blog.ninjahideout.com) instalar ruby
+
+

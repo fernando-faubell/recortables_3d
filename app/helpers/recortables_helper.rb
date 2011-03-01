@@ -5,6 +5,9 @@ module RecortablesHelper
 
     if @recortable.nombre.blank?
       array_imagenes << "esfera320.jpg"
+      array_imagenes << "esfera320.jpg"
+      array_imagenes << "esfera320.jpg"
+      array_imagenes << "esfera320.jpg"
     elsif @recortable.nombre && @recortable.imagenes.empty?
       #Personalizada
       case @recortable.nombre

@@ -62,10 +62,11 @@
 			var obj = $(this); 				
 			var s = $("li", obj).length;
 			var w = $("li", obj).width(); 
-			var h = $("li", obj).height(); 
+			var h = $("li", obj).height();
+                        alert(h);
 			var clickable = true;
 			obj.width(w); 
-			obj.height(h); 
+			obj.height(h);
 			obj.css("overflow","hidden");
 			var ts = s-1;
 			var t = 0;

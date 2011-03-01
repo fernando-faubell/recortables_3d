@@ -1,6 +1,8 @@
 #imagenes
-  %div{:id => "slider_imagenes"}
-    %ul
+  %div{:class => "coda-slider-wrapper"}
+    %div{:class=>"coda-slider preload", :id=>"coda-slider-imagenes"}
       - lista_imagenes_recortable.each do |i|
-        %li
-          = image_tag i, :size => "300x300", :id => "imagen_cabecera"
+        %div.panel
+          %div.panel-wrapper
+            %div.centrada
+              = image_tag i, :size => "400x400"

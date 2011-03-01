@@ -1,3 +1,10 @@
+@import "base";
+@import "partials/base";
+//@import "partials/form";
+//@import "partials/page";
+//@import "partials/two_col";
+//@import "partials/una_col";
+
 
 form.bp input.text,
 form.bp input.title,
@@ -5,13 +12,31 @@ form.bp input[type="email"],
 form.bp input[type="text"],
 form.bp input[type="password"] {
 
-width:80px;
+width: 80px;
 
 }
 
 .invisible {
   display: none;
   visibility: hidden; }
+
+
+
+@mixin tres-columnas($header, $footer, $sidebar, $content) {
+  @include container;
+  background-color: black;
+  #{$header}, #{$footer} {
+    background-color: #110011;
+    @include column(24); }
+  #{$sidebar} {
+    background-color: #22eeee;
+    @include column(24); }
+  #{$content} {
+    background-color: black;
+    @include column(30, true); } }
+
+div.tres-columnas {
+  @include tres-columnas("#header", "#footer", "#sidebar", "#content"); }
 
 div.pantalla_formulario {
   background-color: #0022aa;
@@ -23,6 +48,7 @@ div.pantalla_formulario {
   -webkit-border-radius: 10px; }
 
 .caja {
+  display: inline;
   margin: 0 auto;
   width: 910px;
   height: 360px;
@@ -62,3 +88,13 @@ div.pantalla_formulario {
 
 td {
   vertical-align: top; }
+
+.centrada {
+  text-align: center;
+  margin:0 auto;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
